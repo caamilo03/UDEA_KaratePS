@@ -14,7 +14,7 @@ Feature: Login to Parabank
     And match response ==
     """
     {
-       "id": '#number',
+       "ids": '#number',
        "firstName": '#string',
        "lastName": '#string',
        "address": {
