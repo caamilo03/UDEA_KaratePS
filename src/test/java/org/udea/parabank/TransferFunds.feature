@@ -27,4 +27,4 @@ Feature: Transfer funds in Parabank
     And param amount = val_amount // monto a transferir
     When method POST
     Then status 400
-    And match response == "Could not find account number " + val_fromAccountIdError + " and/or " + val_toAccountIdError
+    And match response == "Could not find account " + val_fromAccountIdError + " and/or " + val_toAccountIdError
