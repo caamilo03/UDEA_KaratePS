@@ -1,0 +1,44 @@
+19:35:42.184 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+19:35:44.011 [main] DEBUG com.intuit.karate - request:
+1 > GET http://192.168.0.182:8080/parabank/services/bank/login/john/demo
+1 > Accept: application/json
+1 > Host: 192.168.0.182:8080
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
+1 > Accept-Encoding: gzip,deflate
+
+
+19:35:49.045 [main] ERROR com.intuit.karate - org.apache.http.conn.ConnectTimeoutException: Connect to 192.168.0.182:8080 [/192.168.0.182] failed: Connect timed out, http call failed after 5358 milliseconds for url: http://192.168.0.182:8080/parabank/services/bank/login/john/demo
+19:35:49.047 [main] ERROR com.intuit.karate - classpath:org/udea/parabank/login.feature:12
+When method GET
+http call failed after 5358 milliseconds for url: http://192.168.0.182:8080/parabank/services/bank/login/john/demo
+classpath:org/udea/parabank/login.feature:12
+19:35:50.444 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+19:35:50.574 [main] DEBUG com.intuit.karate - request:
+1 > POST http://192.168.0.182:8080/parabank/services/bank/transfer?amount=159&fromAccountId=13899&toAccountId=14565
+1 > Accept: application/json
+1 > Host: 192.168.0.182:8080
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
+1 > Accept-Encoding: gzip,deflate
+
+
+19:35:55.582 [main] ERROR com.intuit.karate - org.apache.http.conn.ConnectTimeoutException: Connect to 192.168.0.182:8080 [/192.168.0.182] failed: Connect timed out, http call failed after 5010 milliseconds for url: http://192.168.0.182:8080/parabank/services/bank/transfer?amount=159&fromAccountId=13899&toAccountId=14565
+19:35:55.582 [main] ERROR com.intuit.karate - classpath:org/udea/parabank/TransferFunds.feature:19
+When method POST
+http call failed after 5010 milliseconds for url: http://192.168.0.182:8080/parabank/services/bank/transfer?amount=159&fromAccountId=13899&toAccountId=14565
+classpath:org/udea/parabank/TransferFunds.feature:19
+19:35:55.606 [main] DEBUG com.intuit.karate - request:
+1 > POST http://192.168.0.182:8080/parabank/services/bank/transfer?amount=78&fromAccountId=260631&toAccountId=433732
+1 > Accept: application/json
+1 > Host: 192.168.0.182:8080
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
+1 > Accept-Encoding: gzip,deflate
+
+
+19:36:00.612 [main] ERROR com.intuit.karate - org.apache.http.conn.ConnectTimeoutException: Connect to 192.168.0.182:8080 [/192.168.0.182] failed: Connect timed out, http call failed after 5008 milliseconds for url: http://192.168.0.182:8080/parabank/services/bank/transfer?amount=78&fromAccountId=260631&toAccountId=433732
+19:36:00.614 [main] ERROR com.intuit.karate - classpath:org/udea/parabank/TransferFunds.feature:28
+When method POST
+http call failed after 5008 milliseconds for url: http://192.168.0.182:8080/parabank/services/bank/transfer?amount=78&fromAccountId=260631&toAccountId=433732
+classpath:org/udea/parabank/TransferFunds.feature:28
