@@ -4,7 +4,7 @@ Feature: Accounts in Parabank
   Background:
     * url baseUrl
     * header Accept = 'application/json'
-    //from login.feature
+    #from login.feature
     * def authData = call read('login.feature')
     * def targetCustomerId = authData.customerId
 
