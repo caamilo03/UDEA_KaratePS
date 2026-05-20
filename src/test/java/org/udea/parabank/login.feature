@@ -33,11 +33,13 @@ Feature: Login to Parabank
 
     * match cookieHeader contains 'JSESSIONID'
 
+    * def customerId = response.id
+
   Scenario: Customer Login with invalid credentials returns 401
     Given path 'login', 'john', 'wrongpassword'
     When method GET
     Then status 401
 
-    
+
     * match response == {error: '#object'}
     

@@ -4,9 +4,11 @@ Feature: Accounts in Parabank
   Background:
     * url baseUrl
     * header Accept = 'application/json'
-    * def targetCustomerId = '12212'
+    //from login.feature
+    * def authData = call read('login.feature')
+    * def targetCustomerId = authData.customerId
 
-    Scenario: Get accounts by customer ID
+    Scenario: Validate the schema and financial integrity of the accounts endpoint
       Given path 'customers', targetCustomerId, 'accounts'
       When method GET
       Then status 200
