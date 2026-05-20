@@ -38,5 +38,6 @@ Feature: Login to Parabank
     When method GET
     Then status 401
 
+    
     * match response == {error: '#object'}
     
