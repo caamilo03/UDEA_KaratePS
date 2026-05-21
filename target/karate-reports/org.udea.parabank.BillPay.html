@@ -39,8 +39,8 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <img src="karate-labs-logo-ring.svg" alt="Karate Labs"/>
     </a>
     <div class="nav-count">
-      <div id="nav-pass" class="bg-success">5</div>
-      <div id="nav-fail" class="bg-danger">0</div>
+      <div id="nav-pass" class="bg-success">1</div>
+      <div id="nav-fail" class="bg-danger">4</div>
     </div>
   </div>
   <div id="nav-env">
@@ -50,25 +50,25 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
     <div>Scenarios</div>
   </div>
   <div id="nav-date">
-    <div>2026-05-20 07:30:01 p. m.</div>
+    <div>2026-05-20 07:59:12 p. m.</div>
   </div>
 </div>
 
         <div class="nav-container">
           <div class="nav-item passed">
-            <a href="#[1:35]"><span>[1:35]</span> <span>Pago exitoso valida esquema de respuesta</span></a>
+            <a href="#[1:37]"><span>[1:37]</span> <span>Pago exitoso con monto válido - valida esquema de respuesta</span></a>
           </div>
-          <div class="nav-item passed">
-            <a href="#[2.1:61]"><span>[2.1:61]</span> <span>Data-Driven - Validación de casos de borde y saldo insuficiente</span></a>
+          <div class="nav-item failed">
+            <a href="#[2.1:65]"><span>[2.1:65]</span> <span>Validación de montos inválidos y saldo insuficiente - Data Driven</span></a>
           </div>
-          <div class="nav-item passed">
-            <a href="#[2.2:62]"><span>[2.2:62]</span> <span>Data-Driven - Validación de casos de borde y saldo insuficiente</span></a>
+          <div class="nav-item failed">
+            <a href="#[2.2:66]"><span>[2.2:66]</span> <span>Validación de montos inválidos y saldo insuficiente - Data Driven</span></a>
           </div>
-          <div class="nav-item passed">
-            <a href="#[2.3:63]"><span>[2.3:63]</span> <span>Data-Driven - Validación de casos de borde y saldo insuficiente</span></a>
+          <div class="nav-item failed">
+            <a href="#[2.3:67]"><span>[2.3:67]</span> <span>Validación de montos inválidos y saldo insuficiente - Data Driven</span></a>
           </div>
-          <div class="nav-item passed">
-            <a href="#[3:65]"><span>[3:65]</span> <span>Cuenta de origen inexistente retorna error de servidor</span></a>
+          <div class="nav-item failed">
+            <a href="#[3:69]"><span>[3:69]</span> <span>Cuenta de origen inexistente debe retornar error de negocio 400, no error interno</span></a>
           </div>
         </div>
       </div>
@@ -82,29 +82,29 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
           <span class="feature-description"></span>
         </div>
         <div class="scenario">
-          <div class="scenario-heading" id="[1:35]">
+          <div class="scenario-heading" id="[1:37]">
             <div class="heading-container">
               <div class="scenario-tags">
                 <a class="badge badge-primary" href="karate-tags.html">parabank_billpay</a>
               </div>
               <div class="scenario-keyword">
-                Scenario: <span>[1:35]</span>
-                <span class="scenario-name">Pago exitoso valida esquema de respuesta</span>
+                Scenario: <span>[1:37]</span>
+                <span class="scenario-name">Pago exitoso con monto válido - valida esquema de respuesta</span>
                 <span></span>
               </div>
             </div>
             <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>1618</span>
+              <span>ms:</span>&nbsp;<span>1789</span>
             </div>
           </div>
           <div class="step-row">
-            <div class="step-container" id="[1:35]bg">
+            <div class="step-container" id="[1:37]bg">
               <div class="step-ref bg-step">&gt;&gt;</div>
               <div class="step-cell passed">Background:</div>
             </div>
             <div class="time-cell passed"></div>
           </div>
-          <div data-parent="[1:35]bg"><div>
+          <div data-parent="[1:37]bg"><div>
   
 
   
@@ -132,14 +132,14 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
 </div>
 </div>
-          <div data-parent="[1:35]bg"><div>
+          <div data-parent="[1:37]bg"><div>
   
 
   <div class="step-row">
     <div class="step-container">
       <div class="step-ref passed"></div>
       
-      <div class="step-cell comment"># configure headers persiste Accept en TODOS los requests del feature (no solo el primero)</div>
+      <div class="step-cell comment"># configure headers garantiza que Accept: application/json persista en todos los requests del escenario</div>
     </div>
     <div class="time-cell comment"></div>            
   </div>
@@ -152,7 +152,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>*</span>&nbsp;<span>configure headers = { Accept: &#39;application/json&#39; }</span>
       </div>
     </div>
-    <div class="time-cell passed">54</div>
+    <div class="time-cell passed">68</div>
   </div>
 
    
@@ -167,14 +167,14 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
 </div>
 </div>
-          <div data-parent="[1:35]bg"><div>
+          <div data-parent="[1:37]bg"><div>
   
 
   <div class="step-row">
     <div class="step-container">
       <div class="step-ref passed"></div>
       
-      <div class="step-cell comment"># Obtener customerId via login</div>
+      <div class="step-cell comment"># Login directo como prerequisito de setup (los criterios de login se validan en login.feature)</div>
     </div>
     <div class="time-cell comment"></div>            
   </div>
@@ -184,45 +184,10 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref bg-step">9</div>
       
       <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def authData = call read(&#39;login.feature@login_ok&#39;)</span>
+        <span>Given</span>&nbsp;<span>path &#39;login&#39;, &#39;john&#39;, &#39;demo&#39;</span>
       </div>
     </div>
-    <div class="time-cell passed">1046</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  <div>
-        
-    <div class="step-row">
-      <div class="step-container" id="0.9.0.call">
-        <div class="step-ref bg-step">&gt;&gt;</div>
-        <div class="step-indent"></div>
-        <div class="step-cell passed">org.udea.parabank.login</div>
-      </div>
-      <div class="time-cell passed">1011</div>
-    </div>
-    <div>
-      <div><div>
-  
-
-  
-
-  <div class="step-row" data-parent="0.9.0.call">
-    <div class="step-container" id="0.9.0.call.0.5">
-      <div class="step-ref bg-step">5</div>
-      <div class="step-indent"></div>
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>url baseUrl</span>
-      </div>
-    </div>
-    <div class="time-cell passed">3</div>
+    <div class="time-cell passed">9</div>
   </div>
 
    
@@ -237,132 +202,20 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
 </div>
 </div>
-      <div><div>
+          <div data-parent="[1:37]bg"><div>
   
 
   
 
-  <div class="step-row" data-parent="0.9.0.call">
-    <div class="step-container" id="0.9.0.call.0.6">
-      <div class="step-ref bg-step">6</div>
-      <div class="step-indent"></div>
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
-      </div>
-    </div>
-    <div class="time-cell passed">1</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-      <div><div>
-  
-
-  
-
-  <div class="step-row" data-parent="0.9.0.call">
-    <div class="step-container" id="0.9.0.call.0.10">
+  <div class="step-row">
+    <div class="step-container" id="0.10">
       <div class="step-ref bg-step">10</div>
-      <div class="step-indent"></div>
-      <div class="step-cell passed">
-        <span>Given</span>&nbsp;<span>path &#39;login&#39;</span>
-      </div>
-    </div>
-    <div class="time-cell passed">1</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-      <div><div>
-  
-
-  
-
-  <div class="step-row" data-parent="0.9.0.call">
-    <div class="step-container" id="0.9.0.call.0.11">
-      <div class="step-ref bg-step">11</div>
-      <div class="step-indent"></div>
-      <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>path &#39;john&#39; //userName</span>
-      </div>
-    </div>
-    <div class="time-cell passed">1</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-      <div><div>
-  
-
-  
-
-  <div class="step-row" data-parent="0.9.0.call">
-    <div class="step-container" id="0.9.0.call.0.12">
-      <div class="step-ref bg-step">12</div>
-      <div class="step-indent"></div>
-      <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>path &#39;demo&#39; //password</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-      <div><div>
-  
-
-  
-
-  <div class="step-row" data-parent="0.9.0.call">
-    <div class="step-container" id="0.9.0.call.0.13">
-      <div class="step-ref bg-step">13</div>
-      <div class="step-indent"></div>
+      
       <div class="step-cell passed">
         <span>When</span>&nbsp;<span>method GET</span>
       </div>
     </div>
-    <div class="time-cell passed">957</div>
+    <div class="time-cell passed">1128</div>
   </div>
 
    
@@ -371,7 +224,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.9.0.call.0.13">19:29:57.530 request:
+  <div class="preformatted" data-parent="0.10">19:59:09.016 request:
 1 &gt; GET https://parabank.parasoft.com/parabank/services/bank/login/john/demo
 1 &gt; Accept: application/json
 1 &gt; Host: parabank.parasoft.com
@@ -380,16 +233,16 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 1 &gt; Accept-Encoding: gzip,deflate
 
 
-19:29:58.119 response time in milliseconds: 586
+19:59:09.697 response time in milliseconds: 674
 1 &lt; 200
-1 &lt; Date: Thu, 21 May 2026 00:29:56 GMT
+1 &lt; Date: Thu, 21 May 2026 00:59:08 GMT
 1 &lt; Content-Type: application/json
 1 &lt; Transfer-Encoding: chunked
 1 &lt; Connection: keep-alive
 1 &lt; Server: cloudflare
 1 &lt; cf-cache-status: DYNAMIC
 1 &lt; X-Content-Type-Options: nosniff
-1 &lt; CF-RAY: 9fef783dca4bb6ff-BOG
+1 &lt; CF-RAY: 9fefa3012bafb6ff-BOG
 {&quot;id&quot;:12212,&quot;firstName&quot;:&quot;John&quot;,&quot;lastName&quot;:&quot;Smith&quot;,&quot;address&quot;:{&quot;street&quot;:&quot;1431 Main St&quot;,&quot;city&quot;:&quot;Beverly Hills&quot;,&quot;state&quot;:&quot;CA&quot;,&quot;zipCode&quot;:&quot;90210&quot;},&quot;phoneNumber&quot;:&quot;310-447-4121&quot;,&quot;ssn&quot;:&quot;622-11-9999&quot;}
 
 </div>   
@@ -398,17 +251,45 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
 </div>
 </div>
-      <div><div>
+          <div data-parent="[1:37]bg"><div>
   
 
   
 
-  <div class="step-row" data-parent="0.9.0.call">
-    <div class="step-container" id="0.9.0.call.0.14">
-      <div class="step-ref bg-step">14</div>
-      <div class="step-indent"></div>
+  <div class="step-row">
+    <div class="step-container" id="0.11">
+      <div class="step-ref bg-step">11</div>
+      
       <div class="step-cell passed">
         <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">6</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1:37]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.12">
+      <div class="step-ref bg-step">12</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def customerId = response.id</span>
       </div>
     </div>
     <div class="time-cell passed">8</div>
@@ -426,240 +307,27 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
 </div>
 </div>
-      <div><div>
-  
-
-  
-
-  <div class="step-row" data-parent="0.9.0.call">
-    <div class="step-container" id="0.9.0.call.0.15">
-      <div class="step-ref bg-step">15</div>
-      <div class="step-indent"></div>
-      <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>match response ==</span>
-      </div>
-    </div>
-    <div class="time-cell passed">26</div>
-  </div>
-
-   
-  
-  <div class="preformatted" data-parent="0.9.0.call.0.15">{
-   &quot;id&quot;: &#39;#number&#39;,
-   &quot;firstName&quot;: &#39;#string&#39;,
-   &quot;lastName&quot;: &#39;#string&#39;,
-   &quot;address&quot;: {
-        &quot;street&quot;: &#39;#string&#39;,
-        &quot;city&quot;: &#39;#string&#39;,
-        &quot;state&quot;: &#39;#string&#39;,
-        &quot;zipCode&quot;: &#39;#string&#39;
-    },
-   &quot;phoneNumber&quot;: &#39;#string&#39;,
-   &quot;ssn&quot;: &#39;#string&#39;
-}</div>
-
-  
-
-     
-
-  
-
-</div>
-</div>
-      <div><div>
-  
-
-  
-
-  <div class="step-row" data-parent="0.9.0.call">
-    <div class="step-container" id="0.9.0.call.0.31">
-      <div class="step-ref bg-step">31</div>
-      <div class="step-indent"></div>
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>match header Content-Type contains &#39;application/json&#39;</span>
-      </div>
-    </div>
-    <div class="time-cell passed">2</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-      <div><div>
-  
-
-  <div class="step-row" data-parent="0.9.0.call">
-    <div class="step-container">
-      <div class="step-ref passed"></div>
-      <div class="step-indent"></div>
-      <div class="step-cell comment"># DEFECTO DOCUMENTADO: El endpoint REST /login/{user}/{pass} no emite Set-Cookie/JSESSIONID.</div>
-    </div>
-    <div class="time-cell comment"></div>            
-  </div>
-
-  <div class="step-row" data-parent="0.9.0.call">
-    <div class="step-container">
-      <div class="step-ref passed"></div>
-      <div class="step-indent"></div>
-      <div class="step-cell comment"># La sesión solo se crea via formulario HTML (/login.htm), no via el API REST.</div>
-    </div>
-    <div class="time-cell comment"></div>            
-  </div>
-
-  <div class="step-row" data-parent="0.9.0.call">
-    <div class="step-container">
-      <div class="step-ref passed"></div>
-      <div class="step-indent"></div>
-      <div class="step-cell comment"># Criterio de aceptación exige JSESSIONID, pero la API no lo provee en este endpoint.</div>
-    </div>
-    <div class="time-cell comment"></div>            
-  </div>
-
-  <div class="step-row" data-parent="0.9.0.call">
-    <div class="step-container" id="0.9.0.call.0.36">
-      <div class="step-ref bg-step">36</div>
-      <div class="step-indent"></div>
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def setCookie = responseHeaders[&#39;Set-Cookie&#39;]</span>
-      </div>
-    </div>
-    <div class="time-cell passed">4</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-      <div><div>
-  
-
-  
-
-  <div class="step-row" data-parent="0.9.0.call">
-    <div class="step-container" id="0.9.0.call.0.37">
-      <div class="step-ref bg-step">37</div>
-      <div class="step-indent"></div>
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>print &#39;Set-Cookie (DEFECTO - esperado JSESSIONID, no presente en REST login):&#39;, setCookie</span>
-      </div>
-    </div>
-    <div class="time-cell passed">7</div>
-  </div>
-
-   
-  
-  
-
-  
-
-  <div class="preformatted" data-parent="0.9.0.call.0.37">19:29:58.172 [print] Set-Cookie (DEFECTO - esperado JSESSIONID, no presente en REST login): [
-]
- 
-</div>   
-
-  
-
-</div>
-</div>
-      <div><div>
-  
-
-  
-
-  <div class="step-row" data-parent="0.9.0.call">
-    <div class="step-container" id="0.9.0.call.0.39">
-      <div class="step-ref bg-step">39</div>
-      <div class="step-indent"></div>
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def customerId = response.id</span>
-      </div>
-    </div>
-    <div class="time-cell passed">2</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-    </div>    
-  </div>
-
-</div>
-</div>
-          <div data-parent="[1:35]bg"><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.10">
-      <div class="step-ref bg-step">10</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def customerId = authData.customerId</span>
-      </div>
-    </div>
-    <div class="time-cell passed">2</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div data-parent="[1:35]bg"><div>
+          <div data-parent="[1:37]bg"><div>
   
 
   <div class="step-row">
     <div class="step-container">
       <div class="step-ref passed"></div>
       
-      <div class="step-cell comment"># Obtener accountId y saldo disponible DINÁMICAMENTE</div>
+      <div class="step-cell comment"># Obtener accountId y saldo disponible DINÁMICAMENTE desde el endpoint de cuentas</div>
     </div>
     <div class="time-cell comment"></div>            
   </div>
 
   <div class="step-row">
-    <div class="step-container" id="0.12">
-      <div class="step-ref bg-step">12</div>
+    <div class="step-container" id="0.14">
+      <div class="step-ref bg-step">14</div>
       
       <div class="step-cell passed">
         <span>Given</span>&nbsp;<span>path &#39;customers&#39;, customerId, &#39;accounts&#39;</span>
       </div>
     </div>
-    <div class="time-cell passed">11</div>
+    <div class="time-cell passed">9</div>
   </div>
 
    
@@ -674,20 +342,20 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
 </div>
 </div>
-          <div data-parent="[1:35]bg"><div>
+          <div data-parent="[1:37]bg"><div>
   
 
   
 
   <div class="step-row">
-    <div class="step-container" id="0.13">
-      <div class="step-ref bg-step">13</div>
+    <div class="step-container" id="0.15">
+      <div class="step-ref bg-step">15</div>
       
       <div class="step-cell passed">
         <span>When</span>&nbsp;<span>method GET</span>
       </div>
     </div>
-    <div class="time-cell passed">199</div>
+    <div class="time-cell passed">206</div>
   </div>
 
    
@@ -696,26 +364,26 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.13">19:29:58.192 request:
-1 &gt; GET https://parabank.parasoft.com/parabank/services/bank/customers/12212/accounts
-1 &gt; Accept: application/json
-1 &gt; Host: parabank.parasoft.com
-1 &gt; Connection: Keep-Alive
-1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
-1 &gt; Accept-Encoding: gzip,deflate
+  <div class="preformatted" data-parent="0.15">19:59:09.733 request:
+2 &gt; GET https://parabank.parasoft.com/parabank/services/bank/customers/12212/accounts
+2 &gt; Accept: application/json
+2 &gt; Host: parabank.parasoft.com
+2 &gt; Connection: Keep-Alive
+2 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
+2 &gt; Accept-Encoding: gzip,deflate
 
 
-19:29:58.386 response time in milliseconds: 193
-1 &lt; 200
-1 &lt; Date: Thu, 21 May 2026 00:29:57 GMT
-1 &lt; Content-Type: application/json
-1 &lt; Transfer-Encoding: chunked
-1 &lt; Connection: keep-alive
-1 &lt; Server: cloudflare
-1 &lt; cf-cache-status: DYNAMIC
-1 &lt; X-Content-Type-Options: nosniff
-1 &lt; CF-RAY: 9fef783f8af4b6ef-BOG
-[{&quot;id&quot;:13344,&quot;customerId&quot;:12212,&quot;type&quot;:&quot;CHECKING&quot;,&quot;balance&quot;:-19994855.07}]
+19:59:09.932 response time in milliseconds: 199
+2 &lt; 200
+2 &lt; Date: Thu, 21 May 2026 00:59:08 GMT
+2 &lt; Content-Type: application/json
+2 &lt; Transfer-Encoding: chunked
+2 &lt; Connection: keep-alive
+2 &lt; Server: cloudflare
+2 &lt; cf-cache-status: DYNAMIC
+2 &lt; X-Content-Type-Options: nosniff
+2 &lt; CF-RAY: 9fefa302cdc8b6fd-BOG
+[{&quot;id&quot;:13344,&quot;customerId&quot;:12212,&quot;type&quot;:&quot;CHECKING&quot;,&quot;balance&quot;:-69994650.07}]
 
 </div>   
 
@@ -723,14 +391,14 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
 </div>
 </div>
-          <div data-parent="[1:35]bg"><div>
+          <div data-parent="[1:37]bg"><div>
   
 
   
 
   <div class="step-row">
-    <div class="step-container" id="0.14">
-      <div class="step-ref bg-step">14</div>
+    <div class="step-container" id="0.16">
+      <div class="step-ref bg-step">16</div>
       
       <div class="step-cell passed">
         <span>Then</span>&nbsp;<span>status 200</span>
@@ -751,17 +419,45 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
 </div>
 </div>
-          <div data-parent="[1:35]bg"><div>
+          <div data-parent="[1:37]bg"><div>
   
 
   
 
   <div class="step-row">
-    <div class="step-container" id="0.15">
-      <div class="step-ref bg-step">15</div>
+    <div class="step-container" id="0.17">
+      <div class="step-ref bg-step">17</div>
       
       <div class="step-cell passed">
         <span>*</span>&nbsp;<span>def accountId = response[0].id</span>
+      </div>
+    </div>
+    <div class="time-cell passed">3</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1:37]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.18">
+      <div class="step-ref bg-step">18</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def saldoDisponible = response[0].balance</span>
       </div>
     </div>
     <div class="time-cell passed">2</div>
@@ -779,66 +475,38 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
 </div>
 </div>
-          <div data-parent="[1:35]bg"><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.16">
-      <div class="step-ref bg-step">16</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def availableBalance = response[0].balance</span>
-      </div>
-    </div>
-    <div class="time-cell passed">1</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div data-parent="[1:35]bg"><div>
+          <div data-parent="[1:37]bg"><div>
   
 
   <div class="step-row">
     <div class="step-container">
       <div class="step-ref passed"></div>
       
-      <div class="step-cell comment"># Payee válido (XML requerido por la API de Parabank)</div>
+      <div class="step-cell comment"># Payee válido en formato XML (requerido por la API de Parabank - no acepta JSON en este endpoint)</div>
     </div>
     <div class="time-cell comment"></div>            
   </div>
 
   <div class="step-row">
-    <div class="step-container" id="0.19">
-      <div class="step-ref bg-step">19</div>
+    <div class="step-container" id="0.21">
+      <div class="step-ref bg-step">21</div>
       
       <div class="step-cell passed">
         <span>*</span>&nbsp;<span>def payeeXml =</span>
       </div>
     </div>
-    <div class="time-cell passed">13</div>
+    <div class="time-cell passed">16</div>
   </div>
 
    
   
-  <div class="preformatted" data-parent="0.19">&lt;payee&gt;
-  &lt;name&gt;Test Payee&lt;/name&gt;
+  <div class="preformatted" data-parent="0.21">&lt;payee&gt;
+  &lt;name&gt;Proveedor de Prueba&lt;/name&gt;
   &lt;address&gt;
-    &lt;street&gt;123 Main St&lt;/street&gt;
-    &lt;city&gt;Beverly Hills&lt;/city&gt;
-    &lt;state&gt;CA&lt;/state&gt;
-    &lt;zipCode&gt;90210&lt;/zipCode&gt;
+    &lt;street&gt;Calle 123&lt;/street&gt;
+    &lt;city&gt;Medellín&lt;/city&gt;
+    &lt;state&gt;ANT&lt;/state&gt;
+    &lt;zipCode&gt;050001&lt;/zipCode&gt;
   &lt;/address&gt;
   &lt;phoneNumber&gt;310-000-0000&lt;/phoneNumber&gt;
   &lt;accountNumber&gt;9999&lt;/accountNumber&gt;
@@ -859,8 +527,8 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   
 
   <div class="step-row">
-    <div class="step-container" id="0.36">
-      <div class="step-ref passed">36</div>
+    <div class="step-container" id="0.38">
+      <div class="step-ref passed">38</div>
       
       <div class="step-cell passed">
         <span>Given</span>&nbsp;<span>path &#39;billpay&#39;</span>
@@ -887,70 +555,14 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   
 
   <div class="step-row">
-    <div class="step-container" id="0.37">
-      <div class="step-ref passed">37</div>
+    <div class="step-container" id="0.39">
+      <div class="step-ref passed">39</div>
       
       <div class="step-cell passed">
         <span>And</span>&nbsp;<span>param accountId = accountId</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.38">
-      <div class="step-ref passed">38</div>
-      
-      <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>param amount = 10</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.39">
-      <div class="step-ref passed">39</div>
-      
-      <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>header Content-Type = &#39;application/xml&#39;</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell passed">2</div>
   </div>
 
    
@@ -975,7 +587,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref passed">40</div>
       
       <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>request payeeXml</span>
+        <span>And</span>&nbsp;<span>param amount = 10</span>
       </div>
     </div>
     <div class="time-cell passed">1</div>
@@ -1003,10 +615,10 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref passed">41</div>
       
       <div class="step-cell passed">
-        <span>When</span>&nbsp;<span>method POST</span>
+        <span>And</span>&nbsp;<span>header Content-Type = &#39;application/xml&#39;</span>
       </div>
     </div>
-    <div class="time-cell passed">283</div>
+    <div class="time-cell passed">1</div>
   </div>
 
    
@@ -1015,41 +627,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.41">19:29:58.513 request:
-2 &gt; POST https://parabank.parasoft.com/parabank/services/bank/billpay?accountId=13344&amp;amount=10
-2 &gt; Content-Type: application/xml; charset=UTF-8
-2 &gt; Accept: application/json
-2 &gt; Content-Length: 316
-2 &gt; Host: parabank.parasoft.com
-2 &gt; Connection: Keep-Alive
-2 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
-2 &gt; Accept-Encoding: gzip,deflate
-&lt;payee&gt;
-  &lt;name&gt;Test Payee&lt;/name&gt;
-  &lt;address&gt;
-    &lt;street&gt;123 Main St&lt;/street&gt;
-    &lt;city&gt;Beverly Hills&lt;/city&gt;
-    &lt;state&gt;CA&lt;/state&gt;
-    &lt;zipCode&gt;90210&lt;/zipCode&gt;
-  &lt;/address&gt;
-  &lt;phoneNumber&gt;310-000-0000&lt;/phoneNumber&gt;
-  &lt;accountNumber&gt;9999&lt;/accountNumber&gt;
-  &lt;routingNumber&gt;111000025&lt;/routingNumber&gt;
-&lt;/payee&gt;
-
-19:29:58.690 response time in milliseconds: 176
-2 &lt; 200
-2 &lt; Date: Thu, 21 May 2026 00:29:57 GMT
-2 &lt; Content-Type: application/json
-2 &lt; Transfer-Encoding: chunked
-2 &lt; Connection: keep-alive
-2 &lt; Server: cloudflare
-2 &lt; cf-cache-status: DYNAMIC
-2 &lt; X-Content-Type-Options: nosniff
-2 &lt; CF-RAY: 9fef78417916b6f2-BOG
-{&quot;payeeName&quot;:&quot;Test Payee&quot;,&quot;amount&quot;:10,&quot;accountId&quot;:13344}
-
-</div>   
+     
 
   
 
@@ -1063,6 +641,96 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   <div class="step-row">
     <div class="step-container" id="0.42">
       <div class="step-ref passed">42</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request payeeXml</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.43">
+      <div class="step-ref passed">43</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">313</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.43">19:59:10.080 request:
+3 &gt; POST https://parabank.parasoft.com/parabank/services/bank/billpay?accountId=13344&amp;amount=10
+3 &gt; Content-Type: application/xml; charset=UTF-8
+3 &gt; Accept: application/json
+3 &gt; Content-Length: 321
+3 &gt; Host: parabank.parasoft.com
+3 &gt; Connection: Keep-Alive
+3 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
+3 &gt; Accept-Encoding: gzip,deflate
+&lt;payee&gt;
+  &lt;name&gt;Proveedor de Prueba&lt;/name&gt;
+  &lt;address&gt;
+    &lt;street&gt;Calle 123&lt;/street&gt;
+    &lt;city&gt;Medellín&lt;/city&gt;
+    &lt;state&gt;ANT&lt;/state&gt;
+    &lt;zipCode&gt;050001&lt;/zipCode&gt;
+  &lt;/address&gt;
+  &lt;phoneNumber&gt;310-000-0000&lt;/phoneNumber&gt;
+  &lt;accountNumber&gt;9999&lt;/accountNumber&gt;
+  &lt;routingNumber&gt;111000025&lt;/routingNumber&gt;
+&lt;/payee&gt;
+
+19:59:10.275 response time in milliseconds: 195
+3 &lt; 200
+3 &lt; Date: Thu, 21 May 2026 00:59:09 GMT
+3 &lt; Content-Type: application/json
+3 &lt; Transfer-Encoding: chunked
+3 &lt; Connection: keep-alive
+3 &lt; Server: cloudflare
+3 &lt; cf-cache-status: DYNAMIC
+3 &lt; X-Content-Type-Options: nosniff
+3 &lt; CF-RAY: 9fefa304ec17b6f9-BOG
+{&quot;payeeName&quot;:&quot;Proveedor de Prueba&quot;,&quot;amount&quot;:10,&quot;accountId&quot;:13344}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.44">
+      <div class="step-ref passed">44</div>
       
       <div class="step-cell passed">
         <span>Then</span>&nbsp;<span>status 200</span>
@@ -1089,14 +757,14 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   
 
   <div class="step-row">
-    <div class="step-container" id="0.43">
-      <div class="step-ref passed">43</div>
+    <div class="step-container" id="0.45">
+      <div class="step-ref passed">45</div>
       
       <div class="step-cell passed">
         <span>And</span>&nbsp;<span>match response == { payeeName: &#39;#string&#39;, amount: &#39;#number&#39;, accountId: &#39;#number&#39; }</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell passed">13</div>
   </div>
 
    
@@ -1117,8 +785,8 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   
 
   <div class="step-row">
-    <div class="step-container" id="0.44">
-      <div class="step-ref passed">44</div>
+    <div class="step-container" id="0.46">
+      <div class="step-ref passed">46</div>
       
       <div class="step-cell passed">
         <span>And</span>&nbsp;<span>match response.accountId == accountId</span>
@@ -1141,29 +809,29 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 </div>
         </div>
         <div class="scenario">
-          <div class="scenario-heading" id="[2.1:61]">
+          <div class="scenario-heading" id="[2.1:65]">
             <div class="heading-container">
               <div class="scenario-tags">
                 <a class="badge badge-primary" href="karate-tags.html">parabank_billpay</a>
               </div>
               <div class="scenario-keyword">
-                Scenario: <span>[2.1:61]</span>
-                <span class="scenario-name">Data-Driven - Validación de casos de borde y saldo insuficiente</span>
+                Scenario: <span>[2.1:65]</span>
+                <span class="scenario-name">Validación de montos inválidos y saldo insuficiente - Data Driven</span>
                 <span></span>
               </div>
             </div>
-            <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>572</span>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>584</span>
             </div>
           </div>
           <div class="step-row">
-            <div class="step-container" id="[2.1:61]bg">
+            <div class="step-container" id="[2.1:65]bg">
               <div class="step-ref bg-step">&gt;&gt;</div>
               <div class="step-cell passed">Background:</div>
             </div>
             <div class="time-cell passed"></div>
           </div>
-          <div data-parent="[2.1:61]bg"><div>
+          <div data-parent="[2.1:65]bg"><div>
   
 
   
@@ -1191,14 +859,14 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
 </div>
 </div>
-          <div data-parent="[2.1:61]bg"><div>
+          <div data-parent="[2.1:65]bg"><div>
   
 
   <div class="step-row">
     <div class="step-container">
       <div class="step-ref passed"></div>
       
-      <div class="step-cell comment"># configure headers persiste Accept en TODOS los requests del feature (no solo el primero)</div>
+      <div class="step-cell comment"># configure headers garantiza que Accept: application/json persista en todos los requests del escenario</div>
     </div>
     <div class="time-cell comment"></div>            
   </div>
@@ -1226,14 +894,14 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
 </div>
 </div>
-          <div data-parent="[2.1:61]bg"><div>
+          <div data-parent="[2.1:65]bg"><div>
   
 
   <div class="step-row">
     <div class="step-container">
       <div class="step-ref passed"></div>
       
-      <div class="step-cell comment"># Obtener customerId via login</div>
+      <div class="step-cell comment"># Login directo como prerequisito de setup (los criterios de login se validan en login.feature)</div>
     </div>
     <div class="time-cell comment"></div>            
   </div>
@@ -1243,70 +911,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref bg-step">9</div>
       
       <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def authData = call read(&#39;login.feature@login_ok&#39;)</span>
-      </div>
-    </div>
-    <div class="time-cell passed">206</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  <div>
-        
-    <div class="step-row">
-      <div class="step-container" id="1.9.0.call">
-        <div class="step-ref bg-step">&gt;&gt;</div>
-        <div class="step-indent"></div>
-        <div class="step-cell passed">org.udea.parabank.login</div>
-      </div>
-      <div class="time-cell passed">189</div>
-    </div>
-    <div>
-      <div><div>
-  
-
-  
-
-  <div class="step-row" data-parent="1.9.0.call">
-    <div class="step-container" id="1.9.0.call.0.5">
-      <div class="step-ref bg-step">5</div>
-      <div class="step-indent"></div>
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>url baseUrl</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-      <div><div>
-  
-
-  
-
-  <div class="step-row" data-parent="1.9.0.call">
-    <div class="step-container" id="1.9.0.call.0.6">
-      <div class="step-ref bg-step">6</div>
-      <div class="step-indent"></div>
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
+        <span>Given</span>&nbsp;<span>path &#39;login&#39;, &#39;john&#39;, &#39;demo&#39;</span>
       </div>
     </div>
     <div class="time-cell passed">1</div>
@@ -1324,104 +929,20 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
 </div>
 </div>
-      <div><div>
+          <div data-parent="[2.1:65]bg"><div>
   
 
   
 
-  <div class="step-row" data-parent="1.9.0.call">
-    <div class="step-container" id="1.9.0.call.0.10">
+  <div class="step-row">
+    <div class="step-container" id="1.10">
       <div class="step-ref bg-step">10</div>
-      <div class="step-indent"></div>
-      <div class="step-cell passed">
-        <span>Given</span>&nbsp;<span>path &#39;login&#39;</span>
-      </div>
-    </div>
-    <div class="time-cell passed">1</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-      <div><div>
-  
-
-  
-
-  <div class="step-row" data-parent="1.9.0.call">
-    <div class="step-container" id="1.9.0.call.0.11">
-      <div class="step-ref bg-step">11</div>
-      <div class="step-indent"></div>
-      <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>path &#39;john&#39; //userName</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-      <div><div>
-  
-
-  
-
-  <div class="step-row" data-parent="1.9.0.call">
-    <div class="step-container" id="1.9.0.call.0.12">
-      <div class="step-ref bg-step">12</div>
-      <div class="step-indent"></div>
-      <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>path &#39;demo&#39; //password</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-      <div><div>
-  
-
-  
-
-  <div class="step-row" data-parent="1.9.0.call">
-    <div class="step-container" id="1.9.0.call.0.13">
-      <div class="step-ref bg-step">13</div>
-      <div class="step-indent"></div>
+      
       <div class="step-cell passed">
         <span>When</span>&nbsp;<span>method GET</span>
       </div>
     </div>
-    <div class="time-cell passed">183</div>
+    <div class="time-cell passed">185</div>
   </div>
 
    
@@ -1430,7 +951,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="1.9.0.call.0.13">19:29:58.743 request:
+  <div class="preformatted" data-parent="1.10">19:59:10.329 request:
 1 &gt; GET https://parabank.parasoft.com/parabank/services/bank/login/john/demo
 1 &gt; Accept: application/json
 1 &gt; Host: parabank.parasoft.com
@@ -1439,16 +960,16 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 1 &gt; Accept-Encoding: gzip,deflate
 
 
-19:29:58.923 response time in milliseconds: 179
+19:59:10.510 response time in milliseconds: 179
 1 &lt; 200
-1 &lt; Date: Thu, 21 May 2026 00:29:57 GMT
+1 &lt; Date: Thu, 21 May 2026 00:59:09 GMT
 1 &lt; Content-Type: application/json
 1 &lt; Transfer-Encoding: chunked
 1 &lt; Connection: keep-alive
 1 &lt; Server: cloudflare
 1 &lt; cf-cache-status: DYNAMIC
 1 &lt; X-Content-Type-Options: nosniff
-1 &lt; CF-RAY: 9fef7842e83cb6ef-BOG
+1 &lt; CF-RAY: 9fefa3067d31b6ff-BOG
 {&quot;id&quot;:12212,&quot;firstName&quot;:&quot;John&quot;,&quot;lastName&quot;:&quot;Smith&quot;,&quot;address&quot;:{&quot;street&quot;:&quot;1431 Main St&quot;,&quot;city&quot;:&quot;Beverly Hills&quot;,&quot;state&quot;:&quot;CA&quot;,&quot;zipCode&quot;:&quot;90210&quot;},&quot;phoneNumber&quot;:&quot;310-447-4121&quot;,&quot;ssn&quot;:&quot;622-11-9999&quot;}
 
 </div>   
@@ -1457,15 +978,15 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
 </div>
 </div>
-      <div><div>
+          <div data-parent="[2.1:65]bg"><div>
   
 
   
 
-  <div class="step-row" data-parent="1.9.0.call">
-    <div class="step-container" id="1.9.0.call.0.14">
-      <div class="step-ref bg-step">14</div>
-      <div class="step-indent"></div>
+  <div class="step-row">
+    <div class="step-container" id="1.11">
+      <div class="step-ref bg-step">11</div>
+      
       <div class="step-cell passed">
         <span>Then</span>&nbsp;<span>status 200</span>
       </div>
@@ -1485,167 +1006,15 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
 </div>
 </div>
-      <div><div>
+          <div data-parent="[2.1:65]bg"><div>
   
 
   
 
-  <div class="step-row" data-parent="1.9.0.call">
-    <div class="step-container" id="1.9.0.call.0.15">
-      <div class="step-ref bg-step">15</div>
-      <div class="step-indent"></div>
-      <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>match response ==</span>
-      </div>
-    </div>
-    <div class="time-cell passed">1</div>
-  </div>
-
-   
-  
-  <div class="preformatted" data-parent="1.9.0.call.0.15">{
-   &quot;id&quot;: &#39;#number&#39;,
-   &quot;firstName&quot;: &#39;#string&#39;,
-   &quot;lastName&quot;: &#39;#string&#39;,
-   &quot;address&quot;: {
-        &quot;street&quot;: &#39;#string&#39;,
-        &quot;city&quot;: &#39;#string&#39;,
-        &quot;state&quot;: &#39;#string&#39;,
-        &quot;zipCode&quot;: &#39;#string&#39;
-    },
-   &quot;phoneNumber&quot;: &#39;#string&#39;,
-   &quot;ssn&quot;: &#39;#string&#39;
-}</div>
-
-  
-
-     
-
-  
-
-</div>
-</div>
-      <div><div>
-  
-
-  
-
-  <div class="step-row" data-parent="1.9.0.call">
-    <div class="step-container" id="1.9.0.call.0.31">
-      <div class="step-ref bg-step">31</div>
-      <div class="step-indent"></div>
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>match header Content-Type contains &#39;application/json&#39;</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-      <div><div>
-  
-
-  <div class="step-row" data-parent="1.9.0.call">
-    <div class="step-container">
-      <div class="step-ref passed"></div>
-      <div class="step-indent"></div>
-      <div class="step-cell comment"># DEFECTO DOCUMENTADO: El endpoint REST /login/{user}/{pass} no emite Set-Cookie/JSESSIONID.</div>
-    </div>
-    <div class="time-cell comment"></div>            
-  </div>
-
-  <div class="step-row" data-parent="1.9.0.call">
-    <div class="step-container">
-      <div class="step-ref passed"></div>
-      <div class="step-indent"></div>
-      <div class="step-cell comment"># La sesión solo se crea via formulario HTML (/login.htm), no via el API REST.</div>
-    </div>
-    <div class="time-cell comment"></div>            
-  </div>
-
-  <div class="step-row" data-parent="1.9.0.call">
-    <div class="step-container">
-      <div class="step-ref passed"></div>
-      <div class="step-indent"></div>
-      <div class="step-cell comment"># Criterio de aceptación exige JSESSIONID, pero la API no lo provee en este endpoint.</div>
-    </div>
-    <div class="time-cell comment"></div>            
-  </div>
-
-  <div class="step-row" data-parent="1.9.0.call">
-    <div class="step-container" id="1.9.0.call.0.36">
-      <div class="step-ref bg-step">36</div>
-      <div class="step-indent"></div>
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def setCookie = responseHeaders[&#39;Set-Cookie&#39;]</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-      <div><div>
-  
-
-  
-
-  <div class="step-row" data-parent="1.9.0.call">
-    <div class="step-container" id="1.9.0.call.0.37">
-      <div class="step-ref bg-step">37</div>
-      <div class="step-indent"></div>
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>print &#39;Set-Cookie (DEFECTO - esperado JSESSIONID, no presente en REST login):&#39;, setCookie</span>
-      </div>
-    </div>
-    <div class="time-cell passed">1</div>
-  </div>
-
-   
-  
-  
-
-  
-
-  <div class="preformatted" data-parent="1.9.0.call.0.37">19:29:58.927 [print] Set-Cookie (DEFECTO - esperado JSESSIONID, no presente en REST login): [
-]
- 
-</div>   
-
-  
-
-</div>
-</div>
-      <div><div>
-  
-
-  
-
-  <div class="step-row" data-parent="1.9.0.call">
-    <div class="step-container" id="1.9.0.call.0.39">
-      <div class="step-ref bg-step">39</div>
-      <div class="step-indent"></div>
+  <div class="step-row">
+    <div class="step-container" id="1.12">
+      <div class="step-ref bg-step">12</div>
+      
       <div class="step-cell passed">
         <span>*</span>&nbsp;<span>def customerId = response.id</span>
       </div>
@@ -1665,54 +1034,21 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
 </div>
 </div>
-    </div>    
-  </div>
-
-</div>
-</div>
-          <div data-parent="[2.1:61]bg"><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="1.10">
-      <div class="step-ref bg-step">10</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def customerId = authData.customerId</span>
-      </div>
-    </div>
-    <div class="time-cell passed">1</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div data-parent="[2.1:61]bg"><div>
+          <div data-parent="[2.1:65]bg"><div>
   
 
   <div class="step-row">
     <div class="step-container">
       <div class="step-ref passed"></div>
       
-      <div class="step-cell comment"># Obtener accountId y saldo disponible DINÁMICAMENTE</div>
+      <div class="step-cell comment"># Obtener accountId y saldo disponible DINÁMICAMENTE desde el endpoint de cuentas</div>
     </div>
     <div class="time-cell comment"></div>            
   </div>
 
   <div class="step-row">
-    <div class="step-container" id="1.12">
-      <div class="step-ref bg-step">12</div>
+    <div class="step-container" id="1.14">
+      <div class="step-ref bg-step">14</div>
       
       <div class="step-cell passed">
         <span>Given</span>&nbsp;<span>path &#39;customers&#39;, customerId, &#39;accounts&#39;</span>
@@ -1733,20 +1069,20 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
 </div>
 </div>
-          <div data-parent="[2.1:61]bg"><div>
+          <div data-parent="[2.1:65]bg"><div>
   
 
   
 
   <div class="step-row">
-    <div class="step-container" id="1.13">
-      <div class="step-ref bg-step">13</div>
+    <div class="step-container" id="1.15">
+      <div class="step-ref bg-step">15</div>
       
       <div class="step-cell passed">
         <span>When</span>&nbsp;<span>method GET</span>
       </div>
     </div>
-    <div class="time-cell passed">179</div>
+    <div class="time-cell passed">205</div>
   </div>
 
    
@@ -1755,26 +1091,26 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="1.13">19:29:58.931 request:
-1 &gt; GET https://parabank.parasoft.com/parabank/services/bank/customers/12212/accounts
-1 &gt; Accept: application/json
-1 &gt; Host: parabank.parasoft.com
-1 &gt; Connection: Keep-Alive
-1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
-1 &gt; Accept-Encoding: gzip,deflate
+  <div class="preformatted" data-parent="1.15">19:59:10.516 request:
+2 &gt; GET https://parabank.parasoft.com/parabank/services/bank/customers/12212/accounts
+2 &gt; Accept: application/json
+2 &gt; Host: parabank.parasoft.com
+2 &gt; Connection: Keep-Alive
+2 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
+2 &gt; Accept-Encoding: gzip,deflate
 
 
-19:29:59.108 response time in milliseconds: 176
-1 &lt; 200
-1 &lt; Date: Thu, 21 May 2026 00:29:57 GMT
-1 &lt; Content-Type: application/json
-1 &lt; Transfer-Encoding: chunked
-1 &lt; Connection: keep-alive
-1 &lt; Server: cloudflare
-1 &lt; cf-cache-status: DYNAMIC
-1 &lt; X-Content-Type-Options: nosniff
-1 &lt; CF-RAY: 9fef78441c0ab6ec-BOG
-[{&quot;id&quot;:13344,&quot;customerId&quot;:12212,&quot;type&quot;:&quot;CHECKING&quot;,&quot;balance&quot;:-19994865.07}]
+19:59:10.717 response time in milliseconds: 200
+2 &lt; 200
+2 &lt; Date: Thu, 21 May 2026 00:59:09 GMT
+2 &lt; Content-Type: application/json
+2 &lt; Transfer-Encoding: chunked
+2 &lt; Connection: keep-alive
+2 &lt; Server: cloudflare
+2 &lt; cf-cache-status: DYNAMIC
+2 &lt; X-Content-Type-Options: nosniff
+2 &lt; CF-RAY: 9fefa307ad56b6f5-BOG
+[{&quot;id&quot;:13344,&quot;customerId&quot;:12212,&quot;type&quot;:&quot;CHECKING&quot;,&quot;balance&quot;:-69994660.07}]
 
 </div>   
 
@@ -1782,14 +1118,14 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
 </div>
 </div>
-          <div data-parent="[2.1:61]bg"><div>
+          <div data-parent="[2.1:65]bg"><div>
   
 
   
 
   <div class="step-row">
-    <div class="step-container" id="1.14">
-      <div class="step-ref bg-step">14</div>
+    <div class="step-container" id="1.16">
+      <div class="step-ref bg-step">16</div>
       
       <div class="step-cell passed">
         <span>Then</span>&nbsp;<span>status 200</span>
@@ -1810,80 +1146,17 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
 </div>
 </div>
-          <div data-parent="[2.1:61]bg"><div>
+          <div data-parent="[2.1:65]bg"><div>
   
 
   
 
   <div class="step-row">
-    <div class="step-container" id="1.15">
-      <div class="step-ref bg-step">15</div>
+    <div class="step-container" id="1.17">
+      <div class="step-ref bg-step">17</div>
       
       <div class="step-cell passed">
         <span>*</span>&nbsp;<span>def accountId = response[0].id</span>
-      </div>
-    </div>
-    <div class="time-cell passed">1</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div data-parent="[2.1:61]bg"><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="1.16">
-      <div class="step-ref bg-step">16</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def availableBalance = response[0].balance</span>
-      </div>
-    </div>
-    <div class="time-cell passed">1</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div data-parent="[2.1:61]bg"><div>
-  
-
-  <div class="step-row">
-    <div class="step-container">
-      <div class="step-ref passed"></div>
-      
-      <div class="step-cell comment"># Payee válido (XML requerido por la API de Parabank)</div>
-    </div>
-    <div class="time-cell comment"></div>            
-  </div>
-
-  <div class="step-row">
-    <div class="step-container" id="1.19">
-      <div class="step-ref bg-step">19</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def payeeXml =</span>
       </div>
     </div>
     <div class="time-cell passed">2</div>
@@ -1891,13 +1164,76 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
    
   
-  <div class="preformatted" data-parent="1.19">&lt;payee&gt;
-  &lt;name&gt;Test Payee&lt;/name&gt;
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.1:65]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.18">
+      <div class="step-ref bg-step">18</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def saldoDisponible = response[0].balance</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.1:65]bg"><div>
+  
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment"># Payee válido en formato XML (requerido por la API de Parabank - no acepta JSON en este endpoint)</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container" id="1.21">
+      <div class="step-ref bg-step">21</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def payeeXml =</span>
+      </div>
+    </div>
+    <div class="time-cell passed">3</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="1.21">&lt;payee&gt;
+  &lt;name&gt;Proveedor de Prueba&lt;/name&gt;
   &lt;address&gt;
-    &lt;street&gt;123 Main St&lt;/street&gt;
-    &lt;city&gt;Beverly Hills&lt;/city&gt;
-    &lt;state&gt;CA&lt;/state&gt;
-    &lt;zipCode&gt;90210&lt;/zipCode&gt;
+    &lt;street&gt;Calle 123&lt;/street&gt;
+    &lt;city&gt;Medellín&lt;/city&gt;
+    &lt;state&gt;ANT&lt;/state&gt;
+    &lt;zipCode&gt;050001&lt;/zipCode&gt;
   &lt;/address&gt;
   &lt;phoneNumber&gt;310-000-0000&lt;/phoneNumber&gt;
   &lt;accountNumber&gt;9999&lt;/accountNumber&gt;
@@ -1919,7 +1255,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
     <div class="step-container">
       <div class="step-ref passed"></div>
       
-      <div class="step-cell comment"># El criterio de aceptación espera 400 Bad Request para montos inválidos y saldo insuficiente.</div>
+      <div class="step-cell comment"># El criterio de aceptación exige que la API retorne 400 Bad Request (error de lógica de negocio)</div>
     </div>
     <div class="time-cell comment"></div>            
   </div>
@@ -1928,7 +1264,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
     <div class="step-container">
       <div class="step-ref passed"></div>
       
-      <div class="step-cell comment"># DEFECTO DOCUMENTADO: La API no valida montos y retorna 200 en todos los casos de borde.</div>
+      <div class="step-cell comment"># para montos inválidos o superiores al saldo disponible, con un mensaje de error descriptivo.</div>
     </div>
     <div class="time-cell comment"></div>            
   </div>
@@ -1937,101 +1273,26 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
     <div class="step-container">
       <div class="step-ref passed"></div>
       
-      <div class="step-cell comment"># Los mensajes de error descriptivos esperados por el criterio no son provistos por la API.</div>
+      <div class="step-cell comment"># DEFECTO DEL API: La API no valida el monto y retorna 200 OK en todos los casos de borde,</div>
     </div>
     <div class="time-cell comment"></div>            
   </div>
 
   <div class="step-row">
-    <div class="step-container" id="1.50">
-      <div class="step-ref passed">50</div>
+    <div class="step-container">
+      <div class="step-ref passed"></div>
       
-      <div class="step-cell passed">
-        <span>Given</span>&nbsp;<span>path &#39;billpay&#39;</span>
-      </div>
+      <div class="step-cell comment"># aceptando pagos con monto cero, negativo y mayor al saldo sin ninguna validación.</div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell comment"></div>            
   </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="1.51">
-      <div class="step-ref passed">51</div>
-      
-      <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>param accountId = accountId</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="1.52">
-      <div class="step-ref passed">52</div>
-      
-      <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>param amount = 0</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
 
   <div class="step-row">
     <div class="step-container" id="1.53">
       <div class="step-ref passed">53</div>
       
       <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>header Content-Type = &#39;application/xml&#39;</span>
+        <span>Given</span>&nbsp;<span>path &#39;billpay&#39;</span>
       </div>
     </div>
     <div class="time-cell passed">0</div>
@@ -2059,7 +1320,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref passed">54</div>
       
       <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>request payeeXml</span>
+        <span>And</span>&nbsp;<span>param accountId = accountId</span>
       </div>
     </div>
     <div class="time-cell passed">0</div>
@@ -2087,10 +1348,10 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref passed">55</div>
       
       <div class="step-cell passed">
-        <span>When</span>&nbsp;<span>method POST</span>
+        <span>And</span>&nbsp;<span>param amount = 0</span>
       </div>
     </div>
-    <div class="time-cell passed">180</div>
+    <div class="time-cell passed">1</div>
   </div>
 
    
@@ -2099,41 +1360,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="1.55">19:29:59.117 request:
-2 &gt; POST https://parabank.parasoft.com/parabank/services/bank/billpay?accountId=13344&amp;amount=0
-2 &gt; Content-Type: application/xml; charset=UTF-8
-2 &gt; Accept: application/json
-2 &gt; Content-Length: 316
-2 &gt; Host: parabank.parasoft.com
-2 &gt; Connection: Keep-Alive
-2 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
-2 &gt; Accept-Encoding: gzip,deflate
-&lt;payee&gt;
-  &lt;name&gt;Test Payee&lt;/name&gt;
-  &lt;address&gt;
-    &lt;street&gt;123 Main St&lt;/street&gt;
-    &lt;city&gt;Beverly Hills&lt;/city&gt;
-    &lt;state&gt;CA&lt;/state&gt;
-    &lt;zipCode&gt;90210&lt;/zipCode&gt;
-  &lt;/address&gt;
-  &lt;phoneNumber&gt;310-000-0000&lt;/phoneNumber&gt;
-  &lt;accountNumber&gt;9999&lt;/accountNumber&gt;
-  &lt;routingNumber&gt;111000025&lt;/routingNumber&gt;
-&lt;/payee&gt;
-
-19:29:59.294 response time in milliseconds: 176
-2 &lt; 200
-2 &lt; Date: Thu, 21 May 2026 00:29:58 GMT
-2 &lt; Content-Type: application/json
-2 &lt; Transfer-Encoding: chunked
-2 &lt; Connection: keep-alive
-2 &lt; Server: cloudflare
-2 &lt; cf-cache-status: DYNAMIC
-2 &lt; X-Content-Type-Options: nosniff
-2 &lt; CF-RAY: 9fef78454de8b6ec-BOG
-{&quot;payeeName&quot;:&quot;Test Payee&quot;,&quot;amount&quot;:0,&quot;accountId&quot;:13344}
-
-</div>   
+     
 
   
 
@@ -2142,21 +1369,14 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
           <div><div>
   
 
-  <div class="step-row">
-    <div class="step-container">
-      <div class="step-ref passed"></div>
-      
-      <div class="step-cell comment"># DEFECTO: Debería retornar 400, pero la API retorna &lt;actualStatus&gt; sin validar &lt;descripcion&gt;</div>
-    </div>
-    <div class="time-cell comment"></div>            
-  </div>
+  
 
   <div class="step-row">
-    <div class="step-container" id="1.57">
-      <div class="step-ref passed">57</div>
+    <div class="step-container" id="1.56">
+      <div class="step-ref passed">56</div>
       
       <div class="step-cell passed">
-        <span>Then</span>&nbsp;<span>status 200</span>
+        <span>And</span>&nbsp;<span>header Content-Type = &#39;application/xml&#39;</span>
       </div>
     </div>
     <div class="time-cell passed">0</div>
@@ -2174,31 +1394,154 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
 </div>
 </div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.57">
+      <div class="step-ref passed">57</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request payeeXml</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.58">
+      <div class="step-ref passed">58</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">182</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.58">19:59:10.732 request:
+3 &gt; POST https://parabank.parasoft.com/parabank/services/bank/billpay?accountId=13344&amp;amount=0
+3 &gt; Content-Type: application/xml; charset=UTF-8
+3 &gt; Accept: application/json
+3 &gt; Content-Length: 321
+3 &gt; Host: parabank.parasoft.com
+3 &gt; Connection: Keep-Alive
+3 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
+3 &gt; Accept-Encoding: gzip,deflate
+&lt;payee&gt;
+  &lt;name&gt;Proveedor de Prueba&lt;/name&gt;
+  &lt;address&gt;
+    &lt;street&gt;Calle 123&lt;/street&gt;
+    &lt;city&gt;Medellín&lt;/city&gt;
+    &lt;state&gt;ANT&lt;/state&gt;
+    &lt;zipCode&gt;050001&lt;/zipCode&gt;
+  &lt;/address&gt;
+  &lt;phoneNumber&gt;310-000-0000&lt;/phoneNumber&gt;
+  &lt;accountNumber&gt;9999&lt;/accountNumber&gt;
+  &lt;routingNumber&gt;111000025&lt;/routingNumber&gt;
+&lt;/payee&gt;
+
+19:59:10.910 response time in milliseconds: 177
+3 &lt; 200
+3 &lt; Date: Thu, 21 May 2026 00:59:09 GMT
+3 &lt; Content-Type: application/json
+3 &lt; Transfer-Encoding: chunked
+3 &lt; Connection: keep-alive
+3 &lt; Server: cloudflare
+3 &lt; cf-cache-status: DYNAMIC
+3 &lt; X-Content-Type-Options: nosniff
+3 &lt; CF-RAY: 9fefa308f9ecb6ff-BOG
+{&quot;payeeName&quot;:&quot;Proveedor de Prueba&quot;,&quot;amount&quot;:0,&quot;accountId&quot;:13344}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.59">
+      <div class="step-ref failed">59</div>
+      
+      <div class="step-cell failed">
+        <span>Then</span>&nbsp;<span>status 400</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.59">19:59:10.912 classpath:org/udea/parabank/BillPay.feature:59
+Then status 400
+status code was: 200, expected: 400, response time in milliseconds: 177, url: https://parabank.parasoft.com/parabank/services/bank/billpay?accountId=13344&amp;amount=0, response: 
+{&quot;payeeName&quot;:&quot;Proveedor de Prueba&quot;,&quot;amount&quot;:0,&quot;accountId&quot;:13344}
+classpath:org/udea/parabank/BillPay.feature:59
+</div>   
+
+  
+
+</div>
+</div>
         </div>
         <div class="scenario">
-          <div class="scenario-heading" id="[2.2:62]">
+          <div class="scenario-heading" id="[2.2:66]">
             <div class="heading-container">
               <div class="scenario-tags">
                 <a class="badge badge-primary" href="karate-tags.html">parabank_billpay</a>
               </div>
               <div class="scenario-keyword">
-                Scenario: <span>[2.2:62]</span>
-                <span class="scenario-name">Data-Driven - Validación de casos de borde y saldo insuficiente</span>
+                Scenario: <span>[2.2:66]</span>
+                <span class="scenario-name">Validación de montos inválidos y saldo insuficiente - Data Driven</span>
                 <span></span>
               </div>
             </div>
-            <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>566</span>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>569</span>
             </div>
           </div>
           <div class="step-row">
-            <div class="step-container" id="[2.2:62]bg">
+            <div class="step-container" id="[2.2:66]bg">
               <div class="step-ref bg-step">&gt;&gt;</div>
               <div class="step-cell passed">Background:</div>
             </div>
             <div class="time-cell passed"></div>
           </div>
-          <div data-parent="[2.2:62]bg"><div>
+          <div data-parent="[2.2:66]bg"><div>
   
 
   
@@ -2226,14 +1569,14 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
 </div>
 </div>
-          <div data-parent="[2.2:62]bg"><div>
+          <div data-parent="[2.2:66]bg"><div>
   
 
   <div class="step-row">
     <div class="step-container">
       <div class="step-ref passed"></div>
       
-      <div class="step-cell comment"># configure headers persiste Accept en TODOS los requests del feature (no solo el primero)</div>
+      <div class="step-cell comment"># configure headers garantiza que Accept: application/json persista en todos los requests del escenario</div>
     </div>
     <div class="time-cell comment"></div>            
   </div>
@@ -2261,14 +1604,14 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
 </div>
 </div>
-          <div data-parent="[2.2:62]bg"><div>
+          <div data-parent="[2.2:66]bg"><div>
   
 
   <div class="step-row">
     <div class="step-container">
       <div class="step-ref passed"></div>
       
-      <div class="step-cell comment"># Obtener customerId via login</div>
+      <div class="step-cell comment"># Login directo como prerequisito de setup (los criterios de login se validan en login.feature)</div>
     </div>
     <div class="time-cell comment"></div>            
   </div>
@@ -2278,42 +1621,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref bg-step">9</div>
       
       <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def authData = call read(&#39;login.feature@login_ok&#39;)</span>
-      </div>
-    </div>
-    <div class="time-cell passed">194</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  <div>
-        
-    <div class="step-row">
-      <div class="step-container" id="2.9.0.call">
-        <div class="step-ref bg-step">&gt;&gt;</div>
-        <div class="step-indent"></div>
-        <div class="step-cell passed">org.udea.parabank.login</div>
-      </div>
-      <div class="time-cell passed">181</div>
-    </div>
-    <div>
-      <div><div>
-  
-
-  
-
-  <div class="step-row" data-parent="2.9.0.call">
-    <div class="step-container" id="2.9.0.call.0.5">
-      <div class="step-ref bg-step">5</div>
-      <div class="step-indent"></div>
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>url baseUrl</span>
+        <span>Given</span>&nbsp;<span>path &#39;login&#39;, &#39;john&#39;, &#39;demo&#39;</span>
       </div>
     </div>
     <div class="time-cell passed">0</div>
@@ -2331,132 +1639,20 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
 </div>
 </div>
-      <div><div>
+          <div data-parent="[2.2:66]bg"><div>
   
 
   
 
-  <div class="step-row" data-parent="2.9.0.call">
-    <div class="step-container" id="2.9.0.call.0.6">
-      <div class="step-ref bg-step">6</div>
-      <div class="step-indent"></div>
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-      <div><div>
-  
-
-  
-
-  <div class="step-row" data-parent="2.9.0.call">
-    <div class="step-container" id="2.9.0.call.0.10">
+  <div class="step-row">
+    <div class="step-container" id="2.10">
       <div class="step-ref bg-step">10</div>
-      <div class="step-indent"></div>
-      <div class="step-cell passed">
-        <span>Given</span>&nbsp;<span>path &#39;login&#39;</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-      <div><div>
-  
-
-  
-
-  <div class="step-row" data-parent="2.9.0.call">
-    <div class="step-container" id="2.9.0.call.0.11">
-      <div class="step-ref bg-step">11</div>
-      <div class="step-indent"></div>
-      <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>path &#39;john&#39; //userName</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-      <div><div>
-  
-
-  
-
-  <div class="step-row" data-parent="2.9.0.call">
-    <div class="step-container" id="2.9.0.call.0.12">
-      <div class="step-ref bg-step">12</div>
-      <div class="step-indent"></div>
-      <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>path &#39;demo&#39; //password</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-      <div><div>
-  
-
-  
-
-  <div class="step-row" data-parent="2.9.0.call">
-    <div class="step-container" id="2.9.0.call.0.13">
-      <div class="step-ref bg-step">13</div>
-      <div class="step-indent"></div>
+      
       <div class="step-cell passed">
         <span>When</span>&nbsp;<span>method GET</span>
       </div>
     </div>
-    <div class="time-cell passed">177</div>
+    <div class="time-cell passed">191</div>
   </div>
 
    
@@ -2465,7 +1661,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="2.9.0.call.0.13">19:29:59.321 request:
+  <div class="preformatted" data-parent="2.10">19:59:10.947 request:
 1 &gt; GET https://parabank.parasoft.com/parabank/services/bank/login/john/demo
 1 &gt; Accept: application/json
 1 &gt; Host: parabank.parasoft.com
@@ -2474,16 +1670,16 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 1 &gt; Accept-Encoding: gzip,deflate
 
 
-19:29:59.495 response time in milliseconds: 174
+19:59:11.134 response time in milliseconds: 186
 1 &lt; 200
-1 &lt; Date: Thu, 21 May 2026 00:29:58 GMT
+1 &lt; Date: Thu, 21 May 2026 00:59:09 GMT
 1 &lt; Content-Type: application/json
 1 &lt; Transfer-Encoding: chunked
 1 &lt; Connection: keep-alive
 1 &lt; Server: cloudflare
 1 &lt; cf-cache-status: DYNAMIC
 1 &lt; X-Content-Type-Options: nosniff
-1 &lt; CF-RAY: 9fef78468ffeb6fd-BOG
+1 &lt; CF-RAY: 9fefa30a59bcb6ef-BOG
 {&quot;id&quot;:12212,&quot;firstName&quot;:&quot;John&quot;,&quot;lastName&quot;:&quot;Smith&quot;,&quot;address&quot;:{&quot;street&quot;:&quot;1431 Main St&quot;,&quot;city&quot;:&quot;Beverly Hills&quot;,&quot;state&quot;:&quot;CA&quot;,&quot;zipCode&quot;:&quot;90210&quot;},&quot;phoneNumber&quot;:&quot;310-447-4121&quot;,&quot;ssn&quot;:&quot;622-11-9999&quot;}
 
 </div>   
@@ -2492,15 +1688,15 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
 </div>
 </div>
-      <div><div>
+          <div data-parent="[2.2:66]bg"><div>
   
 
   
 
-  <div class="step-row" data-parent="2.9.0.call">
-    <div class="step-container" id="2.9.0.call.0.14">
-      <div class="step-ref bg-step">14</div>
-      <div class="step-indent"></div>
+  <div class="step-row">
+    <div class="step-container" id="2.11">
+      <div class="step-ref bg-step">11</div>
+      
       <div class="step-cell passed">
         <span>Then</span>&nbsp;<span>status 200</span>
       </div>
@@ -2520,167 +1716,15 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
 </div>
 </div>
-      <div><div>
+          <div data-parent="[2.2:66]bg"><div>
   
 
   
 
-  <div class="step-row" data-parent="2.9.0.call">
-    <div class="step-container" id="2.9.0.call.0.15">
-      <div class="step-ref bg-step">15</div>
-      <div class="step-indent"></div>
-      <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>match response ==</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  <div class="preformatted" data-parent="2.9.0.call.0.15">{
-   &quot;id&quot;: &#39;#number&#39;,
-   &quot;firstName&quot;: &#39;#string&#39;,
-   &quot;lastName&quot;: &#39;#string&#39;,
-   &quot;address&quot;: {
-        &quot;street&quot;: &#39;#string&#39;,
-        &quot;city&quot;: &#39;#string&#39;,
-        &quot;state&quot;: &#39;#string&#39;,
-        &quot;zipCode&quot;: &#39;#string&#39;
-    },
-   &quot;phoneNumber&quot;: &#39;#string&#39;,
-   &quot;ssn&quot;: &#39;#string&#39;
-}</div>
-
-  
-
-     
-
-  
-
-</div>
-</div>
-      <div><div>
-  
-
-  
-
-  <div class="step-row" data-parent="2.9.0.call">
-    <div class="step-container" id="2.9.0.call.0.31">
-      <div class="step-ref bg-step">31</div>
-      <div class="step-indent"></div>
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>match header Content-Type contains &#39;application/json&#39;</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-      <div><div>
-  
-
-  <div class="step-row" data-parent="2.9.0.call">
-    <div class="step-container">
-      <div class="step-ref passed"></div>
-      <div class="step-indent"></div>
-      <div class="step-cell comment"># DEFECTO DOCUMENTADO: El endpoint REST /login/{user}/{pass} no emite Set-Cookie/JSESSIONID.</div>
-    </div>
-    <div class="time-cell comment"></div>            
-  </div>
-
-  <div class="step-row" data-parent="2.9.0.call">
-    <div class="step-container">
-      <div class="step-ref passed"></div>
-      <div class="step-indent"></div>
-      <div class="step-cell comment"># La sesión solo se crea via formulario HTML (/login.htm), no via el API REST.</div>
-    </div>
-    <div class="time-cell comment"></div>            
-  </div>
-
-  <div class="step-row" data-parent="2.9.0.call">
-    <div class="step-container">
-      <div class="step-ref passed"></div>
-      <div class="step-indent"></div>
-      <div class="step-cell comment"># Criterio de aceptación exige JSESSIONID, pero la API no lo provee en este endpoint.</div>
-    </div>
-    <div class="time-cell comment"></div>            
-  </div>
-
-  <div class="step-row" data-parent="2.9.0.call">
-    <div class="step-container" id="2.9.0.call.0.36">
-      <div class="step-ref bg-step">36</div>
-      <div class="step-indent"></div>
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def setCookie = responseHeaders[&#39;Set-Cookie&#39;]</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-      <div><div>
-  
-
-  
-
-  <div class="step-row" data-parent="2.9.0.call">
-    <div class="step-container" id="2.9.0.call.0.37">
-      <div class="step-ref bg-step">37</div>
-      <div class="step-indent"></div>
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>print &#39;Set-Cookie (DEFECTO - esperado JSESSIONID, no presente en REST login):&#39;, setCookie</span>
-      </div>
-    </div>
-    <div class="time-cell passed">1</div>
-  </div>
-
-   
-  
-  
-
-  
-
-  <div class="preformatted" data-parent="2.9.0.call.0.37">19:29:59.498 [print] Set-Cookie (DEFECTO - esperado JSESSIONID, no presente en REST login): [
-]
- 
-</div>   
-
-  
-
-</div>
-</div>
-      <div><div>
-  
-
-  
-
-  <div class="step-row" data-parent="2.9.0.call">
-    <div class="step-container" id="2.9.0.call.0.39">
-      <div class="step-ref bg-step">39</div>
-      <div class="step-indent"></div>
+  <div class="step-row">
+    <div class="step-container" id="2.12">
+      <div class="step-ref bg-step">12</div>
+      
       <div class="step-cell passed">
         <span>*</span>&nbsp;<span>def customerId = response.id</span>
       </div>
@@ -2700,54 +1744,21 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
 </div>
 </div>
-    </div>    
-  </div>
-
-</div>
-</div>
-          <div data-parent="[2.2:62]bg"><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="2.10">
-      <div class="step-ref bg-step">10</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def customerId = authData.customerId</span>
-      </div>
-    </div>
-    <div class="time-cell passed">1</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div data-parent="[2.2:62]bg"><div>
+          <div data-parent="[2.2:66]bg"><div>
   
 
   <div class="step-row">
     <div class="step-container">
       <div class="step-ref passed"></div>
       
-      <div class="step-cell comment"># Obtener accountId y saldo disponible DINÁMICAMENTE</div>
+      <div class="step-cell comment"># Obtener accountId y saldo disponible DINÁMICAMENTE desde el endpoint de cuentas</div>
     </div>
     <div class="time-cell comment"></div>            
   </div>
 
   <div class="step-row">
-    <div class="step-container" id="2.12">
-      <div class="step-ref bg-step">12</div>
+    <div class="step-container" id="2.14">
+      <div class="step-ref bg-step">14</div>
       
       <div class="step-cell passed">
         <span>Given</span>&nbsp;<span>path &#39;customers&#39;, customerId, &#39;accounts&#39;</span>
@@ -2768,20 +1779,20 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
 </div>
 </div>
-          <div data-parent="[2.2:62]bg"><div>
+          <div data-parent="[2.2:66]bg"><div>
   
 
   
 
   <div class="step-row">
-    <div class="step-container" id="2.13">
-      <div class="step-ref bg-step">13</div>
+    <div class="step-container" id="2.15">
+      <div class="step-ref bg-step">15</div>
       
       <div class="step-cell passed">
         <span>When</span>&nbsp;<span>method GET</span>
       </div>
     </div>
-    <div class="time-cell passed">179</div>
+    <div class="time-cell passed">185</div>
   </div>
 
    
@@ -2790,26 +1801,26 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="2.13">19:29:59.503 request:
-1 &gt; GET https://parabank.parasoft.com/parabank/services/bank/customers/12212/accounts
-1 &gt; Accept: application/json
-1 &gt; Host: parabank.parasoft.com
-1 &gt; Connection: Keep-Alive
-1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
-1 &gt; Accept-Encoding: gzip,deflate
+  <div class="preformatted" data-parent="2.15">19:59:11.139 request:
+2 &gt; GET https://parabank.parasoft.com/parabank/services/bank/customers/12212/accounts
+2 &gt; Accept: application/json
+2 &gt; Host: parabank.parasoft.com
+2 &gt; Connection: Keep-Alive
+2 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
+2 &gt; Accept-Encoding: gzip,deflate
 
 
-19:29:59.679 response time in milliseconds: 175
-1 &lt; 200
-1 &lt; Date: Thu, 21 May 2026 00:29:58 GMT
-1 &lt; Content-Type: application/json
-1 &lt; Transfer-Encoding: chunked
-1 &lt; Connection: keep-alive
-1 &lt; Server: cloudflare
-1 &lt; cf-cache-status: DYNAMIC
-1 &lt; X-Content-Type-Options: nosniff
-1 &lt; CF-RAY: 9fef7847af8eb6f6-BOG
-[{&quot;id&quot;:13344,&quot;customerId&quot;:12212,&quot;type&quot;:&quot;CHECKING&quot;,&quot;balance&quot;:-19994865.07}]
+19:59:11.321 response time in milliseconds: 182
+2 &lt; 200
+2 &lt; Date: Thu, 21 May 2026 00:59:10 GMT
+2 &lt; Content-Type: application/json
+2 &lt; Transfer-Encoding: chunked
+2 &lt; Connection: keep-alive
+2 &lt; Server: cloudflare
+2 &lt; cf-cache-status: DYNAMIC
+2 &lt; X-Content-Type-Options: nosniff
+2 &lt; CF-RAY: 9fefa30b7d10b6f5-BOG
+[{&quot;id&quot;:13344,&quot;customerId&quot;:12212,&quot;type&quot;:&quot;CHECKING&quot;,&quot;balance&quot;:-69994660.07}]
 
 </div>   
 
@@ -2817,14 +1828,14 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
 </div>
 </div>
-          <div data-parent="[2.2:62]bg"><div>
+          <div data-parent="[2.2:66]bg"><div>
   
 
   
 
   <div class="step-row">
-    <div class="step-container" id="2.14">
-      <div class="step-ref bg-step">14</div>
+    <div class="step-container" id="2.16">
+      <div class="step-ref bg-step">16</div>
       
       <div class="step-cell passed">
         <span>Then</span>&nbsp;<span>status 200</span>
@@ -2845,14 +1856,14 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
 </div>
 </div>
-          <div data-parent="[2.2:62]bg"><div>
+          <div data-parent="[2.2:66]bg"><div>
   
 
   
 
   <div class="step-row">
-    <div class="step-container" id="2.15">
-      <div class="step-ref bg-step">15</div>
+    <div class="step-container" id="2.17">
+      <div class="step-ref bg-step">17</div>
       
       <div class="step-cell passed">
         <span>*</span>&nbsp;<span>def accountId = response[0].id</span>
@@ -2873,17 +1884,17 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
 </div>
 </div>
-          <div data-parent="[2.2:62]bg"><div>
+          <div data-parent="[2.2:66]bg"><div>
   
 
   
 
   <div class="step-row">
-    <div class="step-container" id="2.16">
-      <div class="step-ref bg-step">16</div>
+    <div class="step-container" id="2.18">
+      <div class="step-ref bg-step">18</div>
       
       <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def availableBalance = response[0].balance</span>
+        <span>*</span>&nbsp;<span>def saldoDisponible = response[0].balance</span>
       </div>
     </div>
     <div class="time-cell passed">1</div>
@@ -2901,21 +1912,21 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
 </div>
 </div>
-          <div data-parent="[2.2:62]bg"><div>
+          <div data-parent="[2.2:66]bg"><div>
   
 
   <div class="step-row">
     <div class="step-container">
       <div class="step-ref passed"></div>
       
-      <div class="step-cell comment"># Payee válido (XML requerido por la API de Parabank)</div>
+      <div class="step-cell comment"># Payee válido en formato XML (requerido por la API de Parabank - no acepta JSON en este endpoint)</div>
     </div>
     <div class="time-cell comment"></div>            
   </div>
 
   <div class="step-row">
-    <div class="step-container" id="2.19">
-      <div class="step-ref bg-step">19</div>
+    <div class="step-container" id="2.21">
+      <div class="step-ref bg-step">21</div>
       
       <div class="step-cell passed">
         <span>*</span>&nbsp;<span>def payeeXml =</span>
@@ -2926,13 +1937,13 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
    
   
-  <div class="preformatted" data-parent="2.19">&lt;payee&gt;
-  &lt;name&gt;Test Payee&lt;/name&gt;
+  <div class="preformatted" data-parent="2.21">&lt;payee&gt;
+  &lt;name&gt;Proveedor de Prueba&lt;/name&gt;
   &lt;address&gt;
-    &lt;street&gt;123 Main St&lt;/street&gt;
-    &lt;city&gt;Beverly Hills&lt;/city&gt;
-    &lt;state&gt;CA&lt;/state&gt;
-    &lt;zipCode&gt;90210&lt;/zipCode&gt;
+    &lt;street&gt;Calle 123&lt;/street&gt;
+    &lt;city&gt;Medellín&lt;/city&gt;
+    &lt;state&gt;ANT&lt;/state&gt;
+    &lt;zipCode&gt;050001&lt;/zipCode&gt;
   &lt;/address&gt;
   &lt;phoneNumber&gt;310-000-0000&lt;/phoneNumber&gt;
   &lt;accountNumber&gt;9999&lt;/accountNumber&gt;
@@ -2954,7 +1965,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
     <div class="step-container">
       <div class="step-ref passed"></div>
       
-      <div class="step-cell comment"># El criterio de aceptación espera 400 Bad Request para montos inválidos y saldo insuficiente.</div>
+      <div class="step-cell comment"># El criterio de aceptación exige que la API retorne 400 Bad Request (error de lógica de negocio)</div>
     </div>
     <div class="time-cell comment"></div>            
   </div>
@@ -2963,7 +1974,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
     <div class="step-container">
       <div class="step-ref passed"></div>
       
-      <div class="step-cell comment"># DEFECTO DOCUMENTADO: La API no valida montos y retorna 200 en todos los casos de borde.</div>
+      <div class="step-cell comment"># para montos inválidos o superiores al saldo disponible, con un mensaje de error descriptivo.</div>
     </div>
     <div class="time-cell comment"></div>            
   </div>
@@ -2972,101 +1983,26 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
     <div class="step-container">
       <div class="step-ref passed"></div>
       
-      <div class="step-cell comment"># Los mensajes de error descriptivos esperados por el criterio no son provistos por la API.</div>
+      <div class="step-cell comment"># DEFECTO DEL API: La API no valida el monto y retorna 200 OK en todos los casos de borde,</div>
     </div>
     <div class="time-cell comment"></div>            
   </div>
 
   <div class="step-row">
-    <div class="step-container" id="2.50">
-      <div class="step-ref passed">50</div>
+    <div class="step-container">
+      <div class="step-ref passed"></div>
       
-      <div class="step-cell passed">
-        <span>Given</span>&nbsp;<span>path &#39;billpay&#39;</span>
-      </div>
+      <div class="step-cell comment"># aceptando pagos con monto cero, negativo y mayor al saldo sin ninguna validación.</div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell comment"></div>            
   </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="2.51">
-      <div class="step-ref passed">51</div>
-      
-      <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>param accountId = accountId</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="2.52">
-      <div class="step-ref passed">52</div>
-      
-      <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>param amount = -50</span>
-      </div>
-    </div>
-    <div class="time-cell passed">2</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
 
   <div class="step-row">
     <div class="step-container" id="2.53">
       <div class="step-ref passed">53</div>
       
       <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>header Content-Type = &#39;application/xml&#39;</span>
+        <span>Given</span>&nbsp;<span>path &#39;billpay&#39;</span>
       </div>
     </div>
     <div class="time-cell passed">0</div>
@@ -3094,7 +2030,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref passed">54</div>
       
       <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>request payeeXml</span>
+        <span>And</span>&nbsp;<span>param accountId = accountId</span>
       </div>
     </div>
     <div class="time-cell passed">0</div>
@@ -3122,10 +2058,10 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref passed">55</div>
       
       <div class="step-cell passed">
-        <span>When</span>&nbsp;<span>method POST</span>
+        <span>And</span>&nbsp;<span>param amount = -50</span>
       </div>
     </div>
-    <div class="time-cell passed">184</div>
+    <div class="time-cell passed">2</div>
   </div>
 
    
@@ -3134,41 +2070,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="2.55">19:29:59.691 request:
-2 &gt; POST https://parabank.parasoft.com/parabank/services/bank/billpay?accountId=13344&amp;amount=-50
-2 &gt; Content-Type: application/xml; charset=UTF-8
-2 &gt; Accept: application/json
-2 &gt; Content-Length: 316
-2 &gt; Host: parabank.parasoft.com
-2 &gt; Connection: Keep-Alive
-2 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
-2 &gt; Accept-Encoding: gzip,deflate
-&lt;payee&gt;
-  &lt;name&gt;Test Payee&lt;/name&gt;
-  &lt;address&gt;
-    &lt;street&gt;123 Main St&lt;/street&gt;
-    &lt;city&gt;Beverly Hills&lt;/city&gt;
-    &lt;state&gt;CA&lt;/state&gt;
-    &lt;zipCode&gt;90210&lt;/zipCode&gt;
-  &lt;/address&gt;
-  &lt;phoneNumber&gt;310-000-0000&lt;/phoneNumber&gt;
-  &lt;accountNumber&gt;9999&lt;/accountNumber&gt;
-  &lt;routingNumber&gt;111000025&lt;/routingNumber&gt;
-&lt;/payee&gt;
-
-19:29:59.871 response time in milliseconds: 180
-2 &lt; 200
-2 &lt; Date: Thu, 21 May 2026 00:29:58 GMT
-2 &lt; Content-Type: application/json
-2 &lt; Transfer-Encoding: chunked
-2 &lt; Connection: keep-alive
-2 &lt; Server: cloudflare
-2 &lt; cf-cache-status: DYNAMIC
-2 &lt; X-Content-Type-Options: nosniff
-2 &lt; CF-RAY: 9fef7848dbccb6fd-BOG
-{&quot;payeeName&quot;:&quot;Test Payee&quot;,&quot;amount&quot;:-50,&quot;accountId&quot;:13344}
-
-</div>   
+     
 
   
 
@@ -3177,21 +2079,14 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
           <div><div>
   
 
-  <div class="step-row">
-    <div class="step-container">
-      <div class="step-ref passed"></div>
-      
-      <div class="step-cell comment"># DEFECTO: Debería retornar 400, pero la API retorna &lt;actualStatus&gt; sin validar &lt;descripcion&gt;</div>
-    </div>
-    <div class="time-cell comment"></div>            
-  </div>
+  
 
   <div class="step-row">
-    <div class="step-container" id="2.57">
-      <div class="step-ref passed">57</div>
+    <div class="step-container" id="2.56">
+      <div class="step-ref passed">56</div>
       
       <div class="step-cell passed">
-        <span>Then</span>&nbsp;<span>status 200</span>
+        <span>And</span>&nbsp;<span>header Content-Type = &#39;application/xml&#39;</span>
       </div>
     </div>
     <div class="time-cell passed">0</div>
@@ -3209,31 +2104,154 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
 </div>
 </div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.57">
+      <div class="step-ref passed">57</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request payeeXml</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.58">
+      <div class="step-ref passed">58</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">184</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="2.58">19:59:11.334 request:
+3 &gt; POST https://parabank.parasoft.com/parabank/services/bank/billpay?accountId=13344&amp;amount=-50
+3 &gt; Content-Type: application/xml; charset=UTF-8
+3 &gt; Accept: application/json
+3 &gt; Content-Length: 321
+3 &gt; Host: parabank.parasoft.com
+3 &gt; Connection: Keep-Alive
+3 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
+3 &gt; Accept-Encoding: gzip,deflate
+&lt;payee&gt;
+  &lt;name&gt;Proveedor de Prueba&lt;/name&gt;
+  &lt;address&gt;
+    &lt;street&gt;Calle 123&lt;/street&gt;
+    &lt;city&gt;Medellín&lt;/city&gt;
+    &lt;state&gt;ANT&lt;/state&gt;
+    &lt;zipCode&gt;050001&lt;/zipCode&gt;
+  &lt;/address&gt;
+  &lt;phoneNumber&gt;310-000-0000&lt;/phoneNumber&gt;
+  &lt;accountNumber&gt;9999&lt;/accountNumber&gt;
+  &lt;routingNumber&gt;111000025&lt;/routingNumber&gt;
+&lt;/payee&gt;
+
+19:59:11.513 response time in milliseconds: 178
+3 &lt; 200
+3 &lt; Date: Thu, 21 May 2026 00:59:10 GMT
+3 &lt; Content-Type: application/json
+3 &lt; Transfer-Encoding: chunked
+3 &lt; Connection: keep-alive
+3 &lt; Server: cloudflare
+3 &lt; cf-cache-status: DYNAMIC
+3 &lt; X-Content-Type-Options: nosniff
+3 &lt; CF-RAY: 9fefa30cb81fb6ff-BOG
+{&quot;payeeName&quot;:&quot;Proveedor de Prueba&quot;,&quot;amount&quot;:-50,&quot;accountId&quot;:13344}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.59">
+      <div class="step-ref failed">59</div>
+      
+      <div class="step-cell failed">
+        <span>Then</span>&nbsp;<span>status 400</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="2.59">19:59:11.515 classpath:org/udea/parabank/BillPay.feature:59
+Then status 400
+status code was: 200, expected: 400, response time in milliseconds: 178, url: https://parabank.parasoft.com/parabank/services/bank/billpay?accountId=13344&amp;amount=-50, response: 
+{&quot;payeeName&quot;:&quot;Proveedor de Prueba&quot;,&quot;amount&quot;:-50,&quot;accountId&quot;:13344}
+classpath:org/udea/parabank/BillPay.feature:59
+</div>   
+
+  
+
+</div>
+</div>
         </div>
         <div class="scenario">
-          <div class="scenario-heading" id="[2.3:63]">
+          <div class="scenario-heading" id="[2.3:67]">
             <div class="heading-container">
               <div class="scenario-tags">
                 <a class="badge badge-primary" href="karate-tags.html">parabank_billpay</a>
               </div>
               <div class="scenario-keyword">
-                Scenario: <span>[2.3:63]</span>
-                <span class="scenario-name">Data-Driven - Validación de casos de borde y saldo insuficiente</span>
+                Scenario: <span>[2.3:67]</span>
+                <span class="scenario-name">Validación de montos inválidos y saldo insuficiente - Data Driven</span>
                 <span></span>
               </div>
             </div>
-            <div class="scenario-time passed">
+            <div class="scenario-time failed">
               <span>ms:</span>&nbsp;<span>572</span>
             </div>
           </div>
           <div class="step-row">
-            <div class="step-container" id="[2.3:63]bg">
+            <div class="step-container" id="[2.3:67]bg">
               <div class="step-ref bg-step">&gt;&gt;</div>
               <div class="step-cell passed">Background:</div>
             </div>
             <div class="time-cell passed"></div>
           </div>
-          <div data-parent="[2.3:63]bg"><div>
+          <div data-parent="[2.3:67]bg"><div>
   
 
   
@@ -3261,14 +2279,14 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
 </div>
 </div>
-          <div data-parent="[2.3:63]bg"><div>
+          <div data-parent="[2.3:67]bg"><div>
   
 
   <div class="step-row">
     <div class="step-container">
       <div class="step-ref passed"></div>
       
-      <div class="step-cell comment"># configure headers persiste Accept en TODOS los requests del feature (no solo el primero)</div>
+      <div class="step-cell comment"># configure headers garantiza que Accept: application/json persista en todos los requests del escenario</div>
     </div>
     <div class="time-cell comment"></div>            
   </div>
@@ -3296,14 +2314,14 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
 </div>
 </div>
-          <div data-parent="[2.3:63]bg"><div>
+          <div data-parent="[2.3:67]bg"><div>
   
 
   <div class="step-row">
     <div class="step-container">
       <div class="step-ref passed"></div>
       
-      <div class="step-cell comment"># Obtener customerId via login</div>
+      <div class="step-cell comment"># Login directo como prerequisito de setup (los criterios de login se validan en login.feature)</div>
     </div>
     <div class="time-cell comment"></div>            
   </div>
@@ -3313,45 +2331,10 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref bg-step">9</div>
       
       <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def authData = call read(&#39;login.feature@login_ok&#39;)</span>
+        <span>Given</span>&nbsp;<span>path &#39;login&#39;, &#39;john&#39;, &#39;demo&#39;</span>
       </div>
     </div>
-    <div class="time-cell passed">192</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  <div>
-        
-    <div class="step-row">
-      <div class="step-container" id="3.9.0.call">
-        <div class="step-ref bg-step">&gt;&gt;</div>
-        <div class="step-indent"></div>
-        <div class="step-cell passed">org.udea.parabank.login</div>
-      </div>
-      <div class="time-cell passed">181</div>
-    </div>
-    <div>
-      <div><div>
-  
-
-  
-
-  <div class="step-row" data-parent="3.9.0.call">
-    <div class="step-container" id="3.9.0.call.0.5">
-      <div class="step-ref bg-step">5</div>
-      <div class="step-indent"></div>
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>url baseUrl</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell passed">1</div>
   </div>
 
    
@@ -3366,132 +2349,20 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
 </div>
 </div>
-      <div><div>
+          <div data-parent="[2.3:67]bg"><div>
   
 
   
 
-  <div class="step-row" data-parent="3.9.0.call">
-    <div class="step-container" id="3.9.0.call.0.6">
-      <div class="step-ref bg-step">6</div>
-      <div class="step-indent"></div>
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-      <div><div>
-  
-
-  
-
-  <div class="step-row" data-parent="3.9.0.call">
-    <div class="step-container" id="3.9.0.call.0.10">
+  <div class="step-row">
+    <div class="step-container" id="3.10">
       <div class="step-ref bg-step">10</div>
-      <div class="step-indent"></div>
-      <div class="step-cell passed">
-        <span>Given</span>&nbsp;<span>path &#39;login&#39;</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-      <div><div>
-  
-
-  
-
-  <div class="step-row" data-parent="3.9.0.call">
-    <div class="step-container" id="3.9.0.call.0.11">
-      <div class="step-ref bg-step">11</div>
-      <div class="step-indent"></div>
-      <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>path &#39;john&#39; //userName</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-      <div><div>
-  
-
-  
-
-  <div class="step-row" data-parent="3.9.0.call">
-    <div class="step-container" id="3.9.0.call.0.12">
-      <div class="step-ref bg-step">12</div>
-      <div class="step-indent"></div>
-      <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>path &#39;demo&#39; //password</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-      <div><div>
-  
-
-  
-
-  <div class="step-row" data-parent="3.9.0.call">
-    <div class="step-container" id="3.9.0.call.0.13">
-      <div class="step-ref bg-step">13</div>
-      <div class="step-indent"></div>
+      
       <div class="step-cell passed">
         <span>When</span>&nbsp;<span>method GET</span>
       </div>
     </div>
-    <div class="time-cell passed">178</div>
+    <div class="time-cell passed">186</div>
   </div>
 
    
@@ -3500,7 +2371,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="3.9.0.call.0.13">19:29:59.896 request:
+  <div class="preformatted" data-parent="3.10">19:59:11.534 request:
 1 &gt; GET https://parabank.parasoft.com/parabank/services/bank/login/john/demo
 1 &gt; Accept: application/json
 1 &gt; Host: parabank.parasoft.com
@@ -3509,16 +2380,16 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 1 &gt; Accept-Encoding: gzip,deflate
 
 
-19:30:00.071 response time in milliseconds: 174
+19:59:11.716 response time in milliseconds: 182
 1 &lt; 200
-1 &lt; Date: Thu, 21 May 2026 00:29:58 GMT
+1 &lt; Date: Thu, 21 May 2026 00:59:10 GMT
 1 &lt; Content-Type: application/json
 1 &lt; Transfer-Encoding: chunked
 1 &lt; Connection: keep-alive
 1 &lt; Server: cloudflare
 1 &lt; cf-cache-status: DYNAMIC
 1 &lt; X-Content-Type-Options: nosniff
-1 &lt; CF-RAY: 9fef784a2885b6f2-BOG
+1 &lt; CF-RAY: 9fefa30dfb94b6f9-BOG
 {&quot;id&quot;:12212,&quot;firstName&quot;:&quot;John&quot;,&quot;lastName&quot;:&quot;Smith&quot;,&quot;address&quot;:{&quot;street&quot;:&quot;1431 Main St&quot;,&quot;city&quot;:&quot;Beverly Hills&quot;,&quot;state&quot;:&quot;CA&quot;,&quot;zipCode&quot;:&quot;90210&quot;},&quot;phoneNumber&quot;:&quot;310-447-4121&quot;,&quot;ssn&quot;:&quot;622-11-9999&quot;}
 
 </div>   
@@ -3527,15 +2398,15 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
 </div>
 </div>
-      <div><div>
+          <div data-parent="[2.3:67]bg"><div>
   
 
   
 
-  <div class="step-row" data-parent="3.9.0.call">
-    <div class="step-container" id="3.9.0.call.0.14">
-      <div class="step-ref bg-step">14</div>
-      <div class="step-indent"></div>
+  <div class="step-row">
+    <div class="step-container" id="3.11">
+      <div class="step-ref bg-step">11</div>
+      
       <div class="step-cell passed">
         <span>Then</span>&nbsp;<span>status 200</span>
       </div>
@@ -3555,234 +2426,49 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
 </div>
 </div>
-      <div><div>
+          <div data-parent="[2.3:67]bg"><div>
   
 
   
-
-  <div class="step-row" data-parent="3.9.0.call">
-    <div class="step-container" id="3.9.0.call.0.15">
-      <div class="step-ref bg-step">15</div>
-      <div class="step-indent"></div>
-      <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>match response ==</span>
-      </div>
-    </div>
-    <div class="time-cell passed">1</div>
-  </div>
-
-   
-  
-  <div class="preformatted" data-parent="3.9.0.call.0.15">{
-   &quot;id&quot;: &#39;#number&#39;,
-   &quot;firstName&quot;: &#39;#string&#39;,
-   &quot;lastName&quot;: &#39;#string&#39;,
-   &quot;address&quot;: {
-        &quot;street&quot;: &#39;#string&#39;,
-        &quot;city&quot;: &#39;#string&#39;,
-        &quot;state&quot;: &#39;#string&#39;,
-        &quot;zipCode&quot;: &#39;#string&#39;
-    },
-   &quot;phoneNumber&quot;: &#39;#string&#39;,
-   &quot;ssn&quot;: &#39;#string&#39;
-}</div>
-
-  
-
-     
-
-  
-
-</div>
-</div>
-      <div><div>
-  
-
-  
-
-  <div class="step-row" data-parent="3.9.0.call">
-    <div class="step-container" id="3.9.0.call.0.31">
-      <div class="step-ref bg-step">31</div>
-      <div class="step-indent"></div>
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>match header Content-Type contains &#39;application/json&#39;</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-      <div><div>
-  
-
-  <div class="step-row" data-parent="3.9.0.call">
-    <div class="step-container">
-      <div class="step-ref passed"></div>
-      <div class="step-indent"></div>
-      <div class="step-cell comment"># DEFECTO DOCUMENTADO: El endpoint REST /login/{user}/{pass} no emite Set-Cookie/JSESSIONID.</div>
-    </div>
-    <div class="time-cell comment"></div>            
-  </div>
-
-  <div class="step-row" data-parent="3.9.0.call">
-    <div class="step-container">
-      <div class="step-ref passed"></div>
-      <div class="step-indent"></div>
-      <div class="step-cell comment"># La sesión solo se crea via formulario HTML (/login.htm), no via el API REST.</div>
-    </div>
-    <div class="time-cell comment"></div>            
-  </div>
-
-  <div class="step-row" data-parent="3.9.0.call">
-    <div class="step-container">
-      <div class="step-ref passed"></div>
-      <div class="step-indent"></div>
-      <div class="step-cell comment"># Criterio de aceptación exige JSESSIONID, pero la API no lo provee en este endpoint.</div>
-    </div>
-    <div class="time-cell comment"></div>            
-  </div>
-
-  <div class="step-row" data-parent="3.9.0.call">
-    <div class="step-container" id="3.9.0.call.0.36">
-      <div class="step-ref bg-step">36</div>
-      <div class="step-indent"></div>
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def setCookie = responseHeaders[&#39;Set-Cookie&#39;]</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-      <div><div>
-  
-
-  
-
-  <div class="step-row" data-parent="3.9.0.call">
-    <div class="step-container" id="3.9.0.call.0.37">
-      <div class="step-ref bg-step">37</div>
-      <div class="step-indent"></div>
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>print &#39;Set-Cookie (DEFECTO - esperado JSESSIONID, no presente en REST login):&#39;, setCookie</span>
-      </div>
-    </div>
-    <div class="time-cell passed">1</div>
-  </div>
-
-   
-  
-  
-
-  
-
-  <div class="preformatted" data-parent="3.9.0.call.0.37">19:30:00.074 [print] Set-Cookie (DEFECTO - esperado JSESSIONID, no presente en REST login): [
-]
- 
-</div>   
-
-  
-
-</div>
-</div>
-      <div><div>
-  
-
-  
-
-  <div class="step-row" data-parent="3.9.0.call">
-    <div class="step-container" id="3.9.0.call.0.39">
-      <div class="step-ref bg-step">39</div>
-      <div class="step-indent"></div>
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def customerId = response.id</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-    </div>    
-  </div>
-
-</div>
-</div>
-          <div data-parent="[2.3:63]bg"><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="3.10">
-      <div class="step-ref bg-step">10</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def customerId = authData.customerId</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div data-parent="[2.3:63]bg"><div>
-  
-
-  <div class="step-row">
-    <div class="step-container">
-      <div class="step-ref passed"></div>
-      
-      <div class="step-cell comment"># Obtener accountId y saldo disponible DINÁMICAMENTE</div>
-    </div>
-    <div class="time-cell comment"></div>            
-  </div>
 
   <div class="step-row">
     <div class="step-container" id="3.12">
       <div class="step-ref bg-step">12</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def customerId = response.id</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.3:67]bg"><div>
+  
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment"># Obtener accountId y saldo disponible DINÁMICAMENTE desde el endpoint de cuentas</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container" id="3.14">
+      <div class="step-ref bg-step">14</div>
       
       <div class="step-cell passed">
         <span>Given</span>&nbsp;<span>path &#39;customers&#39;, customerId, &#39;accounts&#39;</span>
@@ -3803,14 +2489,14 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
 </div>
 </div>
-          <div data-parent="[2.3:63]bg"><div>
+          <div data-parent="[2.3:67]bg"><div>
   
 
   
 
   <div class="step-row">
-    <div class="step-container" id="3.13">
-      <div class="step-ref bg-step">13</div>
+    <div class="step-container" id="3.15">
+      <div class="step-ref bg-step">15</div>
       
       <div class="step-cell passed">
         <span>When</span>&nbsp;<span>method GET</span>
@@ -3825,26 +2511,26 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="3.13">19:30:00.078 request:
-1 &gt; GET https://parabank.parasoft.com/parabank/services/bank/customers/12212/accounts
-1 &gt; Accept: application/json
-1 &gt; Host: parabank.parasoft.com
-1 &gt; Connection: Keep-Alive
-1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
-1 &gt; Accept-Encoding: gzip,deflate
+  <div class="preformatted" data-parent="3.15">19:59:11.722 request:
+2 &gt; GET https://parabank.parasoft.com/parabank/services/bank/customers/12212/accounts
+2 &gt; Accept: application/json
+2 &gt; Host: parabank.parasoft.com
+2 &gt; Connection: Keep-Alive
+2 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
+2 &gt; Accept-Encoding: gzip,deflate
 
 
-19:30:00.262 response time in milliseconds: 184
-1 &lt; 200
-1 &lt; Date: Thu, 21 May 2026 00:29:59 GMT
-1 &lt; Content-Type: application/json
-1 &lt; Transfer-Encoding: chunked
-1 &lt; Connection: keep-alive
-1 &lt; Server: cloudflare
-1 &lt; cf-cache-status: DYNAMIC
-1 &lt; X-Content-Type-Options: nosniff
-1 &lt; CF-RAY: 9fef784b3eadb6ef-BOG
-[{&quot;id&quot;:13344,&quot;customerId&quot;:12212,&quot;type&quot;:&quot;CHECKING&quot;,&quot;balance&quot;:-19994815.07}]
+19:59:11.905 response time in milliseconds: 183
+2 &lt; 200
+2 &lt; Date: Thu, 21 May 2026 00:59:10 GMT
+2 &lt; Content-Type: application/json
+2 &lt; Transfer-Encoding: chunked
+2 &lt; Connection: keep-alive
+2 &lt; Server: cloudflare
+2 &lt; cf-cache-status: DYNAMIC
+2 &lt; X-Content-Type-Options: nosniff
+2 &lt; CF-RAY: 9fefa30f2db0b6f9-BOG
+[{&quot;id&quot;:13344,&quot;customerId&quot;:12212,&quot;type&quot;:&quot;CHECKING&quot;,&quot;balance&quot;:-69994610.07}]
 
 </div>   
 
@@ -3852,14 +2538,14 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
 </div>
 </div>
-          <div data-parent="[2.3:63]bg"><div>
+          <div data-parent="[2.3:67]bg"><div>
   
 
   
 
   <div class="step-row">
-    <div class="step-container" id="3.14">
-      <div class="step-ref bg-step">14</div>
+    <div class="step-container" id="3.16">
+      <div class="step-ref bg-step">16</div>
       
       <div class="step-cell passed">
         <span>Then</span>&nbsp;<span>status 200</span>
@@ -3880,20 +2566,20 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
 </div>
 </div>
-          <div data-parent="[2.3:63]bg"><div>
+          <div data-parent="[2.3:67]bg"><div>
   
 
   
 
   <div class="step-row">
-    <div class="step-container" id="3.15">
-      <div class="step-ref bg-step">15</div>
+    <div class="step-container" id="3.17">
+      <div class="step-ref bg-step">17</div>
       
       <div class="step-cell passed">
         <span>*</span>&nbsp;<span>def accountId = response[0].id</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell passed">1</div>
   </div>
 
    
@@ -3908,20 +2594,20 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
 </div>
 </div>
-          <div data-parent="[2.3:63]bg"><div>
+          <div data-parent="[2.3:67]bg"><div>
   
 
   
 
   <div class="step-row">
-    <div class="step-container" id="3.16">
-      <div class="step-ref bg-step">16</div>
+    <div class="step-container" id="3.18">
+      <div class="step-ref bg-step">18</div>
       
       <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def availableBalance = response[0].balance</span>
+        <span>*</span>&nbsp;<span>def saldoDisponible = response[0].balance</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell passed">1</div>
   </div>
 
    
@@ -3936,21 +2622,21 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
 </div>
 </div>
-          <div data-parent="[2.3:63]bg"><div>
+          <div data-parent="[2.3:67]bg"><div>
   
 
   <div class="step-row">
     <div class="step-container">
       <div class="step-ref passed"></div>
       
-      <div class="step-cell comment"># Payee válido (XML requerido por la API de Parabank)</div>
+      <div class="step-cell comment"># Payee válido en formato XML (requerido por la API de Parabank - no acepta JSON en este endpoint)</div>
     </div>
     <div class="time-cell comment"></div>            
   </div>
 
   <div class="step-row">
-    <div class="step-container" id="3.19">
-      <div class="step-ref bg-step">19</div>
+    <div class="step-container" id="3.21">
+      <div class="step-ref bg-step">21</div>
       
       <div class="step-cell passed">
         <span>*</span>&nbsp;<span>def payeeXml =</span>
@@ -3961,13 +2647,13 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
    
   
-  <div class="preformatted" data-parent="3.19">&lt;payee&gt;
-  &lt;name&gt;Test Payee&lt;/name&gt;
+  <div class="preformatted" data-parent="3.21">&lt;payee&gt;
+  &lt;name&gt;Proveedor de Prueba&lt;/name&gt;
   &lt;address&gt;
-    &lt;street&gt;123 Main St&lt;/street&gt;
-    &lt;city&gt;Beverly Hills&lt;/city&gt;
-    &lt;state&gt;CA&lt;/state&gt;
-    &lt;zipCode&gt;90210&lt;/zipCode&gt;
+    &lt;street&gt;Calle 123&lt;/street&gt;
+    &lt;city&gt;Medellín&lt;/city&gt;
+    &lt;state&gt;ANT&lt;/state&gt;
+    &lt;zipCode&gt;050001&lt;/zipCode&gt;
   &lt;/address&gt;
   &lt;phoneNumber&gt;310-000-0000&lt;/phoneNumber&gt;
   &lt;accountNumber&gt;9999&lt;/accountNumber&gt;
@@ -3989,7 +2675,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
     <div class="step-container">
       <div class="step-ref passed"></div>
       
-      <div class="step-cell comment"># El criterio de aceptación espera 400 Bad Request para montos inválidos y saldo insuficiente.</div>
+      <div class="step-cell comment"># El criterio de aceptación exige que la API retorne 400 Bad Request (error de lógica de negocio)</div>
     </div>
     <div class="time-cell comment"></div>            
   </div>
@@ -3998,7 +2684,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
     <div class="step-container">
       <div class="step-ref passed"></div>
       
-      <div class="step-cell comment"># DEFECTO DOCUMENTADO: La API no valida montos y retorna 200 en todos los casos de borde.</div>
+      <div class="step-cell comment"># para montos inválidos o superiores al saldo disponible, con un mensaje de error descriptivo.</div>
     </div>
     <div class="time-cell comment"></div>            
   </div>
@@ -4007,101 +2693,26 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
     <div class="step-container">
       <div class="step-ref passed"></div>
       
-      <div class="step-cell comment"># Los mensajes de error descriptivos esperados por el criterio no son provistos por la API.</div>
+      <div class="step-cell comment"># DEFECTO DEL API: La API no valida el monto y retorna 200 OK en todos los casos de borde,</div>
     </div>
     <div class="time-cell comment"></div>            
   </div>
 
   <div class="step-row">
-    <div class="step-container" id="3.50">
-      <div class="step-ref passed">50</div>
+    <div class="step-container">
+      <div class="step-ref passed"></div>
       
-      <div class="step-cell passed">
-        <span>Given</span>&nbsp;<span>path &#39;billpay&#39;</span>
-      </div>
+      <div class="step-cell comment"># aceptando pagos con monto cero, negativo y mayor al saldo sin ninguna validación.</div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell comment"></div>            
   </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="3.51">
-      <div class="step-ref passed">51</div>
-      
-      <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>param accountId = accountId</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="3.52">
-      <div class="step-ref passed">52</div>
-      
-      <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>param amount = 9999999</span>
-      </div>
-    </div>
-    <div class="time-cell passed">1</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
 
   <div class="step-row">
     <div class="step-container" id="3.53">
       <div class="step-ref passed">53</div>
       
       <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>header Content-Type = &#39;application/xml&#39;</span>
+        <span>Given</span>&nbsp;<span>path &#39;billpay&#39;</span>
       </div>
     </div>
     <div class="time-cell passed">0</div>
@@ -4129,7 +2740,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref passed">54</div>
       
       <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>request payeeXml</span>
+        <span>And</span>&nbsp;<span>param accountId = accountId</span>
       </div>
     </div>
     <div class="time-cell passed">0</div>
@@ -4157,10 +2768,10 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref passed">55</div>
       
       <div class="step-cell passed">
-        <span>When</span>&nbsp;<span>method POST</span>
+        <span>And</span>&nbsp;<span>param amount = 9999999</span>
       </div>
     </div>
-    <div class="time-cell passed">188</div>
+    <div class="time-cell passed">1</div>
   </div>
 
    
@@ -4169,41 +2780,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="3.55">19:30:00.271 request:
-2 &gt; POST https://parabank.parasoft.com/parabank/services/bank/billpay?accountId=13344&amp;amount=9999999
-2 &gt; Content-Type: application/xml; charset=UTF-8
-2 &gt; Accept: application/json
-2 &gt; Content-Length: 316
-2 &gt; Host: parabank.parasoft.com
-2 &gt; Connection: Keep-Alive
-2 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
-2 &gt; Accept-Encoding: gzip,deflate
-&lt;payee&gt;
-  &lt;name&gt;Test Payee&lt;/name&gt;
-  &lt;address&gt;
-    &lt;street&gt;123 Main St&lt;/street&gt;
-    &lt;city&gt;Beverly Hills&lt;/city&gt;
-    &lt;state&gt;CA&lt;/state&gt;
-    &lt;zipCode&gt;90210&lt;/zipCode&gt;
-  &lt;/address&gt;
-  &lt;phoneNumber&gt;310-000-0000&lt;/phoneNumber&gt;
-  &lt;accountNumber&gt;9999&lt;/accountNumber&gt;
-  &lt;routingNumber&gt;111000025&lt;/routingNumber&gt;
-&lt;/payee&gt;
-
-19:30:00.455 response time in milliseconds: 184
-2 &lt; 200
-2 &lt; Date: Thu, 21 May 2026 00:29:59 GMT
-2 &lt; Content-Type: application/json
-2 &lt; Transfer-Encoding: chunked
-2 &lt; Connection: keep-alive
-2 &lt; Server: cloudflare
-2 &lt; cf-cache-status: DYNAMIC
-2 &lt; X-Content-Type-Options: nosniff
-2 &lt; CF-RAY: 9fef784c7a10b6f7-BOG
-{&quot;payeeName&quot;:&quot;Test Payee&quot;,&quot;amount&quot;:9999999,&quot;accountId&quot;:13344}
-
-</div>   
+     
 
   
 
@@ -4212,21 +2789,14 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
           <div><div>
   
 
-  <div class="step-row">
-    <div class="step-container">
-      <div class="step-ref passed"></div>
-      
-      <div class="step-cell comment"># DEFECTO: Debería retornar 400, pero la API retorna &lt;actualStatus&gt; sin validar &lt;descripcion&gt;</div>
-    </div>
-    <div class="time-cell comment"></div>            
-  </div>
+  
 
   <div class="step-row">
-    <div class="step-container" id="3.57">
-      <div class="step-ref passed">57</div>
+    <div class="step-container" id="3.56">
+      <div class="step-ref passed">56</div>
       
       <div class="step-cell passed">
-        <span>Then</span>&nbsp;<span>status 200</span>
+        <span>And</span>&nbsp;<span>header Content-Type = &#39;application/xml&#39;</span>
       </div>
     </div>
     <div class="time-cell passed">0</div>
@@ -4244,31 +2814,154 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
 </div>
 </div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.57">
+      <div class="step-ref passed">57</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request payeeXml</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.58">
+      <div class="step-ref passed">58</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">191</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="3.58">19:59:11.914 request:
+3 &gt; POST https://parabank.parasoft.com/parabank/services/bank/billpay?accountId=13344&amp;amount=9999999
+3 &gt; Content-Type: application/xml; charset=UTF-8
+3 &gt; Accept: application/json
+3 &gt; Content-Length: 321
+3 &gt; Host: parabank.parasoft.com
+3 &gt; Connection: Keep-Alive
+3 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
+3 &gt; Accept-Encoding: gzip,deflate
+&lt;payee&gt;
+  &lt;name&gt;Proveedor de Prueba&lt;/name&gt;
+  &lt;address&gt;
+    &lt;street&gt;Calle 123&lt;/street&gt;
+    &lt;city&gt;Medellín&lt;/city&gt;
+    &lt;state&gt;ANT&lt;/state&gt;
+    &lt;zipCode&gt;050001&lt;/zipCode&gt;
+  &lt;/address&gt;
+  &lt;phoneNumber&gt;310-000-0000&lt;/phoneNumber&gt;
+  &lt;accountNumber&gt;9999&lt;/accountNumber&gt;
+  &lt;routingNumber&gt;111000025&lt;/routingNumber&gt;
+&lt;/payee&gt;
+
+19:59:12.103 response time in milliseconds: 188
+3 &lt; 200
+3 &lt; Date: Thu, 21 May 2026 00:59:10 GMT
+3 &lt; Content-Type: application/json
+3 &lt; Transfer-Encoding: chunked
+3 &lt; Connection: keep-alive
+3 &lt; Server: cloudflare
+3 &lt; cf-cache-status: DYNAMIC
+3 &lt; X-Content-Type-Options: nosniff
+3 &lt; CF-RAY: 9fefa3105ba7b6ef-BOG
+{&quot;payeeName&quot;:&quot;Proveedor de Prueba&quot;,&quot;amount&quot;:9999999,&quot;accountId&quot;:13344}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.59">
+      <div class="step-ref failed">59</div>
+      
+      <div class="step-cell failed">
+        <span>Then</span>&nbsp;<span>status 400</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="3.59">19:59:12.105 classpath:org/udea/parabank/BillPay.feature:59
+Then status 400
+status code was: 200, expected: 400, response time in milliseconds: 188, url: https://parabank.parasoft.com/parabank/services/bank/billpay?accountId=13344&amp;amount=9999999, response: 
+{&quot;payeeName&quot;:&quot;Proveedor de Prueba&quot;,&quot;amount&quot;:9999999,&quot;accountId&quot;:13344}
+classpath:org/udea/parabank/BillPay.feature:59
+</div>   
+
+  
+
+</div>
+</div>
         </div>
         <div class="scenario">
-          <div class="scenario-heading" id="[3:65]">
+          <div class="scenario-heading" id="[3:69]">
             <div class="heading-container">
               <div class="scenario-tags">
                 <a class="badge badge-primary" href="karate-tags.html">parabank_billpay</a>
               </div>
               <div class="scenario-keyword">
-                Scenario: <span>[3:65]</span>
-                <span class="scenario-name">Cuenta de origen inexistente retorna error de servidor</span>
+                Scenario: <span>[3:69]</span>
+                <span class="scenario-name">Cuenta de origen inexistente debe retornar error de negocio 400, no error interno</span>
                 <span></span>
               </div>
             </div>
-            <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>584</span>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>576</span>
             </div>
           </div>
           <div class="step-row">
-            <div class="step-container" id="[3:65]bg">
+            <div class="step-container" id="[3:69]bg">
               <div class="step-ref bg-step">&gt;&gt;</div>
               <div class="step-cell passed">Background:</div>
             </div>
             <div class="time-cell passed"></div>
           </div>
-          <div data-parent="[3:65]bg"><div>
+          <div data-parent="[3:69]bg"><div>
   
 
   
@@ -4296,14 +2989,14 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
 </div>
 </div>
-          <div data-parent="[3:65]bg"><div>
+          <div data-parent="[3:69]bg"><div>
   
 
   <div class="step-row">
     <div class="step-container">
       <div class="step-ref passed"></div>
       
-      <div class="step-cell comment"># configure headers persiste Accept en TODOS los requests del feature (no solo el primero)</div>
+      <div class="step-cell comment"># configure headers garantiza que Accept: application/json persista en todos los requests del escenario</div>
     </div>
     <div class="time-cell comment"></div>            
   </div>
@@ -4331,14 +3024,14 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
 </div>
 </div>
-          <div data-parent="[3:65]bg"><div>
+          <div data-parent="[3:69]bg"><div>
   
 
   <div class="step-row">
     <div class="step-container">
       <div class="step-ref passed"></div>
       
-      <div class="step-cell comment"># Obtener customerId via login</div>
+      <div class="step-cell comment"># Login directo como prerequisito de setup (los criterios de login se validan en login.feature)</div>
     </div>
     <div class="time-cell comment"></div>            
   </div>
@@ -4348,380 +3041,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref bg-step">9</div>
       
       <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def authData = call read(&#39;login.feature@login_ok&#39;)</span>
-      </div>
-    </div>
-    <div class="time-cell passed">209</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  <div>
-        
-    <div class="step-row">
-      <div class="step-container" id="0.9.0.call">
-        <div class="step-ref bg-step">&gt;&gt;</div>
-        <div class="step-indent"></div>
-        <div class="step-cell passed">org.udea.parabank.login</div>
-      </div>
-      <div class="time-cell passed">181</div>
-    </div>
-    <div>
-      <div><div>
-  
-
-  
-
-  <div class="step-row" data-parent="0.9.0.call">
-    <div class="step-container" id="0.9.0.call.0.5">
-      <div class="step-ref bg-step">5</div>
-      <div class="step-indent"></div>
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>url baseUrl</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-      <div><div>
-  
-
-  
-
-  <div class="step-row" data-parent="0.9.0.call">
-    <div class="step-container" id="0.9.0.call.0.6">
-      <div class="step-ref bg-step">6</div>
-      <div class="step-indent"></div>
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-      <div><div>
-  
-
-  
-
-  <div class="step-row" data-parent="0.9.0.call">
-    <div class="step-container" id="0.9.0.call.0.10">
-      <div class="step-ref bg-step">10</div>
-      <div class="step-indent"></div>
-      <div class="step-cell passed">
-        <span>Given</span>&nbsp;<span>path &#39;login&#39;</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-      <div><div>
-  
-
-  
-
-  <div class="step-row" data-parent="0.9.0.call">
-    <div class="step-container" id="0.9.0.call.0.11">
-      <div class="step-ref bg-step">11</div>
-      <div class="step-indent"></div>
-      <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>path &#39;john&#39; //userName</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-      <div><div>
-  
-
-  
-
-  <div class="step-row" data-parent="0.9.0.call">
-    <div class="step-container" id="0.9.0.call.0.12">
-      <div class="step-ref bg-step">12</div>
-      <div class="step-indent"></div>
-      <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>path &#39;demo&#39; //password</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-      <div><div>
-  
-
-  
-
-  <div class="step-row" data-parent="0.9.0.call">
-    <div class="step-container" id="0.9.0.call.0.13">
-      <div class="step-ref bg-step">13</div>
-      <div class="step-indent"></div>
-      <div class="step-cell passed">
-        <span>When</span>&nbsp;<span>method GET</span>
-      </div>
-    </div>
-    <div class="time-cell passed">178</div>
-  </div>
-
-   
-  
-  
-
-  
-
-  <div class="preformatted" data-parent="0.9.0.call.0.13">19:30:00.498 request:
-1 &gt; GET https://parabank.parasoft.com/parabank/services/bank/login/john/demo
-1 &gt; Accept: application/json
-1 &gt; Host: parabank.parasoft.com
-1 &gt; Connection: Keep-Alive
-1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
-1 &gt; Accept-Encoding: gzip,deflate
-
-
-19:30:00.674 response time in milliseconds: 174
-1 &lt; 200
-1 &lt; Date: Thu, 21 May 2026 00:29:59 GMT
-1 &lt; Content-Type: application/json
-1 &lt; Transfer-Encoding: chunked
-1 &lt; Connection: keep-alive
-1 &lt; Server: cloudflare
-1 &lt; cf-cache-status: DYNAMIC
-1 &lt; X-Content-Type-Options: nosniff
-1 &lt; CF-RAY: 9fef784deabcb6f9-BOG
-{&quot;id&quot;:12212,&quot;firstName&quot;:&quot;John&quot;,&quot;lastName&quot;:&quot;Smith&quot;,&quot;address&quot;:{&quot;street&quot;:&quot;1431 Main St&quot;,&quot;city&quot;:&quot;Beverly Hills&quot;,&quot;state&quot;:&quot;CA&quot;,&quot;zipCode&quot;:&quot;90210&quot;},&quot;phoneNumber&quot;:&quot;310-447-4121&quot;,&quot;ssn&quot;:&quot;622-11-9999&quot;}
-
-</div>   
-
-  
-
-</div>
-</div>
-      <div><div>
-  
-
-  
-
-  <div class="step-row" data-parent="0.9.0.call">
-    <div class="step-container" id="0.9.0.call.0.14">
-      <div class="step-ref bg-step">14</div>
-      <div class="step-indent"></div>
-      <div class="step-cell passed">
-        <span>Then</span>&nbsp;<span>status 200</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-      <div><div>
-  
-
-  
-
-  <div class="step-row" data-parent="0.9.0.call">
-    <div class="step-container" id="0.9.0.call.0.15">
-      <div class="step-ref bg-step">15</div>
-      <div class="step-indent"></div>
-      <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>match response ==</span>
-      </div>
-    </div>
-    <div class="time-cell passed">1</div>
-  </div>
-
-   
-  
-  <div class="preformatted" data-parent="0.9.0.call.0.15">{
-   &quot;id&quot;: &#39;#number&#39;,
-   &quot;firstName&quot;: &#39;#string&#39;,
-   &quot;lastName&quot;: &#39;#string&#39;,
-   &quot;address&quot;: {
-        &quot;street&quot;: &#39;#string&#39;,
-        &quot;city&quot;: &#39;#string&#39;,
-        &quot;state&quot;: &#39;#string&#39;,
-        &quot;zipCode&quot;: &#39;#string&#39;
-    },
-   &quot;phoneNumber&quot;: &#39;#string&#39;,
-   &quot;ssn&quot;: &#39;#string&#39;
-}</div>
-
-  
-
-     
-
-  
-
-</div>
-</div>
-      <div><div>
-  
-
-  
-
-  <div class="step-row" data-parent="0.9.0.call">
-    <div class="step-container" id="0.9.0.call.0.31">
-      <div class="step-ref bg-step">31</div>
-      <div class="step-indent"></div>
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>match header Content-Type contains &#39;application/json&#39;</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-      <div><div>
-  
-
-  <div class="step-row" data-parent="0.9.0.call">
-    <div class="step-container">
-      <div class="step-ref passed"></div>
-      <div class="step-indent"></div>
-      <div class="step-cell comment"># DEFECTO DOCUMENTADO: El endpoint REST /login/{user}/{pass} no emite Set-Cookie/JSESSIONID.</div>
-    </div>
-    <div class="time-cell comment"></div>            
-  </div>
-
-  <div class="step-row" data-parent="0.9.0.call">
-    <div class="step-container">
-      <div class="step-ref passed"></div>
-      <div class="step-indent"></div>
-      <div class="step-cell comment"># La sesión solo se crea via formulario HTML (/login.htm), no via el API REST.</div>
-    </div>
-    <div class="time-cell comment"></div>            
-  </div>
-
-  <div class="step-row" data-parent="0.9.0.call">
-    <div class="step-container">
-      <div class="step-ref passed"></div>
-      <div class="step-indent"></div>
-      <div class="step-cell comment"># Criterio de aceptación exige JSESSIONID, pero la API no lo provee en este endpoint.</div>
-    </div>
-    <div class="time-cell comment"></div>            
-  </div>
-
-  <div class="step-row" data-parent="0.9.0.call">
-    <div class="step-container" id="0.9.0.call.0.36">
-      <div class="step-ref bg-step">36</div>
-      <div class="step-indent"></div>
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def setCookie = responseHeaders[&#39;Set-Cookie&#39;]</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-      <div><div>
-  
-
-  
-
-  <div class="step-row" data-parent="0.9.0.call">
-    <div class="step-container" id="0.9.0.call.0.37">
-      <div class="step-ref bg-step">37</div>
-      <div class="step-indent"></div>
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>print &#39;Set-Cookie (DEFECTO - esperado JSESSIONID, no presente en REST login):&#39;, setCookie</span>
+        <span>Given</span>&nbsp;<span>path &#39;login&#39;, &#39;john&#39;, &#39;demo&#39;</span>
       </div>
     </div>
     <div class="time-cell passed">1</div>
@@ -4733,49 +3053,13 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.9.0.call.0.37">19:30:00.676 [print] Set-Cookie (DEFECTO - esperado JSESSIONID, no presente en REST login): [
-]
- 
-</div>   
-
-  
-
-</div>
-</div>
-      <div><div>
-  
-
-  
-
-  <div class="step-row" data-parent="0.9.0.call">
-    <div class="step-container" id="0.9.0.call.0.39">
-      <div class="step-ref bg-step">39</div>
-      <div class="step-indent"></div>
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def customerId = response.id</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
      
 
   
 
 </div>
 </div>
-    </div>    
-  </div>
-
-</div>
-</div>
-          <div data-parent="[3:65]bg"><div>
+          <div data-parent="[3:69]bg"><div>
   
 
   
@@ -4785,73 +3069,10 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref bg-step">10</div>
       
       <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def customerId = authData.customerId</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div data-parent="[3:65]bg"><div>
-  
-
-  <div class="step-row">
-    <div class="step-container">
-      <div class="step-ref passed"></div>
-      
-      <div class="step-cell comment"># Obtener accountId y saldo disponible DINÁMICAMENTE</div>
-    </div>
-    <div class="time-cell comment"></div>            
-  </div>
-
-  <div class="step-row">
-    <div class="step-container" id="0.12">
-      <div class="step-ref bg-step">12</div>
-      
-      <div class="step-cell passed">
-        <span>Given</span>&nbsp;<span>path &#39;customers&#39;, customerId, &#39;accounts&#39;</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div data-parent="[3:65]bg"><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.13">
-      <div class="step-ref bg-step">13</div>
-      
-      <div class="step-cell passed">
         <span>When</span>&nbsp;<span>method GET</span>
       </div>
     </div>
-    <div class="time-cell passed">181</div>
+    <div class="time-cell passed">182</div>
   </div>
 
    
@@ -4860,8 +3081,8 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.13">19:30:00.681 request:
-1 &gt; GET https://parabank.parasoft.com/parabank/services/bank/customers/12212/accounts
+  <div class="preformatted" data-parent="0.10">19:59:12.122 request:
+1 &gt; GET https://parabank.parasoft.com/parabank/services/bank/login/john/demo
 1 &gt; Accept: application/json
 1 &gt; Host: parabank.parasoft.com
 1 &gt; Connection: Keep-Alive
@@ -4869,17 +3090,17 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 1 &gt; Accept-Encoding: gzip,deflate
 
 
-19:30:00.859 response time in milliseconds: 178
+19:59:12.301 response time in milliseconds: 177
 1 &lt; 200
-1 &lt; Date: Thu, 21 May 2026 00:29:59 GMT
+1 &lt; Date: Thu, 21 May 2026 00:59:11 GMT
 1 &lt; Content-Type: application/json
 1 &lt; Transfer-Encoding: chunked
 1 &lt; Connection: keep-alive
 1 &lt; Server: cloudflare
 1 &lt; cf-cache-status: DYNAMIC
 1 &lt; X-Content-Type-Options: nosniff
-1 &lt; CF-RAY: 9fef784f08c1b6f2-BOG
-[{&quot;id&quot;:13344,&quot;customerId&quot;:12212,&quot;type&quot;:&quot;CHECKING&quot;,&quot;balance&quot;:-29994814.07}]
+1 &lt; CF-RAY: 9fefa311ab6ab6ec-BOG
+{&quot;id&quot;:12212,&quot;firstName&quot;:&quot;John&quot;,&quot;lastName&quot;:&quot;Smith&quot;,&quot;address&quot;:{&quot;street&quot;:&quot;1431 Main St&quot;,&quot;city&quot;:&quot;Beverly Hills&quot;,&quot;state&quot;:&quot;CA&quot;,&quot;zipCode&quot;:&quot;90210&quot;},&quot;phoneNumber&quot;:&quot;310-447-4121&quot;,&quot;ssn&quot;:&quot;622-11-9999&quot;}
 
 </div>   
 
@@ -4887,14 +3108,14 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
 </div>
 </div>
-          <div data-parent="[3:65]bg"><div>
+          <div data-parent="[3:69]bg"><div>
   
 
   
 
   <div class="step-row">
-    <div class="step-container" id="0.14">
-      <div class="step-ref bg-step">14</div>
+    <div class="step-container" id="0.11">
+      <div class="step-ref bg-step">11</div>
       
       <div class="step-cell passed">
         <span>Then</span>&nbsp;<span>status 200</span>
@@ -4915,7 +3136,70 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
 </div>
 </div>
-          <div data-parent="[3:65]bg"><div>
+          <div data-parent="[3:69]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.12">
+      <div class="step-ref bg-step">12</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def customerId = response.id</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[3:69]bg"><div>
+  
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment"># Obtener accountId y saldo disponible DINÁMICAMENTE desde el endpoint de cuentas</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container" id="0.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;customers&#39;, customerId, &#39;accounts&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[3:69]bg"><div>
   
 
   
@@ -4925,10 +3209,10 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref bg-step">15</div>
       
       <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def accountId = response[0].id</span>
+        <span>When</span>&nbsp;<span>method GET</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell passed">184</div>
   </div>
 
    
@@ -4937,13 +3221,34 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-     
+  <div class="preformatted" data-parent="0.15">19:59:12.306 request:
+2 &gt; GET https://parabank.parasoft.com/parabank/services/bank/customers/12212/accounts
+2 &gt; Accept: application/json
+2 &gt; Host: parabank.parasoft.com
+2 &gt; Connection: Keep-Alive
+2 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
+2 &gt; Accept-Encoding: gzip,deflate
+
+
+19:59:12.487 response time in milliseconds: 181
+2 &lt; 200
+2 &lt; Date: Thu, 21 May 2026 00:59:11 GMT
+2 &lt; Content-Type: application/json
+2 &lt; Transfer-Encoding: chunked
+2 &lt; Connection: keep-alive
+2 &lt; Server: cloudflare
+2 &lt; cf-cache-status: DYNAMIC
+2 &lt; X-Content-Type-Options: nosniff
+2 &lt; CF-RAY: 9fefa312d949b6f6-BOG
+[{&quot;id&quot;:13344,&quot;customerId&quot;:12212,&quot;type&quot;:&quot;CHECKING&quot;,&quot;balance&quot;:-79994609.07}]
+
+</div>   
 
   
 
 </div>
 </div>
-          <div data-parent="[3:65]bg"><div>
+          <div data-parent="[3:69]bg"><div>
   
 
   
@@ -4953,7 +3258,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref bg-step">16</div>
       
       <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def availableBalance = response[0].balance</span>
+        <span>Then</span>&nbsp;<span>status 200</span>
       </div>
     </div>
     <div class="time-cell passed">0</div>
@@ -4971,38 +3276,94 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
 </div>
 </div>
-          <div data-parent="[3:65]bg"><div>
+          <div data-parent="[3:69]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.17">
+      <div class="step-ref bg-step">17</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def accountId = response[0].id</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[3:69]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.18">
+      <div class="step-ref bg-step">18</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def saldoDisponible = response[0].balance</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[3:69]bg"><div>
   
 
   <div class="step-row">
     <div class="step-container">
       <div class="step-ref passed"></div>
       
-      <div class="step-cell comment"># Payee válido (XML requerido por la API de Parabank)</div>
+      <div class="step-cell comment"># Payee válido en formato XML (requerido por la API de Parabank - no acepta JSON en este endpoint)</div>
     </div>
     <div class="time-cell comment"></div>            
   </div>
 
   <div class="step-row">
-    <div class="step-container" id="0.19">
-      <div class="step-ref bg-step">19</div>
+    <div class="step-container" id="0.21">
+      <div class="step-ref bg-step">21</div>
       
       <div class="step-cell passed">
         <span>*</span>&nbsp;<span>def payeeXml =</span>
       </div>
     </div>
-    <div class="time-cell passed">2</div>
+    <div class="time-cell passed">3</div>
   </div>
 
    
   
-  <div class="preformatted" data-parent="0.19">&lt;payee&gt;
-  &lt;name&gt;Test Payee&lt;/name&gt;
+  <div class="preformatted" data-parent="0.21">&lt;payee&gt;
+  &lt;name&gt;Proveedor de Prueba&lt;/name&gt;
   &lt;address&gt;
-    &lt;street&gt;123 Main St&lt;/street&gt;
-    &lt;city&gt;Beverly Hills&lt;/city&gt;
-    &lt;state&gt;CA&lt;/state&gt;
-    &lt;zipCode&gt;90210&lt;/zipCode&gt;
+    &lt;street&gt;Calle 123&lt;/street&gt;
+    &lt;city&gt;Medellín&lt;/city&gt;
+    &lt;state&gt;ANT&lt;/state&gt;
+    &lt;zipCode&gt;050001&lt;/zipCode&gt;
   &lt;/address&gt;
   &lt;phoneNumber&gt;310-000-0000&lt;/phoneNumber&gt;
   &lt;accountNumber&gt;9999&lt;/accountNumber&gt;
@@ -5024,7 +3385,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
     <div class="step-container">
       <div class="step-ref passed"></div>
       
-      <div class="step-cell comment"># DEFECTO DOCUMENTADO: Con accountId inexistente la API retorna 500 Internal Server Error.</div>
+      <div class="step-cell comment"># El criterio exige 400 Bad Request con mensaje descriptivo para una cuenta inexistente.</div>
     </div>
     <div class="time-cell comment"></div>            
   </div>
@@ -5033,7 +3394,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
     <div class="step-container">
       <div class="step-ref passed"></div>
       
-      <div class="step-cell comment"># El criterio exige 400 Bad Request con mensaje descriptivo (no un error interno del servidor).</div>
+      <div class="step-cell comment"># DEFECTO DEL API: La API retorna 500 Internal Server Error, lo que expone un error interno</div>
     </div>
     <div class="time-cell comment"></div>            
   </div>
@@ -5042,129 +3403,17 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
     <div class="step-container">
       <div class="step-ref passed"></div>
       
-      <div class="step-cell comment"># Esto expone trazas internas, lo cual es también un defecto de seguridad.</div>
+      <div class="step-cell comment"># del servidor al cliente. Esto es además un defecto de seguridad (exposición de trazas internas).</div>
     </div>
     <div class="time-cell comment"></div>            
   </div>
-
-  <div class="step-row">
-    <div class="step-container" id="0.69">
-      <div class="step-ref passed">69</div>
-      
-      <div class="step-cell passed">
-        <span>Given</span>&nbsp;<span>path &#39;billpay&#39;</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.70">
-      <div class="step-ref passed">70</div>
-      
-      <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>param accountId = 99999999</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.71">
-      <div class="step-ref passed">71</div>
-      
-      <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>param amount = 10</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.72">
-      <div class="step-ref passed">72</div>
-      
-      <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>header Content-Type = &#39;application/xml&#39;</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
 
   <div class="step-row">
     <div class="step-container" id="0.73">
       <div class="step-ref passed">73</div>
       
       <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>request payeeXml</span>
+        <span>Given</span>&nbsp;<span>path &#39;billpay&#39;</span>
       </div>
     </div>
     <div class="time-cell passed">0</div>
@@ -5192,10 +3441,10 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref passed">74</div>
       
       <div class="step-cell passed">
-        <span>When</span>&nbsp;<span>method POST</span>
+        <span>And</span>&nbsp;<span>param accountId = 99999999</span>
       </div>
     </div>
-    <div class="time-cell passed">190</div>
+    <div class="time-cell passed">1</div>
   </div>
 
    
@@ -5204,40 +3453,152 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.74">19:30:00.866 request:
-2 &gt; POST https://parabank.parasoft.com/parabank/services/bank/billpay?accountId=99999999&amp;amount=10
-2 &gt; Content-Type: application/xml; charset=UTF-8
-2 &gt; Accept: application/json
-2 &gt; Content-Length: 316
-2 &gt; Host: parabank.parasoft.com
-2 &gt; Connection: Keep-Alive
-2 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
-2 &gt; Accept-Encoding: gzip,deflate
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.75">
+      <div class="step-ref passed">75</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>param amount = 10</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.76">
+      <div class="step-ref passed">76</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Content-Type = &#39;application/xml&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.77">
+      <div class="step-ref passed">77</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request payeeXml</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.78">
+      <div class="step-ref passed">78</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">202</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.78">19:59:12.497 request:
+3 &gt; POST https://parabank.parasoft.com/parabank/services/bank/billpay?accountId=99999999&amp;amount=10
+3 &gt; Content-Type: application/xml; charset=UTF-8
+3 &gt; Accept: application/json
+3 &gt; Content-Length: 321
+3 &gt; Host: parabank.parasoft.com
+3 &gt; Connection: Keep-Alive
+3 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
+3 &gt; Accept-Encoding: gzip,deflate
 &lt;payee&gt;
-  &lt;name&gt;Test Payee&lt;/name&gt;
+  &lt;name&gt;Proveedor de Prueba&lt;/name&gt;
   &lt;address&gt;
-    &lt;street&gt;123 Main St&lt;/street&gt;
-    &lt;city&gt;Beverly Hills&lt;/city&gt;
-    &lt;state&gt;CA&lt;/state&gt;
-    &lt;zipCode&gt;90210&lt;/zipCode&gt;
+    &lt;street&gt;Calle 123&lt;/street&gt;
+    &lt;city&gt;Medellín&lt;/city&gt;
+    &lt;state&gt;ANT&lt;/state&gt;
+    &lt;zipCode&gt;050001&lt;/zipCode&gt;
   &lt;/address&gt;
   &lt;phoneNumber&gt;310-000-0000&lt;/phoneNumber&gt;
   &lt;accountNumber&gt;9999&lt;/accountNumber&gt;
   &lt;routingNumber&gt;111000025&lt;/routingNumber&gt;
 &lt;/payee&gt;
 
-19:30:01.053 response time in milliseconds: 184
-2 &lt; 500
-2 &lt; Date: Thu, 21 May 2026 00:29:59 GMT
-2 &lt; Content-Type: text/html;charset=ISO-8859-1
-2 &lt; Transfer-Encoding: chunked
-2 &lt; Connection: keep-alive
-2 &lt; Server: cloudflare
-2 &lt; Set-Cookie: JSESSIONID=E1D7CA367E353EE3C8F7C56250C5A66E; Path=/parabank; HttpOnly
-2 &lt; content-language: en-US
-2 &lt; cf-cache-status: DYNAMIC
-2 &lt; X-Content-Type-Options: nosniff
-2 &lt; CF-RAY: 9fef78503900b6ff-BOG
+19:59:12.694 response time in milliseconds: 193
+3 &lt; 500
+3 &lt; Date: Thu, 21 May 2026 00:59:11 GMT
+3 &lt; Content-Type: text/html;charset=ISO-8859-1
+3 &lt; Transfer-Encoding: chunked
+3 &lt; Connection: keep-alive
+3 &lt; Server: cloudflare
+3 &lt; Set-Cookie: JSESSIONID=F1CD62E7B9CC9A9362ACF0AAFC266A3E; Path=/parabank; HttpOnly
+3 &lt; content-language: en-US
+3 &lt; cf-cache-status: DYNAMIC
+3 &lt; X-Content-Type-Options: nosniff
+3 &lt; CF-RAY: 9fefa313fa5fb6ef-BOG
 
 
 
@@ -5251,11 +3612,11 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 		&lt;meta charset=&quot;UTF-8&quot;&gt;
 		&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot; /&gt;
 		&lt;title&gt;ParaBank | Error&lt;/title&gt;
-		&lt;link href=&quot;template.css;jsessionid=E1D7CA367E353EE3C8F7C56250C5A66E&quot; rel=&quot;stylesheet&quot;
+		&lt;link href=&quot;template.css;jsessionid=F1CD62E7B9CC9A9362ACF0AAFC266A3E&quot; rel=&quot;stylesheet&quot;
 			type=&quot;text/css&quot; /&gt;
-		&lt;link href=&quot;style.css;jsessionid=E1D7CA367E353EE3C8F7C56250C5A66E&quot; rel=&quot;stylesheet&quot;
+		&lt;link href=&quot;style.css;jsessionid=F1CD62E7B9CC9A9362ACF0AAFC266A3E&quot; rel=&quot;stylesheet&quot;
 			type=&quot;text/css&quot; /&gt;
-		&lt;script src=&quot;webjars/jquery/4.0.0/jquery.min.js;jsessionid=E1D7CA367E353EE3C8F7C56250C5A66E&quot;&gt;&lt;/script&gt;
+		&lt;script src=&quot;webjars/jquery/4.0.0/jquery.min.js;jsessionid=F1CD62E7B9CC9A9362ACF0AAFC266A3E&quot;&gt;&lt;/script&gt;
 	&lt;/head&gt;
 
 	&lt;body
@@ -5270,30 +3631,30 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
 
 &lt;div id=&quot;topPanel&quot;&gt;
-  &lt;a href=&quot;admin.htm;jsessionid=E1D7CA367E353EE3C8F7C56250C5A66E&quot;&gt;&lt;img src=&quot;images/clear.gif;jsessionid=E1D7CA367E353EE3C8F7C56250C5A66E&quot; width=&quot;56&quot; height=&quot;42&quot; border=&quot;0&quot; class=&quot;admin&quot;/&gt;&lt;/a&gt;
-  &lt;a href=&quot;index.htm;jsessionid=E1D7CA367E353EE3C8F7C56250C5A66E&quot;&gt;&lt;img src=&quot;images/logo.gif;jsessionid=E1D7CA367E353EE3C8F7C56250C5A66E&quot; alt=&quot;ParaBank&quot; width=&quot;136&quot; height=&quot;31&quot; border=&quot;0&quot; class=&quot;logo&quot; title=&quot;ParaBank&quot;/&gt;&lt;/a&gt;
+  &lt;a href=&quot;admin.htm;jsessionid=F1CD62E7B9CC9A9362ACF0AAFC266A3E&quot;&gt;&lt;img src=&quot;images/clear.gif;jsessionid=F1CD62E7B9CC9A9362ACF0AAFC266A3E&quot; width=&quot;56&quot; height=&quot;42&quot; border=&quot;0&quot; class=&quot;admin&quot;/&gt;&lt;/a&gt;
+  &lt;a href=&quot;index.htm;jsessionid=F1CD62E7B9CC9A9362ACF0AAFC266A3E&quot;&gt;&lt;img src=&quot;images/logo.gif;jsessionid=F1CD62E7B9CC9A9362ACF0AAFC266A3E&quot; alt=&quot;ParaBank&quot; width=&quot;136&quot; height=&quot;31&quot; border=&quot;0&quot; class=&quot;logo&quot; title=&quot;ParaBank&quot;/&gt;&lt;/a&gt;
   &lt;p class=&quot;caption&quot;&gt;Experience the difference&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&quot;headerPanel&quot; style=&quot;background: url(images/header-main.jpg;jsessionid=E1D7CA367E353EE3C8F7C56250C5A66E) 0 0 no-repeat;&quot;&gt;
+&lt;div id=&quot;headerPanel&quot; style=&quot;background: url(images/header-main.jpg;jsessionid=F1CD62E7B9CC9A9362ACF0AAFC266A3E) 0 0 no-repeat;&quot;&gt;
   
 
 
 &lt;ul class=&quot;leftmenu&quot;&gt;
   &lt;li class=&quot;Solutions&quot;&gt;Solutions&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;about.htm;jsessionid=E1D7CA367E353EE3C8F7C56250C5A66E&quot;&gt;About Us&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;services.htm;jsessionid=E1D7CA367E353EE3C8F7C56250C5A66E&quot;&gt;Services&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;about.htm;jsessionid=F1CD62E7B9CC9A9362ACF0AAFC266A3E&quot;&gt;About Us&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;services.htm;jsessionid=F1CD62E7B9CC9A9362ACF0AAFC266A3E&quot;&gt;Services&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://www.parasoft.com/jsp/products.jsp&quot;&gt;Products&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://www.parasoft.com/jsp/pr/contacts.jsp&quot;&gt;Locations&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;admin.htm;jsessionid=E1D7CA367E353EE3C8F7C56250C5A66E&quot;&gt;Admin Page&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;admin.htm;jsessionid=F1CD62E7B9CC9A9362ACF0AAFC266A3E&quot;&gt;Admin Page&lt;/a&gt;&lt;/li&gt;
   
 &lt;/ul&gt;
   
 
 
 &lt;ul class=&quot;button&quot;&gt;
-  &lt;li class=&quot;home&quot;&gt;&lt;a href=&quot;index.htm;jsessionid=E1D7CA367E353EE3C8F7C56250C5A66E&quot;&gt;home&lt;/a&gt;&lt;/li&gt;
-  &lt;li class=&quot;aboutus&quot;&gt;&lt;a href=&quot;about.htm;jsessionid=E1D7CA367E353EE3C8F7C56250C5A66E&quot;&gt;about&lt;/a&gt;&lt;/li&gt;
-  &lt;li class=&quot;contact&quot;&gt;&lt;a href=&quot;contact.htm;jsessionid=E1D7CA367E353EE3C8F7C56250C5A66E&quot;&gt;contact&lt;/a&gt;&lt;/li&gt;
+  &lt;li class=&quot;home&quot;&gt;&lt;a href=&quot;index.htm;jsessionid=F1CD62E7B9CC9A9362ACF0AAFC266A3E&quot;&gt;home&lt;/a&gt;&lt;/li&gt;
+  &lt;li class=&quot;aboutus&quot;&gt;&lt;a href=&quot;about.htm;jsessionid=F1CD62E7B9CC9A9362ACF0AAFC266A3E&quot;&gt;about&lt;/a&gt;&lt;/li&gt;
+  &lt;li class=&quot;contact&quot;&gt;&lt;a href=&quot;contact.htm;jsessionid=F1CD62E7B9CC9A9362ACF0AAFC266A3E&quot;&gt;contact&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 				
@@ -5308,7 +3669,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
 &lt;h2&gt;Customer Login&lt;/h2&gt;
 &lt;div id=&quot;loginPanel&quot;&gt;
-  &lt;form name=&quot;login&quot; action=&quot;login.htm;jsessionid=E1D7CA367E353EE3C8F7C56250C5A66E&quot; method=&quot;POST&quot;&gt;
+  &lt;form name=&quot;login&quot; action=&quot;login.htm;jsessionid=F1CD62E7B9CC9A9362ACF0AAFC266A3E&quot; method=&quot;POST&quot;&gt;
     
     &lt;p&gt;&lt;b&gt;Username&lt;/b&gt;&lt;/p&gt;
     &lt;div class=&quot;login&quot;&gt;&lt;input type=&quot;text&quot; class=&quot;input&quot; name=&quot;username&quot;/&gt;&lt;/div&gt;
@@ -5316,8 +3677,8 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
     &lt;div class=&quot;login&quot;&gt;&lt;input type=&quot;password&quot; class=&quot;input&quot; name=&quot;password&quot;/&gt;&lt;/div&gt;
     &lt;div class=&quot;login&quot;&gt;&lt;input type=&quot;submit&quot; class=&quot;button&quot; value=&quot;Log In&quot;/&gt;&lt;/div&gt;
   &lt;/form&gt;
-  &lt;p&gt;&lt;a href=&quot;lookup.htm;jsessionid=E1D7CA367E353EE3C8F7C56250C5A66E&quot;&gt;Forgot login info?&lt;/a&gt;&lt;/p&gt;
-  &lt;p&gt;&lt;a href=&quot;register.htm;jsessionid=E1D7CA367E353EE3C8F7C56250C5A66E&quot;&gt;Register&lt;/a&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;a href=&quot;lookup.htm;jsessionid=F1CD62E7B9CC9A9362ACF0AAFC266A3E&quot;&gt;Forgot login info?&lt;/a&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;a href=&quot;register.htm;jsessionid=F1CD62E7B9CC9A9362ACF0AAFC266A3E&quot;&gt;Register&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
 						
 						
@@ -5341,14 +3702,14 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 &lt;div id=&quot;footermainPanel&quot;&gt;
   &lt;div id=&quot;footerPanel&quot;&gt;
     &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;index.htm;jsessionid=E1D7CA367E353EE3C8F7C56250C5A66E&quot;&gt;Home&lt;/a&gt;| &lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;about.htm;jsessionid=E1D7CA367E353EE3C8F7C56250C5A66E&quot;&gt;About Us&lt;/a&gt;| &lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;services.htm;jsessionid=E1D7CA367E353EE3C8F7C56250C5A66E&quot;&gt;Services&lt;/a&gt;| &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;index.htm;jsessionid=F1CD62E7B9CC9A9362ACF0AAFC266A3E&quot;&gt;Home&lt;/a&gt;| &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;about.htm;jsessionid=F1CD62E7B9CC9A9362ACF0AAFC266A3E&quot;&gt;About Us&lt;/a&gt;| &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;services.htm;jsessionid=F1CD62E7B9CC9A9362ACF0AAFC266A3E&quot;&gt;Services&lt;/a&gt;| &lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;http://www.parasoft.com/jsp/products.jsp&quot;&gt;Products&lt;/a&gt;| &lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;http://www.parasoft.com/jsp/pr/contacts.jsp&quot;&gt;Locations&lt;/a&gt;| &lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;http://forums.parasoft.com/&quot;&gt;Forum&lt;/a&gt;| &lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;sitemap.htm;jsessionid=E1D7CA367E353EE3C8F7C56250C5A66E&quot;&gt;Site Map&lt;/a&gt;| &lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;contact.htm;jsessionid=E1D7CA367E353EE3C8F7C56250C5A66E&quot;&gt;Contact Us&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;sitemap.htm;jsessionid=F1CD62E7B9CC9A9362ACF0AAFC266A3E&quot;&gt;Site Map&lt;/a&gt;| &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;contact.htm;jsessionid=F1CD62E7B9CC9A9362ACF0AAFC266A3E&quot;&gt;Contact Us&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
     &lt;p class=&quot;copyright&quot;&gt;&amp;copy; Parasoft. All rights reserved.&lt;/p&gt;
     &lt;ul class=&quot;visit&quot;&gt;
@@ -5373,14 +3734,14 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   
 
   <div class="step-row">
-    <div class="step-container" id="0.75">
-      <div class="step-ref passed">75</div>
+    <div class="step-container" id="0.79">
+      <div class="step-ref failed">79</div>
       
-      <div class="step-cell passed">
-        <span>Then</span>&nbsp;<span>status 500</span>
+      <div class="step-cell failed">
+        <span>Then</span>&nbsp;<span>status 400</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell failed">0</div>
   </div>
 
    
@@ -5389,7 +3750,133 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-     
+  <div class="preformatted" data-parent="0.79">19:59:12.698 classpath:org/udea/parabank/BillPay.feature:79
+Then status 400
+status code was: 500, expected: 400, response time in milliseconds: 193, url: https://parabank.parasoft.com/parabank/services/bank/billpay?accountId=99999999&amp;amount=10, response: 
+
+
+
+
+&lt;!-- &lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;
+&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+ --&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;meta charset=&quot;UTF-8&quot;&gt;
+		&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot; /&gt;
+		&lt;title&gt;ParaBank | Error&lt;/title&gt;
+		&lt;link href=&quot;template.css;jsessionid=F1CD62E7B9CC9A9362ACF0AAFC266A3E&quot; rel=&quot;stylesheet&quot;
+			type=&quot;text/css&quot; /&gt;
+		&lt;link href=&quot;style.css;jsessionid=F1CD62E7B9CC9A9362ACF0AAFC266A3E&quot; rel=&quot;stylesheet&quot;
+			type=&quot;text/css&quot; /&gt;
+		&lt;script src=&quot;webjars/jquery/4.0.0/jquery.min.js;jsessionid=F1CD62E7B9CC9A9362ACF0AAFC266A3E&quot;&gt;&lt;/script&gt;
+	&lt;/head&gt;
+
+	&lt;body
+		
+	    onload=&quot;document.login.username.focus();&quot;
+	  &gt;
+		&lt;div id=&quot;mainPanel&quot;&gt;
+			
+				
+					
+
+
+
+&lt;div id=&quot;topPanel&quot;&gt;
+  &lt;a href=&quot;admin.htm;jsessionid=F1CD62E7B9CC9A9362ACF0AAFC266A3E&quot;&gt;&lt;img src=&quot;images/clear.gif;jsessionid=F1CD62E7B9CC9A9362ACF0AAFC266A3E&quot; width=&quot;56&quot; height=&quot;42&quot; border=&quot;0&quot; class=&quot;admin&quot;/&gt;&lt;/a&gt;
+  &lt;a href=&quot;index.htm;jsessionid=F1CD62E7B9CC9A9362ACF0AAFC266A3E&quot;&gt;&lt;img src=&quot;images/logo.gif;jsessionid=F1CD62E7B9CC9A9362ACF0AAFC266A3E&quot; alt=&quot;ParaBank&quot; width=&quot;136&quot; height=&quot;31&quot; border=&quot;0&quot; class=&quot;logo&quot; title=&quot;ParaBank&quot;/&gt;&lt;/a&gt;
+  &lt;p class=&quot;caption&quot;&gt;Experience the difference&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&quot;headerPanel&quot; style=&quot;background: url(images/header-main.jpg;jsessionid=F1CD62E7B9CC9A9362ACF0AAFC266A3E) 0 0 no-repeat;&quot;&gt;
+  
+
+
+&lt;ul class=&quot;leftmenu&quot;&gt;
+  &lt;li class=&quot;Solutions&quot;&gt;Solutions&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;about.htm;jsessionid=F1CD62E7B9CC9A9362ACF0AAFC266A3E&quot;&gt;About Us&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;services.htm;jsessionid=F1CD62E7B9CC9A9362ACF0AAFC266A3E&quot;&gt;Services&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.parasoft.com/jsp/products.jsp&quot;&gt;Products&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.parasoft.com/jsp/pr/contacts.jsp&quot;&gt;Locations&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;admin.htm;jsessionid=F1CD62E7B9CC9A9362ACF0AAFC266A3E&quot;&gt;Admin Page&lt;/a&gt;&lt;/li&gt;
+  
+&lt;/ul&gt;
+  
+
+
+&lt;ul class=&quot;button&quot;&gt;
+  &lt;li class=&quot;home&quot;&gt;&lt;a href=&quot;index.htm;jsessionid=F1CD62E7B9CC9A9362ACF0AAFC266A3E&quot;&gt;home&lt;/a&gt;&lt;/li&gt;
+  &lt;li class=&quot;aboutus&quot;&gt;&lt;a href=&quot;about.htm;jsessionid=F1CD62E7B9CC9A9362ACF0AAFC266A3E&quot;&gt;about&lt;/a&gt;&lt;/li&gt;
+  &lt;li class=&quot;contact&quot;&gt;&lt;a href=&quot;contact.htm;jsessionid=F1CD62E7B9CC9A9362ACF0AAFC266A3E&quot;&gt;contact&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+				
+				
+			
+			&lt;div id=&quot;bodyPanel&quot;&gt;
+				&lt;div id=&quot;leftPanel&quot;&gt;
+					
+						
+							
+
+
+&lt;h2&gt;Customer Login&lt;/h2&gt;
+&lt;div id=&quot;loginPanel&quot;&gt;
+  &lt;form name=&quot;login&quot; action=&quot;login.htm;jsessionid=F1CD62E7B9CC9A9362ACF0AAFC266A3E&quot; method=&quot;POST&quot;&gt;
+    
+    &lt;p&gt;&lt;b&gt;Username&lt;/b&gt;&lt;/p&gt;
+    &lt;div class=&quot;login&quot;&gt;&lt;input type=&quot;text&quot; class=&quot;input&quot; name=&quot;username&quot;/&gt;&lt;/div&gt;
+    &lt;p&gt;&lt;b&gt;Password&lt;/b&gt;&lt;/p&gt;
+    &lt;div class=&quot;login&quot;&gt;&lt;input type=&quot;password&quot; class=&quot;input&quot; name=&quot;password&quot;/&gt;&lt;/div&gt;
+    &lt;div class=&quot;login&quot;&gt;&lt;input type=&quot;submit&quot; class=&quot;button&quot; value=&quot;Log In&quot;/&gt;&lt;/div&gt;
+  &lt;/form&gt;
+  &lt;p&gt;&lt;a href=&quot;lookup.htm;jsessionid=F1CD62E7B9CC9A9362ACF0AAFC266A3E&quot;&gt;Forgot login info?&lt;/a&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;a href=&quot;register.htm;jsessionid=F1CD62E7B9CC9A9362ACF0AAFC266A3E&quot;&gt;Register&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+						
+						
+					
+				&lt;/div&gt;
+				&lt;div id=&quot;rightPanel&quot;&gt;
+					
+
+
+&lt;h1 class=&quot;title&quot;&gt;Error!&lt;/h1&gt;
+
+
+
+&lt;p class=&quot;error&quot;&gt;An internal error has occurred and has been logged.&lt;/p&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		
+
+
+&lt;div id=&quot;footermainPanel&quot;&gt;
+  &lt;div id=&quot;footerPanel&quot;&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;index.htm;jsessionid=F1CD62E7B9CC9A9362ACF0AAFC266A3E&quot;&gt;Home&lt;/a&gt;| &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;about.htm;jsessionid=F1CD62E7B9CC9A9362ACF0AAFC266A3E&quot;&gt;About Us&lt;/a&gt;| &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;services.htm;jsessionid=F1CD62E7B9CC9A9362ACF0AAFC266A3E&quot;&gt;Services&lt;/a&gt;| &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;http://www.parasoft.com/jsp/products.jsp&quot;&gt;Products&lt;/a&gt;| &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;http://www.parasoft.com/jsp/pr/contacts.jsp&quot;&gt;Locations&lt;/a&gt;| &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;http://forums.parasoft.com/&quot;&gt;Forum&lt;/a&gt;| &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;sitemap.htm;jsessionid=F1CD62E7B9CC9A9362ACF0AAFC266A3E&quot;&gt;Site Map&lt;/a&gt;| &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;contact.htm;jsessionid=F1CD62E7B9CC9A9362ACF0AAFC266A3E&quot;&gt;Contact Us&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;p class=&quot;copyright&quot;&gt;&amp;copy; Parasoft. All rights reserved.&lt;/p&gt;
+    &lt;ul class=&quot;visit&quot;&gt;
+      &lt;li&gt;Visit us at:&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;http://www.parasoft.com/&quot; target=&quot;_blank&quot;&gt;www.parasoft.com&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+	&lt;/body&gt;
+&lt;/html&gt;
+
+classpath:org/udea/parabank/BillPay.feature:79
+</div>   
 
   
 

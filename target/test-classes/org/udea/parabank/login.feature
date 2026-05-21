@@ -1,15 +1,13 @@
 @parabank_login
-Feature: Login to Parabank
+Feature: Autenticación y Persistencia de Sesión en Parabank
 
   Background:
     * url baseUrl
     * header Accept = 'application/json'
 
   @login_ok
-  Scenario: Customer Login
-    Given path 'login'
-    And path 'john' //userName
-    And path 'demo' //password
+  Scenario: Login exitoso devuelve datos del cliente y gestiona la sesión
+    Given path 'login', 'john', 'demo'
     When method GET
     Then status 200
     And match response ==
@@ -30,21 +28,22 @@ Feature: Login to Parabank
     """
     * match header Content-Type contains 'application/json'
 
-    # DEFECTO DOCUMENTADO: El endpoint REST /login/{user}/{pass} no emite Set-Cookie/JSESSIONID.
-    # La sesión solo se crea via formulario HTML (/login.htm), no via el API REST.
-    # Criterio de aceptación exige JSESSIONID, pero la API no lo provee en este endpoint.
-    * def setCookie = responseHeaders['Set-Cookie']
-    * print 'Set-Cookie (DEFECTO - esperado JSESSIONID, no presente en REST login):', setCookie
+    # Criterio de aceptación: extraer y validar el header Set-Cookie para asegurar que el JSESSIONID está presente.
+    # DEFECTO DEL API: El endpoint REST /login/{user}/{pass} no emite el header Set-Cookie con JSESSIONID.
+    # La sesión solo se crea via formulario HTML (/login.htm), no a través del endpoint REST.
+    # La API no gestiona el ciclo de vida de la sesión como lo exige el criterio de aceptación.
+    * def cookieHeader = responseHeaders['Set-Cookie'][0]
+    * match cookieHeader contains 'JSESSIONID'
 
     * def customerId = response.id
 
   @login_fail
-  Scenario: Customer Login with invalid credentials returns error
+  Scenario: Credenciales incorrectas retornan 401 Unauthorized con esquema de error estandarizado
     Given path 'login', 'john', 'wrongpassword'
     When method GET
-    # DEFECTO DOCUMENTADO: RFC 7235 establece que credenciales inválidas deben retornar 401 Unauthorized.
-    # Parabank retorna 400 Bad Request, lo cual no sigue el estándar REST de autenticación.
-    Then status 400
-    # DEFECTO DOCUMENTADO: El criterio exige un JSON con campo 'error', pero la API retorna texto plano.
-    # Respuesta real: "Invalid username and/or password" (text/plain, no application/json)
-    * match response contains 'Invalid'
+    # DEFECTO DEL API: El estándar REST (RFC 7235) y el criterio de aceptación exigen 401 Unauthorized
+    # para credenciales inválidas. La API retorna 400 Bad Request, que es semánticamente incorrecto.
+    Then status 401
+    # DEFECTO DEL API: El criterio exige un JSON con campo 'error' estandarizado.
+    # La API retorna texto plano "Invalid username and/or password" con Content-Type: text/plain.
+    * match response == {error: '#string'}

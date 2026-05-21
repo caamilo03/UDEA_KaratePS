@@ -39,8 +39,8 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <img src="karate-labs-logo-ring.svg" alt="Karate Labs"/>
     </a>
     <div class="nav-count">
-      <div id="nav-pass" class="bg-success">1</div>
-      <div id="nav-fail" class="bg-danger">0</div>
+      <div id="nav-pass" class="bg-success">0</div>
+      <div id="nav-fail" class="bg-danger">1</div>
     </div>
   </div>
   <div id="nav-env">
@@ -50,13 +50,13 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
     <div>Scenarios</div>
   </div>
   <div id="nav-date">
-    <div>2026-05-20 07:30:03 p. m.</div>
+    <div>2026-05-20 07:59:43 p. m.</div>
   </div>
 </div>
 
         <div class="nav-container">
-          <div class="nav-item passed">
-            <a href="#[1:12]"><span>[1:12]</span> <span>Validate the schema and financial integrity of the accounts endpoint</span></a>
+          <div class="nav-item failed">
+            <a href="#[1:14]"><span>[1:14]</span> <span>Validar esquema e integridad financiera del endpoint de cuentas</span></a>
           </div>
         </div>
       </div>
@@ -66,33 +66,33 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
           <a href="karate-tags.html">Tags</a><span class="feature-label">|</span>
           <span class="feature-label">Feature:</span>
           <span class="feature-path">org/udea/parabank/accounts.feature</span><span class="feature-label">|</span>
-          <span class="feature-name">Accounts in Parabank</span>
+          <span class="feature-name">Integridad de Datos en Consulta de Cuentas</span>
           <span class="feature-description"></span>
         </div>
         <div class="scenario">
-          <div class="scenario-heading" id="[1:12]">
+          <div class="scenario-heading" id="[1:14]">
             <div class="heading-container">
               <div class="scenario-tags">
                 <a class="badge badge-primary" href="karate-tags.html">parabank_accounts</a>
               </div>
               <div class="scenario-keyword">
-                Scenario: <span>[1:12]</span>
-                <span class="scenario-name">Validate the schema and financial integrity of the accounts endpoint</span>
+                Scenario: <span>[1:14]</span>
+                <span class="scenario-name">Validar esquema e integridad financiera del endpoint de cuentas</span>
                 <span></span>
               </div>
             </div>
-            <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>393</span>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>1299</span>
             </div>
           </div>
           <div class="step-row">
-            <div class="step-container" id="[1:12]bg">
+            <div class="step-container" id="[1:14]bg">
               <div class="step-ref bg-step">&gt;&gt;</div>
               <div class="step-cell passed">Background:</div>
             </div>
             <div class="time-cell passed"></div>
           </div>
-          <div data-parent="[1:12]bg"><div>
+          <div data-parent="[1:14]bg"><div>
   
 
   
@@ -105,7 +105,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>*</span>&nbsp;<span>url baseUrl</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell passed">1</div>
   </div>
 
    
@@ -120,51 +120,49 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
 </div>
 </div>
-          <div data-parent="[1:12]bg"><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.6">
-      <div class="step-ref bg-step">6</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div data-parent="[1:12]bg"><div>
+          <div data-parent="[1:14]bg"><div>
   
 
   <div class="step-row">
     <div class="step-container">
       <div class="step-ref passed"></div>
       
-      <div class="step-cell comment"># Llamamos SOLO el escenario exitoso de login (tag @login_ok) para desacoplar</div>
+      <div class="step-cell comment"># configure headers garantiza que Accept: application/json persista en todos los requests del escenario</div>
     </div>
     <div class="time-cell comment"></div>            
   </div>
 
   <div class="step-row">
+    <div class="step-container" id="0.7">
+      <div class="step-ref bg-step">7</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>configure headers = { Accept: &#39;application/json&#39; }</span>
+      </div>
+    </div>
+    <div class="time-cell passed">51</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1:14]bg"><div>
+  
+
+  <div class="step-row">
     <div class="step-container">
       <div class="step-ref passed"></div>
       
-      <div class="step-cell comment"># este feature de los demás escenarios de login.feature (buena práctica: independencia de tests).</div>
+      <div class="step-cell comment"># Login directo como prerequisito de setup (los criterios de login se validan en login.feature)</div>
     </div>
     <div class="time-cell comment"></div>            
   </div>
@@ -174,45 +172,10 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref bg-step">9</div>
       
       <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def authData = call read(&#39;login.feature@login_ok&#39;)</span>
+        <span>Given</span>&nbsp;<span>path &#39;login&#39;, &#39;john&#39;, &#39;demo&#39;</span>
       </div>
     </div>
-    <div class="time-cell passed">194</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  <div>
-        
-    <div class="step-row">
-      <div class="step-container" id="0.9.0.call">
-        <div class="step-ref bg-step">&gt;&gt;</div>
-        <div class="step-indent"></div>
-        <div class="step-cell passed">org.udea.parabank.login</div>
-      </div>
-      <div class="time-cell passed">185</div>
-    </div>
-    <div>
-      <div><div>
-  
-
-  
-
-  <div class="step-row" data-parent="0.9.0.call">
-    <div class="step-container" id="0.9.0.call.0.5">
-      <div class="step-ref bg-step">5</div>
-      <div class="step-indent"></div>
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>url baseUrl</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell passed">7</div>
   </div>
 
    
@@ -227,381 +190,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
 </div>
 </div>
-      <div><div>
-  
-
-  
-
-  <div class="step-row" data-parent="0.9.0.call">
-    <div class="step-container" id="0.9.0.call.0.6">
-      <div class="step-ref bg-step">6</div>
-      <div class="step-indent"></div>
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-      <div><div>
-  
-
-  
-
-  <div class="step-row" data-parent="0.9.0.call">
-    <div class="step-container" id="0.9.0.call.0.10">
-      <div class="step-ref bg-step">10</div>
-      <div class="step-indent"></div>
-      <div class="step-cell passed">
-        <span>Given</span>&nbsp;<span>path &#39;login&#39;</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-      <div><div>
-  
-
-  
-
-  <div class="step-row" data-parent="0.9.0.call">
-    <div class="step-container" id="0.9.0.call.0.11">
-      <div class="step-ref bg-step">11</div>
-      <div class="step-indent"></div>
-      <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>path &#39;john&#39; //userName</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-      <div><div>
-  
-
-  
-
-  <div class="step-row" data-parent="0.9.0.call">
-    <div class="step-container" id="0.9.0.call.0.12">
-      <div class="step-ref bg-step">12</div>
-      <div class="step-indent"></div>
-      <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>path &#39;demo&#39; //password</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-      <div><div>
-  
-
-  
-
-  <div class="step-row" data-parent="0.9.0.call">
-    <div class="step-container" id="0.9.0.call.0.13">
-      <div class="step-ref bg-step">13</div>
-      <div class="step-indent"></div>
-      <div class="step-cell passed">
-        <span>When</span>&nbsp;<span>method GET</span>
-      </div>
-    </div>
-    <div class="time-cell passed">183</div>
-  </div>
-
-   
-  
-  
-
-  
-
-  <div class="preformatted" data-parent="0.9.0.call.0.13">19:30:03.362 request:
-1 &gt; GET https://parabank.parasoft.com/parabank/services/bank/login/john/demo
-1 &gt; Accept: application/json
-1 &gt; Host: parabank.parasoft.com
-1 &gt; Connection: Keep-Alive
-1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
-1 &gt; Accept-Encoding: gzip,deflate
-
-
-19:30:03.542 response time in milliseconds: 180
-1 &lt; 200
-1 &lt; Date: Thu, 21 May 2026 00:30:02 GMT
-1 &lt; Content-Type: application/json
-1 &lt; Transfer-Encoding: chunked
-1 &lt; Connection: keep-alive
-1 &lt; Server: cloudflare
-1 &lt; cf-cache-status: DYNAMIC
-1 &lt; X-Content-Type-Options: nosniff
-1 &lt; CF-RAY: 9fef785fcd18b6ff-BOG
-{&quot;id&quot;:12212,&quot;firstName&quot;:&quot;John&quot;,&quot;lastName&quot;:&quot;Smith&quot;,&quot;address&quot;:{&quot;street&quot;:&quot;1431 Main St&quot;,&quot;city&quot;:&quot;Beverly Hills&quot;,&quot;state&quot;:&quot;CA&quot;,&quot;zipCode&quot;:&quot;90210&quot;},&quot;phoneNumber&quot;:&quot;310-447-4121&quot;,&quot;ssn&quot;:&quot;622-11-9999&quot;}
-
-</div>   
-
-  
-
-</div>
-</div>
-      <div><div>
-  
-
-  
-
-  <div class="step-row" data-parent="0.9.0.call">
-    <div class="step-container" id="0.9.0.call.0.14">
-      <div class="step-ref bg-step">14</div>
-      <div class="step-indent"></div>
-      <div class="step-cell passed">
-        <span>Then</span>&nbsp;<span>status 200</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-      <div><div>
-  
-
-  
-
-  <div class="step-row" data-parent="0.9.0.call">
-    <div class="step-container" id="0.9.0.call.0.15">
-      <div class="step-ref bg-step">15</div>
-      <div class="step-indent"></div>
-      <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>match response ==</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  <div class="preformatted" data-parent="0.9.0.call.0.15">{
-   &quot;id&quot;: &#39;#number&#39;,
-   &quot;firstName&quot;: &#39;#string&#39;,
-   &quot;lastName&quot;: &#39;#string&#39;,
-   &quot;address&quot;: {
-        &quot;street&quot;: &#39;#string&#39;,
-        &quot;city&quot;: &#39;#string&#39;,
-        &quot;state&quot;: &#39;#string&#39;,
-        &quot;zipCode&quot;: &#39;#string&#39;
-    },
-   &quot;phoneNumber&quot;: &#39;#string&#39;,
-   &quot;ssn&quot;: &#39;#string&#39;
-}</div>
-
-  
-
-     
-
-  
-
-</div>
-</div>
-      <div><div>
-  
-
-  
-
-  <div class="step-row" data-parent="0.9.0.call">
-    <div class="step-container" id="0.9.0.call.0.31">
-      <div class="step-ref bg-step">31</div>
-      <div class="step-indent"></div>
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>match header Content-Type contains &#39;application/json&#39;</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-      <div><div>
-  
-
-  <div class="step-row" data-parent="0.9.0.call">
-    <div class="step-container">
-      <div class="step-ref passed"></div>
-      <div class="step-indent"></div>
-      <div class="step-cell comment"># DEFECTO DOCUMENTADO: El endpoint REST /login/{user}/{pass} no emite Set-Cookie/JSESSIONID.</div>
-    </div>
-    <div class="time-cell comment"></div>            
-  </div>
-
-  <div class="step-row" data-parent="0.9.0.call">
-    <div class="step-container">
-      <div class="step-ref passed"></div>
-      <div class="step-indent"></div>
-      <div class="step-cell comment"># La sesión solo se crea via formulario HTML (/login.htm), no via el API REST.</div>
-    </div>
-    <div class="time-cell comment"></div>            
-  </div>
-
-  <div class="step-row" data-parent="0.9.0.call">
-    <div class="step-container">
-      <div class="step-ref passed"></div>
-      <div class="step-indent"></div>
-      <div class="step-cell comment"># Criterio de aceptación exige JSESSIONID, pero la API no lo provee en este endpoint.</div>
-    </div>
-    <div class="time-cell comment"></div>            
-  </div>
-
-  <div class="step-row" data-parent="0.9.0.call">
-    <div class="step-container" id="0.9.0.call.0.36">
-      <div class="step-ref bg-step">36</div>
-      <div class="step-indent"></div>
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def setCookie = responseHeaders[&#39;Set-Cookie&#39;]</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-      <div><div>
-  
-
-  
-
-  <div class="step-row" data-parent="0.9.0.call">
-    <div class="step-container" id="0.9.0.call.0.37">
-      <div class="step-ref bg-step">37</div>
-      <div class="step-indent"></div>
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>print &#39;Set-Cookie (DEFECTO - esperado JSESSIONID, no presente en REST login):&#39;, setCookie</span>
-      </div>
-    </div>
-    <div class="time-cell passed">1</div>
-  </div>
-
-   
-  
-  
-
-  
-
-  <div class="preformatted" data-parent="0.9.0.call.0.37">19:30:03.545 [print] Set-Cookie (DEFECTO - esperado JSESSIONID, no presente en REST login): [
-]
- 
-</div>   
-
-  
-
-</div>
-</div>
-      <div><div>
-  
-
-  
-
-  <div class="step-row" data-parent="0.9.0.call">
-    <div class="step-container" id="0.9.0.call.0.39">
-      <div class="step-ref bg-step">39</div>
-      <div class="step-indent"></div>
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def customerId = response.id</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-    </div>    
-  </div>
-
-</div>
-</div>
-          <div data-parent="[1:12]bg"><div>
+          <div data-parent="[1:14]bg"><div>
   
 
   
@@ -611,66 +200,10 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref bg-step">10</div>
       
       <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def targetCustomerId = authData.customerId</span>
-      </div>
-    </div>
-    <div class="time-cell passed">1</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.13">
-      <div class="step-ref passed">13</div>
-      
-      <div class="step-cell passed">
-        <span>Given</span>&nbsp;<span>path &#39;customers&#39;, targetCustomerId, &#39;accounts&#39;</span>
-      </div>
-    </div>
-    <div class="time-cell passed">1</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.14">
-      <div class="step-ref passed">14</div>
-      
-      <div class="step-cell passed">
         <span>When</span>&nbsp;<span>method GET</span>
       </div>
     </div>
-    <div class="time-cell passed">184</div>
+    <div class="time-cell passed">962</div>
   </div>
 
    
@@ -679,8 +212,8 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.14">19:30:03.550 request:
-1 &gt; GET https://parabank.parasoft.com/parabank/services/bank/customers/12212/accounts
+  <div class="preformatted" data-parent="0.10">19:59:42.655 request:
+1 &gt; GET https://parabank.parasoft.com/parabank/services/bank/login/john/demo
 1 &gt; Accept: application/json
 1 &gt; Host: parabank.parasoft.com
 1 &gt; Connection: Keep-Alive
@@ -688,19 +221,75 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 1 &gt; Accept-Encoding: gzip,deflate
 
 
-19:30:03.731 response time in milliseconds: 181
+19:59:43.254 response time in milliseconds: 595
 1 &lt; 200
-1 &lt; Date: Thu, 21 May 2026 00:30:02 GMT
+1 &lt; Date: Thu, 21 May 2026 00:59:42 GMT
 1 &lt; Content-Type: application/json
 1 &lt; Transfer-Encoding: chunked
 1 &lt; Connection: keep-alive
 1 &lt; Server: cloudflare
 1 &lt; cf-cache-status: DYNAMIC
 1 &lt; X-Content-Type-Options: nosniff
-1 &lt; CF-RAY: 9fef7860faafb6ef-BOG
-[{&quot;id&quot;:13344,&quot;customerId&quot;:12212,&quot;type&quot;:&quot;CHECKING&quot;,&quot;balance&quot;:-29994814.07}]
+1 &lt; CF-RAY: 9fefa3d2ddd4b6ec-BOG
+{&quot;id&quot;:12212,&quot;firstName&quot;:&quot;John&quot;,&quot;lastName&quot;:&quot;Smith&quot;,&quot;address&quot;:{&quot;street&quot;:&quot;1431 Main St&quot;,&quot;city&quot;:&quot;Beverly Hills&quot;,&quot;state&quot;:&quot;CA&quot;,&quot;zipCode&quot;:&quot;90210&quot;},&quot;phoneNumber&quot;:&quot;310-447-4121&quot;,&quot;ssn&quot;:&quot;622-11-9999&quot;}
 
 </div>   
+
+  
+
+</div>
+</div>
+          <div data-parent="[1:14]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.11">
+      <div class="step-ref bg-step">11</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">6</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1:14]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.12">
+      <div class="step-ref bg-step">12</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def targetCustomerId = response.id</span>
+      </div>
+    </div>
+    <div class="time-cell passed">6</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
 
   
 
@@ -716,6 +305,83 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref passed">15</div>
       
       <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;customers&#39;, targetCustomerId, &#39;accounts&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">5</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.16">
+      <div class="step-ref passed">16</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method GET</span>
+      </div>
+    </div>
+    <div class="time-cell passed">228</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.16">19:59:43.288 request:
+2 &gt; GET https://parabank.parasoft.com/parabank/services/bank/customers/12212/accounts
+2 &gt; Accept: application/json
+2 &gt; Host: parabank.parasoft.com
+2 &gt; Connection: Keep-Alive
+2 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
+2 &gt; Accept-Encoding: gzip,deflate
+
+
+19:59:43.510 response time in milliseconds: 221
+2 &lt; 200
+2 &lt; Date: Thu, 21 May 2026 00:59:42 GMT
+2 &lt; Content-Type: application/json
+2 &lt; Transfer-Encoding: chunked
+2 &lt; Connection: keep-alive
+2 &lt; Server: cloudflare
+2 &lt; cf-cache-status: DYNAMIC
+2 &lt; X-Content-Type-Options: nosniff
+2 &lt; CF-RAY: 9fefa3d48850b6fd-BOG
+[{&quot;id&quot;:13344,&quot;customerId&quot;:12212,&quot;type&quot;:&quot;CHECKING&quot;,&quot;balance&quot;:-79994609.07}]
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.17">
+      <div class="step-ref passed">17</div>
+      
+      <div class="step-cell passed">
         <span>Then</span>&nbsp;<span>status 200</span>
       </div>
     </div>
@@ -737,27 +403,34 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
           <div><div>
   
 
-  
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment"># Validación de Esquema: cada objeto del array debe cumplir estrictamente el contrato</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
 
   <div class="step-row">
-    <div class="step-container" id="0.17">
-      <div class="step-ref passed">17</div>
+    <div class="step-container" id="0.20">
+      <div class="step-ref passed">20</div>
       
       <div class="step-cell passed">
         <span>*</span>&nbsp;<span>match each response ==</span>
       </div>
     </div>
-    <div class="time-cell passed">3</div>
+    <div class="time-cell passed">19</div>
   </div>
 
    
   
-  <div class="preformatted" data-parent="0.17">{
-id: &#39;#number&#39;,
-customerId: &#39;#(targetCustomerId)&#39;,
-type: &#39;#regex ^(CHECKING|SAVINGS)$&#39;,
-balance: &#39;#number&#39;
-    }</div>
+  <div class="preformatted" data-parent="0.20">{
+  id: &#39;#number&#39;,
+  customerId: &#39;#(targetCustomerId)&#39;,
+  type: &#39;#regex ^(CHECKING|SAVINGS)$&#39;,
+  balance: &#39;#number&#39;
+}</div>
 
   
 
@@ -770,11 +443,45 @@ balance: &#39;#number&#39;
           <div><div>
   
 
-  
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment"># Integridad Financiera: ningún balance debe ser negativo</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
 
   <div class="step-row">
-    <div class="step-container" id="0.27">
-      <div class="step-ref passed">27</div>
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment"># DEFECTO DEL ENTORNO DEMO: El servidor demo de Parabank es compartido entre múltiples usuarios</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment"># y no resetea los datos entre ejecuciones. La cuenta acumula transferencias ajenas resultando</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment"># en saldo negativo. El criterio exige balance &gt;= 0 para cuentas CHECKING/SAVINGS.</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container" id="0.34">
+      <div class="step-ref passed">34</div>
       
       <div class="step-cell passed">
         <span>*</span>&nbsp;<span>def isNotNegative = function(x){ return x &gt;= 0 }</span>
@@ -801,14 +508,14 @@ balance: &#39;#number&#39;
   
 
   <div class="step-row">
-    <div class="step-container" id="0.28">
-      <div class="step-ref passed">28</div>
+    <div class="step-container" id="0.35">
+      <div class="step-ref passed">35</div>
       
       <div class="step-cell passed">
         <span>*</span>&nbsp;<span>def balances = $response[*].balance</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell passed">2</div>
   </div>
 
    
@@ -818,129 +525,6 @@ balance: &#39;#number&#39;
   
 
      
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  <div class="step-row">
-    <div class="step-container">
-      <div class="step-ref passed"></div>
-      
-      <div class="step-cell comment"># Integridad Financiera: verificar que ningún balance CHECKING/SAVINGS sea negativo.</div>
-    </div>
-    <div class="time-cell comment"></div>            
-  </div>
-
-  <div class="step-row">
-    <div class="step-container">
-      <div class="step-ref passed"></div>
-      
-      <div class="step-cell comment"># DEFECTO DE DATOS (entorno demo compartido): Parabank demo acumula transferencias de múltiples</div>
-    </div>
-    <div class="time-cell comment"></div>            
-  </div>
-
-  <div class="step-row">
-    <div class="step-container">
-      <div class="step-ref passed"></div>
-      
-      <div class="step-cell comment"># usuarios en las mismas cuentas, resultando en saldos negativos. En producción esto sería un</div>
-    </div>
-    <div class="time-cell comment"></div>            
-  </div>
-
-  <div class="step-row">
-    <div class="step-container">
-      <div class="step-ref passed"></div>
-      
-      <div class="step-cell comment"># defecto crítico de integridad financiera. Se documenta el hallazgo en lugar de bloquear el test.</div>
-    </div>
-    <div class="time-cell comment"></div>            
-  </div>
-
-  <div class="step-row">
-    <div class="step-container" id="0.33">
-      <div class="step-ref passed">33</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>print &#39;Saldos encontrados (DEFECTO si negativo en cuenta CHECKING/SAVINGS):&#39;, balances</span>
-      </div>
-    </div>
-    <div class="time-cell passed">1</div>
-  </div>
-
-   
-  
-  
-
-  
-
-  <div class="preformatted" data-parent="0.33">19:30:03.740 [print] Saldos encontrados (DEFECTO si negativo en cuenta CHECKING/SAVINGS): [
-  -2.999481407E7
-]
- 
-</div>   
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.34">
-      <div class="step-ref passed">34</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def allNonNegative = karate.filter(balances, isNotNegative).length == balances.length</span>
-      </div>
-    </div>
-    <div class="time-cell passed">3</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.35">
-      <div class="step-ref passed">35</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>print &#39;Todos los saldos son &gt;= 0?&#39;, allNonNegative</span>
-      </div>
-    </div>
-    <div class="time-cell passed">1</div>
-  </div>
-
-   
-  
-  
-
-  
-
-  <div class="preformatted" data-parent="0.35">19:30:03.745 [print] Todos los saldos son &gt;= 0? false 
-</div>   
 
   
 
@@ -953,13 +537,13 @@ balance: &#39;#number&#39;
 
   <div class="step-row">
     <div class="step-container" id="0.36">
-      <div class="step-ref passed">36</div>
+      <div class="step-ref failed">36</div>
       
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>match each balances == &#39;#number&#39;</span>
+      <div class="step-cell failed">
+        <span>*</span>&nbsp;<span>match each balances == &#39;#? isNotNegative(_)&#39;</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell failed">9</div>
   </div>
 
    
@@ -968,7 +552,19 @@ balance: &#39;#number&#39;
 
   
 
-     
+  <div class="preformatted" data-parent="0.36">19:59:43.549 classpath:org/udea/parabank/accounts.feature:36
+* match each balances == &#39;#? isNotNegative(_)&#39;
+match failed: EACH_EQUALS
+  $ | match each failed at index 0 (LIST:STRING)
+  [-7.999460907E7]
+  &#39;#? isNotNegative(_)&#39;
+
+    $[0] | evaluated to &#39;false&#39; (NUMBER:STRING)
+    -7.999460907E7
+    &#39;#? isNotNegative(_)&#39;
+
+classpath:org/udea/parabank/accounts.feature:36
+</div>   
 
   
 
