@@ -39,27 +39,24 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <img src="karate-labs-logo-ring.svg" alt="Karate Labs"/>
     </a>
     <div class="nav-count">
-      <div id="nav-pass" class="bg-success">0</div>
-      <div id="nav-fail" class="bg-danger">2</div>
+      <div id="nav-pass" class="bg-success">1</div>
+      <div id="nav-fail" class="bg-danger">0</div>
     </div>
   </div>
   <div id="nav-env">
-    <div></div>
+    <div>prod</div>
   </div>
   <div id="nav-type">
     <div>Scenarios</div>
   </div>
   <div id="nav-date">
-    <div>2026-05-19 07:36:00 p. m.</div>
+    <div>2026-05-20 07:30:04 p. m.</div>
   </div>
 </div>
 
         <div class="nav-container">
-          <div class="nav-item failed">
-            <a href="#[1:14]"><span>[1:14]</span> <span>Successful Transfer</span></a>
-          </div>
-          <div class="nav-item failed">
-            <a href="#[2:23]"><span>[2:23]</span> <span>Transfer Failed - Not found account</span></a>
+          <div class="nav-item passed">
+            <a href="#[1:12]"><span>[1:12]</span> <span>Transferencia y validación en el libro mayor (ledger)</span></a>
           </div>
         </div>
       </div>
@@ -69,33 +66,33 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
           <a href="karate-tags.html">Tags</a><span class="feature-label">|</span>
           <span class="feature-label">Feature:</span>
           <span class="feature-path">org/udea/parabank/TransferFunds.feature</span><span class="feature-label">|</span>
-          <span class="feature-name">Transfer funds in Parabank</span>
+          <span class="feature-name">Transferencia Atómica y Validación de Histórico</span>
           <span class="feature-description"></span>
         </div>
         <div class="scenario">
-          <div class="scenario-heading" id="[1:14]">
+          <div class="scenario-heading" id="[1:12]">
             <div class="heading-container">
               <div class="scenario-tags">
                 <a class="badge badge-primary" href="karate-tags.html">parabank_transfer</a>
               </div>
               <div class="scenario-keyword">
-                Scenario: <span>[1:14]</span>
-                <span class="scenario-name">Successful Transfer</span>
+                Scenario: <span>[1:12]</span>
+                <span class="scenario-name">Transferencia y validación en el libro mayor (ledger)</span>
                 <span></span>
               </div>
             </div>
-            <div class="scenario-time failed">
-              <span>ms:</span>&nbsp;<span>5114</span>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>413</span>
             </div>
           </div>
           <div class="step-row">
-            <div class="step-container" id="[1:14]bg">
+            <div class="step-container" id="[1:12]bg">
               <div class="step-ref bg-step">&gt;&gt;</div>
               <div class="step-cell passed">Background:</div>
             </div>
             <div class="time-cell passed"></div>
           </div>
-          <div data-parent="[1:14]bg"><div>
+          <div data-parent="[1:12]bg"><div>
   
 
   
@@ -108,7 +105,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>*</span>&nbsp;<span>url baseUrl</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell passed">0</div>
   </div>
 
    
@@ -123,7 +120,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
 </div>
 </div>
-          <div data-parent="[1:14]bg"><div>
+          <div data-parent="[1:12]bg"><div>
   
 
   
@@ -133,10 +130,10 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref bg-step">6</div>
       
       <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
+        <span>*</span>&nbsp;<span>configure headers = { Accept: &#39;application/json&#39; }</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell passed">0</div>
   </div>
 
    
@@ -151,14 +148,21 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
 </div>
 </div>
-          <div data-parent="[1:14]bg"><div>
-  
-
+          <div data-parent="[1:12]bg"><div>
   
 
   <div class="step-row">
-    <div class="step-container" id="0.7">
-      <div class="step-ref bg-step">7</div>
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment"># Usamos las cuentas que ya venían en el ejemplo del repo</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container" id="0.8">
+      <div class="step-ref bg-step">8</div>
       
       <div class="step-cell passed">
         <span>*</span>&nbsp;<span>def val_fromAccountId = &#39;13899&#39;</span>
@@ -179,35 +183,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
 </div>
 </div>
-          <div data-parent="[1:14]bg"><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.8">
-      <div class="step-ref bg-step">8</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def val_toAccountId = &#39;14565&#39;</span>
-      </div>
-    </div>
-    <div class="time-cell passed">1</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div data-parent="[1:14]bg"><div>
+          <div data-parent="[1:12]bg"><div>
   
 
   
@@ -217,10 +193,10 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref bg-step">9</div>
       
       <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def fakerObj = new faker()</span>
+        <span>*</span>&nbsp;<span>def val_toAccountId = &#39;14565&#39;</span>
       </div>
     </div>
-    <div class="time-cell passed">73</div>
+    <div class="time-cell passed">0</div>
   </div>
 
    
@@ -235,7 +211,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
 </div>
 </div>
-          <div data-parent="[1:14]bg"><div>
+          <div data-parent="[1:12]bg"><div>
   
 
   
@@ -245,66 +221,45 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref bg-step">10</div>
       
       <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def val_amount = fakerObj.number().numberBetween(1, 200)</span>
-      </div>
-    </div>
-    <div class="time-cell passed">13</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div data-parent="[1:14]bg"><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.11">
-      <div class="step-ref bg-step">11</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def val_fromAccountIdError = fakerObj.number().randomNumber(6, true)</span>
-      </div>
-    </div>
-    <div class="time-cell passed">6</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div data-parent="[1:14]bg"><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.12">
-      <div class="step-ref bg-step">12</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def val_toAccountIdError = fakerObj.number().randomNumber(6, true)</span>
+        <span>*</span>&nbsp;<span>def val_amount = 50</span>
       </div>
     </div>
     <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment"># --- PASO 1: Ejecutar la transferencia ---</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container" id="0.14">
+      <div class="step-ref passed">14</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;transfer&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
   </div>
 
    
@@ -329,10 +284,10 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref passed">15</div>
       
       <div class="step-cell passed">
-        <span>Given</span>&nbsp;<span>path &#39;transfer&#39;</span>
+        <span>And</span>&nbsp;<span>param fromAccountId = val_fromAccountId</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell passed">0</div>
   </div>
 
    
@@ -357,10 +312,10 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref passed">16</div>
       
       <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>param fromAccountId = val_fromAccountId //cuenta origen</span>
+        <span>And</span>&nbsp;<span>param toAccountId = val_toAccountId</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell passed">0</div>
   </div>
 
    
@@ -385,10 +340,10 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref passed">17</div>
       
       <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>param toAccountId = val_toAccountId //cuenta destino</span>
+        <span>And</span>&nbsp;<span>param amount = val_amount</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell passed">0</div>
   </div>
 
    
@@ -413,38 +368,10 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref passed">18</div>
       
       <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>param amount = val_amount // monto a transferir</span>
-      </div>
-    </div>
-    <div class="time-cell passed">1</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.19">
-      <div class="step-ref failed">19</div>
-      
-      <div class="step-cell failed">
         <span>When</span>&nbsp;<span>method POST</span>
       </div>
     </div>
-    <div class="time-cell failed">5013</div>
+    <div class="time-cell passed">200</div>
   </div>
 
    
@@ -453,20 +380,27 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.19">19:35:50.575 request:
-1 &gt; POST http://192.168.0.182:8080/parabank/services/bank/transfer?amount=159&amp;fromAccountId=13899&amp;toAccountId=14565
+  <div class="preformatted" data-parent="0.18">19:30:03.949 request:
+1 &gt; POST https://parabank.parasoft.com/parabank/services/bank/transfer?amount=50&amp;fromAccountId=13899&amp;toAccountId=14565
 1 &gt; Accept: application/json
-1 &gt; Host: 192.168.0.182:8080
+1 &gt; Host: parabank.parasoft.com
 1 &gt; Connection: Keep-Alive
 1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
 1 &gt; Accept-Encoding: gzip,deflate
 
 
-19:35:55.582 org.apache.http.conn.ConnectTimeoutException: Connect to 192.168.0.182:8080 [/192.168.0.182] failed: Connect timed out, http call failed after 5010 milliseconds for url: http://192.168.0.182:8080/parabank/services/bank/transfer?amount=159&amp;fromAccountId=13899&amp;toAccountId=14565
-19:35:55.583 classpath:org/udea/parabank/TransferFunds.feature:19
-When method POST
-http call failed after 5010 milliseconds for url: http://192.168.0.182:8080/parabank/services/bank/transfer?amount=159&amp;fromAccountId=13899&amp;toAccountId=14565
-classpath:org/udea/parabank/TransferFunds.feature:19
+19:30:04.146 response time in milliseconds: 197
+1 &lt; 200
+1 &lt; Date: Thu, 21 May 2026 00:30:02 GMT
+1 &lt; Content-Type: application/json
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Connection: keep-alive
+1 &lt; Server: cloudflare
+1 &lt; cf-cache-status: DYNAMIC
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; CF-RAY: 9fef78637f20b6ef-BOG
+Successfully transferred $50 from account #13899 to account #14565
+
 </div>   
 
   
@@ -479,14 +413,14 @@ classpath:org/udea/parabank/TransferFunds.feature:19
   
 
   <div class="step-row">
-    <div class="step-container" id="0.20">
-      <div class="step-ref skipped">20</div>
+    <div class="step-container" id="0.19">
+      <div class="step-ref passed">19</div>
       
-      <div class="step-cell skipped">
+      <div class="step-cell passed">
         <span>Then</span>&nbsp;<span>status 200</span>
       </div>
     </div>
-    <div class="time-cell skipped">0</div>
+    <div class="time-cell passed">0</div>
   </div>
 
    
@@ -504,262 +438,30 @@ classpath:org/udea/parabank/TransferFunds.feature:19
           <div><div>
   
 
-  
-
   <div class="step-row">
-    <div class="step-container" id="0.21">
-      <div class="step-ref skipped">21</div>
+    <div class="step-container">
+      <div class="step-ref passed"></div>
       
-      <div class="step-cell skipped">
-        <span>And</span>&nbsp;<span>match response == &quot;Successfully transferred $&quot; + val_amount + &quot; from account #&quot; + val_fromAccountId + &quot; to account #&quot; + val_toAccountId</span>
-      </div>
+      <div class="step-cell comment"># DEFECTO DEL API (Sustentación): El criterio exige capturar el ID de la transacción,</div>
     </div>
-    <div class="time-cell skipped">0</div>
+    <div class="time-cell comment"></div>            
   </div>
 
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-        </div>
-        <div class="scenario">
-          <div class="scenario-heading" id="[2:23]">
-            <div class="heading-container">
-              <div class="scenario-tags">
-                <a class="badge badge-primary" href="karate-tags.html">parabank_transfer</a>
-              </div>
-              <div class="scenario-keyword">
-                Scenario: <span>[2:23]</span>
-                <span class="scenario-name">Transfer Failed - Not found account</span>
-                <span></span>
-              </div>
-            </div>
-            <div class="scenario-time failed">
-              <span>ms:</span>&nbsp;<span>5016</span>
-            </div>
-          </div>
-          <div class="step-row">
-            <div class="step-container" id="[2:23]bg">
-              <div class="step-ref bg-step">&gt;&gt;</div>
-              <div class="step-cell passed">Background:</div>
-            </div>
-            <div class="time-cell passed"></div>
-          </div>
-          <div data-parent="[2:23]bg"><div>
-  
-
-  
-
   <div class="step-row">
-    <div class="step-container" id="0.5">
-      <div class="step-ref bg-step">5</div>
+    <div class="step-container">
+      <div class="step-ref passed"></div>
       
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>url baseUrl</span>
-      </div>
+      <div class="step-cell comment"># pero el endpoint de Parabank devuelve texto plano, no un objeto con ID.</div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell comment"></div>            
   </div>
 
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div data-parent="[2:23]bg"><div>
-  
-
-  
-
   <div class="step-row">
-    <div class="step-container" id="0.6">
-      <div class="step-ref bg-step">6</div>
+    <div class="step-container" id="0.23">
+      <div class="step-ref passed">23</div>
       
       <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div data-parent="[2:23]bg"><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.7">
-      <div class="step-ref bg-step">7</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def val_fromAccountId = &#39;13899&#39;</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div data-parent="[2:23]bg"><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.8">
-      <div class="step-ref bg-step">8</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def val_toAccountId = &#39;14565&#39;</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div data-parent="[2:23]bg"><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.9">
-      <div class="step-ref bg-step">9</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def fakerObj = new faker()</span>
-      </div>
-    </div>
-    <div class="time-cell passed">2</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div data-parent="[2:23]bg"><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.10">
-      <div class="step-ref bg-step">10</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def val_amount = fakerObj.number().numberBetween(1, 200)</span>
-      </div>
-    </div>
-    <div class="time-cell passed">1</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div data-parent="[2:23]bg"><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.11">
-      <div class="step-ref bg-step">11</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def val_fromAccountIdError = fakerObj.number().randomNumber(6, true)</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div data-parent="[2:23]bg"><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.12">
-      <div class="step-ref bg-step">12</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def val_toAccountIdError = fakerObj.number().randomNumber(6, true)</span>
+        <span>*</span>&nbsp;<span>match response contains &quot;Successfully transferred $&quot;</span>
       </div>
     </div>
     <div class="time-cell passed">1</div>
@@ -780,98 +482,30 @@ classpath:org/udea/parabank/TransferFunds.feature:19
           <div><div>
   
 
-  
-
   <div class="step-row">
-    <div class="step-container" id="0.24">
-      <div class="step-ref passed">24</div>
+    <div class="step-container">
+      <div class="step-ref passed"></div>
       
-      <div class="step-cell passed">
-        <span>Given</span>&nbsp;<span>path &#39;transfer&#39;</span>
-      </div>
+      <div class="step-cell comment"># --- PASO 2: Encadenamiento y Verificación de Estado ---</div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell comment"></div>            
   </div>
 
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
   <div class="step-row">
-    <div class="step-container" id="0.25">
-      <div class="step-ref passed">25</div>
+    <div class="step-container">
+      <div class="step-ref passed"></div>
       
-      <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>param fromAccountId = val_fromAccountIdError //cuenta origen inexistente</span>
-      </div>
+      <div class="step-cell comment"># Hacemos un GET automático al historial de la cuenta destino</div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell comment"></div>            
   </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.26">
-      <div class="step-ref passed">26</div>
-      
-      <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>param toAccountId = val_toAccountIdError //cuenta destino inexistente</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
 
   <div class="step-row">
     <div class="step-container" id="0.27">
       <div class="step-ref passed">27</div>
       
       <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>param amount = val_amount // monto a transferir</span>
+        <span>Given</span>&nbsp;<span>path &#39;accounts&#39;, val_toAccountId, &#39;transactions&#39;</span>
       </div>
     </div>
     <div class="time-cell passed">0</div>
@@ -896,13 +530,13 @@ classpath:org/udea/parabank/TransferFunds.feature:19
 
   <div class="step-row">
     <div class="step-container" id="0.28">
-      <div class="step-ref failed">28</div>
+      <div class="step-ref passed">28</div>
       
-      <div class="step-cell failed">
-        <span>When</span>&nbsp;<span>method POST</span>
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method GET</span>
       </div>
     </div>
-    <div class="time-cell failed">5009</div>
+    <div class="time-cell passed">180</div>
   </div>
 
    
@@ -911,20 +545,27 @@ classpath:org/udea/parabank/TransferFunds.feature:19
 
   
 
-  <div class="preformatted" data-parent="0.28">19:35:55.610 request:
-1 &gt; POST http://192.168.0.182:8080/parabank/services/bank/transfer?amount=78&amp;fromAccountId=260631&amp;toAccountId=433732
-1 &gt; Accept: application/json
-1 &gt; Host: 192.168.0.182:8080
-1 &gt; Connection: Keep-Alive
-1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
-1 &gt; Accept-Encoding: gzip,deflate
+  <div class="preformatted" data-parent="0.28">19:30:04.150 request:
+2 &gt; GET https://parabank.parasoft.com/parabank/services/bank/accounts/14565/transactions
+2 &gt; Accept: application/json
+2 &gt; Host: parabank.parasoft.com
+2 &gt; Connection: Keep-Alive
+2 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
+2 &gt; Accept-Encoding: gzip,deflate
 
 
-19:36:00.614 org.apache.http.conn.ConnectTimeoutException: Connect to 192.168.0.182:8080 [/192.168.0.182] failed: Connect timed out, http call failed after 5008 milliseconds for url: http://192.168.0.182:8080/parabank/services/bank/transfer?amount=78&amp;fromAccountId=260631&amp;toAccountId=433732
-19:36:00.614 classpath:org/udea/parabank/TransferFunds.feature:28
-When method POST
-http call failed after 5008 milliseconds for url: http://192.168.0.182:8080/parabank/services/bank/transfer?amount=78&amp;fromAccountId=260631&amp;toAccountId=433732
-classpath:org/udea/parabank/TransferFunds.feature:28
+19:30:04.329 response time in milliseconds: 179
+2 &lt; 200
+2 &lt; Date: Thu, 21 May 2026 00:30:03 GMT
+2 &lt; Content-Type: application/json
+2 &lt; Transfer-Encoding: chunked
+2 &lt; Connection: keep-alive
+2 &lt; Server: cloudflare
+2 &lt; cf-cache-status: DYNAMIC
+2 &lt; X-Content-Type-Options: nosniff
+2 &lt; CF-RAY: 9fef7864bb2db6f7-BOG
+[{&quot;id&quot;:16363,&quot;accountId&quot;:14565,&quot;type&quot;:&quot;Credit&quot;,&quot;date&quot;:1779321600000,&quot;amount&quot;:90.00,&quot;description&quot;:&quot;Funds Transfer Received&quot;},{&quot;id&quot;:16585,&quot;accountId&quot;:14565,&quot;type&quot;:&quot;Credit&quot;,&quot;date&quot;:1779321600000,&quot;amount&quot;:0.01,&quot;description&quot;:&quot;Funds Transfer Received&quot;},{&quot;id&quot;:18139,&quot;accountId&quot;:14565,&quot;type&quot;:&quot;Credit&quot;,&quot;date&quot;:1779321600000,&quot;amount&quot;:50.00,&quot;description&quot;:&quot;Funds Transfer Received&quot;},{&quot;id&quot;:22357,&quot;accountId&quot;:14565,&quot;type&quot;:&quot;Credit&quot;,&quot;date&quot;:1779321600000,&quot;amount&quot;:100.00,&quot;description&quot;:&quot;Funds Transfer Received&quot;},{&quot;id&quot;:22579,&quot;accountId&quot;:14565,&quot;type&quot;:&quot;Credit&quot;,&quot;date&quot;:1779321600000,&quot;amount&quot;:100.00,&quot;description&quot;:&quot;Funds Transfer Received&quot;},{&quot;id&quot;:25687,&quot;accountId&quot;:14565,&quot;type&quot;:&quot;Credit&quot;,&quot;date&quot;:1779321600000,&quot;amount&quot;:50.00,&quot;description&quot;:&quot;Funds Transfer Received&quot;},{&quot;id&quot;:26242,&quot;accountId&quot;:14565,&quot;type&quot;:&quot;Credit&quot;,&quot;date&quot;:1779321600000,&quot;amount&quot;:50.00,&quot;description&quot;:&quot;Funds Transfer Received&quot;},{&quot;id&quot;:26908,&quot;accountId&quot;:14565,&quot;type&quot;:&quot;Credit&quot;,&quot;date&quot;:1779321600000,&quot;amount&quot;:50.00,&quot;description&quot;:&quot;Funds Transfer Received&quot;},{&quot;id&quot;:27574,&quot;accountId&quot;:14565,&quot;type&quot;:&quot;Credit&quot;,&quot;date&quot;:1779321600000,&quot;amount&quot;:50.00,&quot;description&quot;:&quot;Funds Transfer Received&quot;}]
+
 </div>   
 
   
@@ -938,13 +579,75 @@ classpath:org/udea/parabank/TransferFunds.feature:28
 
   <div class="step-row">
     <div class="step-container" id="0.29">
-      <div class="step-ref skipped">29</div>
+      <div class="step-ref passed">29</div>
       
-      <div class="step-cell skipped">
-        <span>Then</span>&nbsp;<span>status 400</span>
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
       </div>
     </div>
-    <div class="time-cell skipped">0</div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment"># Validamos mediante JSONPath que la última transacción coincida en monto y tipo (Credit).</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment"># NOTA: Parabank devuelve transacciones en orden ASCENDENTE por ID (más antigua primero),</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment"># por lo que la más reciente está en el ÚLTIMO índice, no en [0].</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment"># Usamos karate.jsonPath con $[-1:] para obtener el último elemento de forma confiable.</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container" id="0.35">
+      <div class="step-ref passed">35</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def lastTransaction = karate.jsonPath(response, &#39;$[-1:]&#39;)[0]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">26</div>
   </div>
 
    
@@ -965,14 +668,42 @@ classpath:org/udea/parabank/TransferFunds.feature:28
   
 
   <div class="step-row">
-    <div class="step-container" id="0.30">
-      <div class="step-ref skipped">30</div>
+    <div class="step-container" id="0.37">
+      <div class="step-ref passed">37</div>
       
-      <div class="step-cell skipped">
-        <span>And</span>&nbsp;<span>match response == &quot;Could not find account &quot; + val_fromAccountIdError + &quot; and/or &quot; + val_toAccountIdError</span>
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>match lastTransaction.type == &#39;Credit&#39;</span>
       </div>
     </div>
-    <div class="time-cell skipped">0</div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.38">
+      <div class="step-ref passed">38</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>match lastTransaction.amount == val_amount</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
   </div>
 
    

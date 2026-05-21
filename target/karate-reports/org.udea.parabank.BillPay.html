@@ -1,0 +1,5403 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet" href="res/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="res/karate-report.css" type="text/css"/>
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <script type="text/javascript" src="res/jquery.min.js"></script>
+    <script type="text/javascript" src="res/jquery.tablesorter.min.js"></script>
+    <script type="text/javascript" src="res/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="res/bootstrap.min.js"></script>
+    <script type="text/javascript" src="res/karate-report.js"></script>
+    <script type="text/javascript" src="res/Resemble.js"></script>
+    <script>
+!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
+  api_host:'https://app.posthog.com',
+  persistence:'localStorage',
+  autocapture:false,
+  capture_pageview:false,
+  api_transport:'sendBeacon',
+  loaded: function(posthog) { 
+    posthog.identify("565da103-5ced-49c0-b2fd-396ff48e2a33",{name:"Camilo"});
+    posthog.capture("report_feature",{karate_version:"1.3.1",karate_meta:null});
+  }
+});
+</script>
+
+    <title>org.udea.parabank.BillPay</title>
+  </head>
+  <body>
+    <div id="root-container">
+      <div id="leftnav">
+        
+        <div>
+  <div class="nav-logo">
+    <a href="https://karatelabs.io">
+      <img src="karate-labs-logo-ring.svg" alt="Karate Labs"/>
+    </a>
+    <div class="nav-count">
+      <div id="nav-pass" class="bg-success">5</div>
+      <div id="nav-fail" class="bg-danger">0</div>
+    </div>
+  </div>
+  <div id="nav-env">
+    <div>prod</div>
+  </div>
+  <div id="nav-type">
+    <div>Scenarios</div>
+  </div>
+  <div id="nav-date">
+    <div>2026-05-20 07:30:01 p. m.</div>
+  </div>
+</div>
+
+        <div class="nav-container">
+          <div class="nav-item passed">
+            <a href="#[1:35]"><span>[1:35]</span> <span>Pago exitoso valida esquema de respuesta</span></a>
+          </div>
+          <div class="nav-item passed">
+            <a href="#[2.1:61]"><span>[2.1:61]</span> <span>Data-Driven - Validación de casos de borde y saldo insuficiente</span></a>
+          </div>
+          <div class="nav-item passed">
+            <a href="#[2.2:62]"><span>[2.2:62]</span> <span>Data-Driven - Validación de casos de borde y saldo insuficiente</span></a>
+          </div>
+          <div class="nav-item passed">
+            <a href="#[2.3:63]"><span>[2.3:63]</span> <span>Data-Driven - Validación de casos de borde y saldo insuficiente</span></a>
+          </div>
+          <div class="nav-item passed">
+            <a href="#[3:65]"><span>[3:65]</span> <span>Cuenta de origen inexistente retorna error de servidor</span></a>
+          </div>
+        </div>
+      </div>
+      <div id="content">
+        <div class="page-heading alert alert-primary">
+          <a href="karate-summary.html">Summary</a><span class="feature-label">|</span>
+          <a href="karate-tags.html">Tags</a><span class="feature-label">|</span>
+          <span class="feature-label">Feature:</span>
+          <span class="feature-path">org/udea/parabank/BillPay.feature</span><span class="feature-label">|</span>
+          <span class="feature-name">Robustez y Manejo de Excepciones en Pagos (Bill Pay)</span>
+          <span class="feature-description"></span>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[1:35]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                <a class="badge badge-primary" href="karate-tags.html">parabank_billpay</a>
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[1:35]</span>
+                <span class="scenario-name">Pago exitoso valida esquema de respuesta</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>1618</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[1:35]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[1:35]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url baseUrl</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1:35]bg"><div>
+  
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment"># configure headers persiste Accept en TODOS los requests del feature (no solo el primero)</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container" id="0.7">
+      <div class="step-ref bg-step">7</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>configure headers = { Accept: &#39;application/json&#39; }</span>
+      </div>
+    </div>
+    <div class="time-cell passed">54</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1:35]bg"><div>
+  
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment"># Obtener customerId via login</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container" id="0.9">
+      <div class="step-ref bg-step">9</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def authData = call read(&#39;login.feature@login_ok&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1046</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  <div>
+        
+    <div class="step-row">
+      <div class="step-container" id="0.9.0.call">
+        <div class="step-ref bg-step">&gt;&gt;</div>
+        <div class="step-indent"></div>
+        <div class="step-cell passed">org.udea.parabank.login</div>
+      </div>
+      <div class="time-cell passed">1011</div>
+    </div>
+    <div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="0.9.0.call">
+    <div class="step-container" id="0.9.0.call.0.5">
+      <div class="step-ref bg-step">5</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url baseUrl</span>
+      </div>
+    </div>
+    <div class="time-cell passed">3</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="0.9.0.call">
+    <div class="step-container" id="0.9.0.call.0.6">
+      <div class="step-ref bg-step">6</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="0.9.0.call">
+    <div class="step-container" id="0.9.0.call.0.10">
+      <div class="step-ref bg-step">10</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;login&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="0.9.0.call">
+    <div class="step-container" id="0.9.0.call.0.11">
+      <div class="step-ref bg-step">11</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>path &#39;john&#39; //userName</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="0.9.0.call">
+    <div class="step-container" id="0.9.0.call.0.12">
+      <div class="step-ref bg-step">12</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>path &#39;demo&#39; //password</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="0.9.0.call">
+    <div class="step-container" id="0.9.0.call.0.13">
+      <div class="step-ref bg-step">13</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method GET</span>
+      </div>
+    </div>
+    <div class="time-cell passed">957</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.9.0.call.0.13">19:29:57.530 request:
+1 &gt; GET https://parabank.parasoft.com/parabank/services/bank/login/john/demo
+1 &gt; Accept: application/json
+1 &gt; Host: parabank.parasoft.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+19:29:58.119 response time in milliseconds: 586
+1 &lt; 200
+1 &lt; Date: Thu, 21 May 2026 00:29:56 GMT
+1 &lt; Content-Type: application/json
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Connection: keep-alive
+1 &lt; Server: cloudflare
+1 &lt; cf-cache-status: DYNAMIC
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; CF-RAY: 9fef783dca4bb6ff-BOG
+{&quot;id&quot;:12212,&quot;firstName&quot;:&quot;John&quot;,&quot;lastName&quot;:&quot;Smith&quot;,&quot;address&quot;:{&quot;street&quot;:&quot;1431 Main St&quot;,&quot;city&quot;:&quot;Beverly Hills&quot;,&quot;state&quot;:&quot;CA&quot;,&quot;zipCode&quot;:&quot;90210&quot;},&quot;phoneNumber&quot;:&quot;310-447-4121&quot;,&quot;ssn&quot;:&quot;622-11-9999&quot;}
+
+</div>   
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="0.9.0.call">
+    <div class="step-container" id="0.9.0.call.0.14">
+      <div class="step-ref bg-step">14</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">8</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="0.9.0.call">
+    <div class="step-container" id="0.9.0.call.0.15">
+      <div class="step-ref bg-step">15</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response ==</span>
+      </div>
+    </div>
+    <div class="time-cell passed">26</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="0.9.0.call.0.15">{
+   &quot;id&quot;: &#39;#number&#39;,
+   &quot;firstName&quot;: &#39;#string&#39;,
+   &quot;lastName&quot;: &#39;#string&#39;,
+   &quot;address&quot;: {
+        &quot;street&quot;: &#39;#string&#39;,
+        &quot;city&quot;: &#39;#string&#39;,
+        &quot;state&quot;: &#39;#string&#39;,
+        &quot;zipCode&quot;: &#39;#string&#39;
+    },
+   &quot;phoneNumber&quot;: &#39;#string&#39;,
+   &quot;ssn&quot;: &#39;#string&#39;
+}</div>
+
+  
+
+     
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="0.9.0.call">
+    <div class="step-container" id="0.9.0.call.0.31">
+      <div class="step-ref bg-step">31</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>match header Content-Type contains &#39;application/json&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  <div class="step-row" data-parent="0.9.0.call">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      <div class="step-indent"></div>
+      <div class="step-cell comment"># DEFECTO DOCUMENTADO: El endpoint REST /login/{user}/{pass} no emite Set-Cookie/JSESSIONID.</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row" data-parent="0.9.0.call">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      <div class="step-indent"></div>
+      <div class="step-cell comment"># La sesión solo se crea via formulario HTML (/login.htm), no via el API REST.</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row" data-parent="0.9.0.call">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      <div class="step-indent"></div>
+      <div class="step-cell comment"># Criterio de aceptación exige JSESSIONID, pero la API no lo provee en este endpoint.</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row" data-parent="0.9.0.call">
+    <div class="step-container" id="0.9.0.call.0.36">
+      <div class="step-ref bg-step">36</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def setCookie = responseHeaders[&#39;Set-Cookie&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">4</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="0.9.0.call">
+    <div class="step-container" id="0.9.0.call.0.37">
+      <div class="step-ref bg-step">37</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>print &#39;Set-Cookie (DEFECTO - esperado JSESSIONID, no presente en REST login):&#39;, setCookie</span>
+      </div>
+    </div>
+    <div class="time-cell passed">7</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.9.0.call.0.37">19:29:58.172 [print] Set-Cookie (DEFECTO - esperado JSESSIONID, no presente en REST login): [
+]
+ 
+</div>   
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="0.9.0.call">
+    <div class="step-container" id="0.9.0.call.0.39">
+      <div class="step-ref bg-step">39</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def customerId = response.id</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+    </div>    
+  </div>
+
+</div>
+</div>
+          <div data-parent="[1:35]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.10">
+      <div class="step-ref bg-step">10</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def customerId = authData.customerId</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1:35]bg"><div>
+  
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment"># Obtener accountId y saldo disponible DINÁMICAMENTE</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container" id="0.12">
+      <div class="step-ref bg-step">12</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;customers&#39;, customerId, &#39;accounts&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">11</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1:35]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.13">
+      <div class="step-ref bg-step">13</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method GET</span>
+      </div>
+    </div>
+    <div class="time-cell passed">199</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.13">19:29:58.192 request:
+1 &gt; GET https://parabank.parasoft.com/parabank/services/bank/customers/12212/accounts
+1 &gt; Accept: application/json
+1 &gt; Host: parabank.parasoft.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+19:29:58.386 response time in milliseconds: 193
+1 &lt; 200
+1 &lt; Date: Thu, 21 May 2026 00:29:57 GMT
+1 &lt; Content-Type: application/json
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Connection: keep-alive
+1 &lt; Server: cloudflare
+1 &lt; cf-cache-status: DYNAMIC
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; CF-RAY: 9fef783f8af4b6ef-BOG
+[{&quot;id&quot;:13344,&quot;customerId&quot;:12212,&quot;type&quot;:&quot;CHECKING&quot;,&quot;balance&quot;:-19994855.07}]
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div data-parent="[1:35]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1:35]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def accountId = response[0].id</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1:35]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def availableBalance = response[0].balance</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1:35]bg"><div>
+  
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment"># Payee válido (XML requerido por la API de Parabank)</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container" id="0.19">
+      <div class="step-ref bg-step">19</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def payeeXml =</span>
+      </div>
+    </div>
+    <div class="time-cell passed">13</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="0.19">&lt;payee&gt;
+  &lt;name&gt;Test Payee&lt;/name&gt;
+  &lt;address&gt;
+    &lt;street&gt;123 Main St&lt;/street&gt;
+    &lt;city&gt;Beverly Hills&lt;/city&gt;
+    &lt;state&gt;CA&lt;/state&gt;
+    &lt;zipCode&gt;90210&lt;/zipCode&gt;
+  &lt;/address&gt;
+  &lt;phoneNumber&gt;310-000-0000&lt;/phoneNumber&gt;
+  &lt;accountNumber&gt;9999&lt;/accountNumber&gt;
+  &lt;routingNumber&gt;111000025&lt;/routingNumber&gt;
+&lt;/payee&gt;</div>
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.36">
+      <div class="step-ref passed">36</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;billpay&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.37">
+      <div class="step-ref passed">37</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>param accountId = accountId</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.38">
+      <div class="step-ref passed">38</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>param amount = 10</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.39">
+      <div class="step-ref passed">39</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Content-Type = &#39;application/xml&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.40">
+      <div class="step-ref passed">40</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request payeeXml</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.41">
+      <div class="step-ref passed">41</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">283</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.41">19:29:58.513 request:
+2 &gt; POST https://parabank.parasoft.com/parabank/services/bank/billpay?accountId=13344&amp;amount=10
+2 &gt; Content-Type: application/xml; charset=UTF-8
+2 &gt; Accept: application/json
+2 &gt; Content-Length: 316
+2 &gt; Host: parabank.parasoft.com
+2 &gt; Connection: Keep-Alive
+2 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
+2 &gt; Accept-Encoding: gzip,deflate
+&lt;payee&gt;
+  &lt;name&gt;Test Payee&lt;/name&gt;
+  &lt;address&gt;
+    &lt;street&gt;123 Main St&lt;/street&gt;
+    &lt;city&gt;Beverly Hills&lt;/city&gt;
+    &lt;state&gt;CA&lt;/state&gt;
+    &lt;zipCode&gt;90210&lt;/zipCode&gt;
+  &lt;/address&gt;
+  &lt;phoneNumber&gt;310-000-0000&lt;/phoneNumber&gt;
+  &lt;accountNumber&gt;9999&lt;/accountNumber&gt;
+  &lt;routingNumber&gt;111000025&lt;/routingNumber&gt;
+&lt;/payee&gt;
+
+19:29:58.690 response time in milliseconds: 176
+2 &lt; 200
+2 &lt; Date: Thu, 21 May 2026 00:29:57 GMT
+2 &lt; Content-Type: application/json
+2 &lt; Transfer-Encoding: chunked
+2 &lt; Connection: keep-alive
+2 &lt; Server: cloudflare
+2 &lt; cf-cache-status: DYNAMIC
+2 &lt; X-Content-Type-Options: nosniff
+2 &lt; CF-RAY: 9fef78417916b6f2-BOG
+{&quot;payeeName&quot;:&quot;Test Payee&quot;,&quot;amount&quot;:10,&quot;accountId&quot;:13344}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.42">
+      <div class="step-ref passed">42</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.43">
+      <div class="step-ref passed">43</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response == { payeeName: &#39;#string&#39;, amount: &#39;#number&#39;, accountId: &#39;#number&#39; }</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.44">
+      <div class="step-ref passed">44</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.accountId == accountId</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[2.1:61]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                <a class="badge badge-primary" href="karate-tags.html">parabank_billpay</a>
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[2.1:61]</span>
+                <span class="scenario-name">Data-Driven - Validación de casos de borde y saldo insuficiente</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>572</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[2.1:61]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[2.1:61]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url baseUrl</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.1:61]bg"><div>
+  
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment"># configure headers persiste Accept en TODOS los requests del feature (no solo el primero)</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container" id="1.7">
+      <div class="step-ref bg-step">7</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>configure headers = { Accept: &#39;application/json&#39; }</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.1:61]bg"><div>
+  
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment"># Obtener customerId via login</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container" id="1.9">
+      <div class="step-ref bg-step">9</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def authData = call read(&#39;login.feature@login_ok&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">206</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  <div>
+        
+    <div class="step-row">
+      <div class="step-container" id="1.9.0.call">
+        <div class="step-ref bg-step">&gt;&gt;</div>
+        <div class="step-indent"></div>
+        <div class="step-cell passed">org.udea.parabank.login</div>
+      </div>
+      <div class="time-cell passed">189</div>
+    </div>
+    <div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="1.9.0.call">
+    <div class="step-container" id="1.9.0.call.0.5">
+      <div class="step-ref bg-step">5</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url baseUrl</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="1.9.0.call">
+    <div class="step-container" id="1.9.0.call.0.6">
+      <div class="step-ref bg-step">6</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="1.9.0.call">
+    <div class="step-container" id="1.9.0.call.0.10">
+      <div class="step-ref bg-step">10</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;login&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="1.9.0.call">
+    <div class="step-container" id="1.9.0.call.0.11">
+      <div class="step-ref bg-step">11</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>path &#39;john&#39; //userName</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="1.9.0.call">
+    <div class="step-container" id="1.9.0.call.0.12">
+      <div class="step-ref bg-step">12</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>path &#39;demo&#39; //password</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="1.9.0.call">
+    <div class="step-container" id="1.9.0.call.0.13">
+      <div class="step-ref bg-step">13</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method GET</span>
+      </div>
+    </div>
+    <div class="time-cell passed">183</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.9.0.call.0.13">19:29:58.743 request:
+1 &gt; GET https://parabank.parasoft.com/parabank/services/bank/login/john/demo
+1 &gt; Accept: application/json
+1 &gt; Host: parabank.parasoft.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+19:29:58.923 response time in milliseconds: 179
+1 &lt; 200
+1 &lt; Date: Thu, 21 May 2026 00:29:57 GMT
+1 &lt; Content-Type: application/json
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Connection: keep-alive
+1 &lt; Server: cloudflare
+1 &lt; cf-cache-status: DYNAMIC
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; CF-RAY: 9fef7842e83cb6ef-BOG
+{&quot;id&quot;:12212,&quot;firstName&quot;:&quot;John&quot;,&quot;lastName&quot;:&quot;Smith&quot;,&quot;address&quot;:{&quot;street&quot;:&quot;1431 Main St&quot;,&quot;city&quot;:&quot;Beverly Hills&quot;,&quot;state&quot;:&quot;CA&quot;,&quot;zipCode&quot;:&quot;90210&quot;},&quot;phoneNumber&quot;:&quot;310-447-4121&quot;,&quot;ssn&quot;:&quot;622-11-9999&quot;}
+
+</div>   
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="1.9.0.call">
+    <div class="step-container" id="1.9.0.call.0.14">
+      <div class="step-ref bg-step">14</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="1.9.0.call">
+    <div class="step-container" id="1.9.0.call.0.15">
+      <div class="step-ref bg-step">15</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response ==</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="1.9.0.call.0.15">{
+   &quot;id&quot;: &#39;#number&#39;,
+   &quot;firstName&quot;: &#39;#string&#39;,
+   &quot;lastName&quot;: &#39;#string&#39;,
+   &quot;address&quot;: {
+        &quot;street&quot;: &#39;#string&#39;,
+        &quot;city&quot;: &#39;#string&#39;,
+        &quot;state&quot;: &#39;#string&#39;,
+        &quot;zipCode&quot;: &#39;#string&#39;
+    },
+   &quot;phoneNumber&quot;: &#39;#string&#39;,
+   &quot;ssn&quot;: &#39;#string&#39;
+}</div>
+
+  
+
+     
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="1.9.0.call">
+    <div class="step-container" id="1.9.0.call.0.31">
+      <div class="step-ref bg-step">31</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>match header Content-Type contains &#39;application/json&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  <div class="step-row" data-parent="1.9.0.call">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      <div class="step-indent"></div>
+      <div class="step-cell comment"># DEFECTO DOCUMENTADO: El endpoint REST /login/{user}/{pass} no emite Set-Cookie/JSESSIONID.</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row" data-parent="1.9.0.call">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      <div class="step-indent"></div>
+      <div class="step-cell comment"># La sesión solo se crea via formulario HTML (/login.htm), no via el API REST.</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row" data-parent="1.9.0.call">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      <div class="step-indent"></div>
+      <div class="step-cell comment"># Criterio de aceptación exige JSESSIONID, pero la API no lo provee en este endpoint.</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row" data-parent="1.9.0.call">
+    <div class="step-container" id="1.9.0.call.0.36">
+      <div class="step-ref bg-step">36</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def setCookie = responseHeaders[&#39;Set-Cookie&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="1.9.0.call">
+    <div class="step-container" id="1.9.0.call.0.37">
+      <div class="step-ref bg-step">37</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>print &#39;Set-Cookie (DEFECTO - esperado JSESSIONID, no presente en REST login):&#39;, setCookie</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.9.0.call.0.37">19:29:58.927 [print] Set-Cookie (DEFECTO - esperado JSESSIONID, no presente en REST login): [
+]
+ 
+</div>   
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="1.9.0.call">
+    <div class="step-container" id="1.9.0.call.0.39">
+      <div class="step-ref bg-step">39</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def customerId = response.id</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+    </div>    
+  </div>
+
+</div>
+</div>
+          <div data-parent="[2.1:61]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.10">
+      <div class="step-ref bg-step">10</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def customerId = authData.customerId</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.1:61]bg"><div>
+  
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment"># Obtener accountId y saldo disponible DINÁMICAMENTE</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container" id="1.12">
+      <div class="step-ref bg-step">12</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;customers&#39;, customerId, &#39;accounts&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.1:61]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.13">
+      <div class="step-ref bg-step">13</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method GET</span>
+      </div>
+    </div>
+    <div class="time-cell passed">179</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.13">19:29:58.931 request:
+1 &gt; GET https://parabank.parasoft.com/parabank/services/bank/customers/12212/accounts
+1 &gt; Accept: application/json
+1 &gt; Host: parabank.parasoft.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+19:29:59.108 response time in milliseconds: 176
+1 &lt; 200
+1 &lt; Date: Thu, 21 May 2026 00:29:57 GMT
+1 &lt; Content-Type: application/json
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Connection: keep-alive
+1 &lt; Server: cloudflare
+1 &lt; cf-cache-status: DYNAMIC
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; CF-RAY: 9fef78441c0ab6ec-BOG
+[{&quot;id&quot;:13344,&quot;customerId&quot;:12212,&quot;type&quot;:&quot;CHECKING&quot;,&quot;balance&quot;:-19994865.07}]
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.1:61]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.1:61]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def accountId = response[0].id</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.1:61]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def availableBalance = response[0].balance</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.1:61]bg"><div>
+  
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment"># Payee válido (XML requerido por la API de Parabank)</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container" id="1.19">
+      <div class="step-ref bg-step">19</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def payeeXml =</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="1.19">&lt;payee&gt;
+  &lt;name&gt;Test Payee&lt;/name&gt;
+  &lt;address&gt;
+    &lt;street&gt;123 Main St&lt;/street&gt;
+    &lt;city&gt;Beverly Hills&lt;/city&gt;
+    &lt;state&gt;CA&lt;/state&gt;
+    &lt;zipCode&gt;90210&lt;/zipCode&gt;
+  &lt;/address&gt;
+  &lt;phoneNumber&gt;310-000-0000&lt;/phoneNumber&gt;
+  &lt;accountNumber&gt;9999&lt;/accountNumber&gt;
+  &lt;routingNumber&gt;111000025&lt;/routingNumber&gt;
+&lt;/payee&gt;</div>
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment"># El criterio de aceptación espera 400 Bad Request para montos inválidos y saldo insuficiente.</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment"># DEFECTO DOCUMENTADO: La API no valida montos y retorna 200 en todos los casos de borde.</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment"># Los mensajes de error descriptivos esperados por el criterio no son provistos por la API.</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container" id="1.50">
+      <div class="step-ref passed">50</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;billpay&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.51">
+      <div class="step-ref passed">51</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>param accountId = accountId</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.52">
+      <div class="step-ref passed">52</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>param amount = 0</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.53">
+      <div class="step-ref passed">53</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Content-Type = &#39;application/xml&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.54">
+      <div class="step-ref passed">54</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request payeeXml</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.55">
+      <div class="step-ref passed">55</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">180</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.55">19:29:59.117 request:
+2 &gt; POST https://parabank.parasoft.com/parabank/services/bank/billpay?accountId=13344&amp;amount=0
+2 &gt; Content-Type: application/xml; charset=UTF-8
+2 &gt; Accept: application/json
+2 &gt; Content-Length: 316
+2 &gt; Host: parabank.parasoft.com
+2 &gt; Connection: Keep-Alive
+2 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
+2 &gt; Accept-Encoding: gzip,deflate
+&lt;payee&gt;
+  &lt;name&gt;Test Payee&lt;/name&gt;
+  &lt;address&gt;
+    &lt;street&gt;123 Main St&lt;/street&gt;
+    &lt;city&gt;Beverly Hills&lt;/city&gt;
+    &lt;state&gt;CA&lt;/state&gt;
+    &lt;zipCode&gt;90210&lt;/zipCode&gt;
+  &lt;/address&gt;
+  &lt;phoneNumber&gt;310-000-0000&lt;/phoneNumber&gt;
+  &lt;accountNumber&gt;9999&lt;/accountNumber&gt;
+  &lt;routingNumber&gt;111000025&lt;/routingNumber&gt;
+&lt;/payee&gt;
+
+19:29:59.294 response time in milliseconds: 176
+2 &lt; 200
+2 &lt; Date: Thu, 21 May 2026 00:29:58 GMT
+2 &lt; Content-Type: application/json
+2 &lt; Transfer-Encoding: chunked
+2 &lt; Connection: keep-alive
+2 &lt; Server: cloudflare
+2 &lt; cf-cache-status: DYNAMIC
+2 &lt; X-Content-Type-Options: nosniff
+2 &lt; CF-RAY: 9fef78454de8b6ec-BOG
+{&quot;payeeName&quot;:&quot;Test Payee&quot;,&quot;amount&quot;:0,&quot;accountId&quot;:13344}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment"># DEFECTO: Debería retornar 400, pero la API retorna &lt;actualStatus&gt; sin validar &lt;descripcion&gt;</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container" id="1.57">
+      <div class="step-ref passed">57</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[2.2:62]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                <a class="badge badge-primary" href="karate-tags.html">parabank_billpay</a>
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[2.2:62]</span>
+                <span class="scenario-name">Data-Driven - Validación de casos de borde y saldo insuficiente</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>566</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[2.2:62]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[2.2:62]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url baseUrl</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.2:62]bg"><div>
+  
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment"># configure headers persiste Accept en TODOS los requests del feature (no solo el primero)</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container" id="2.7">
+      <div class="step-ref bg-step">7</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>configure headers = { Accept: &#39;application/json&#39; }</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.2:62]bg"><div>
+  
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment"># Obtener customerId via login</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container" id="2.9">
+      <div class="step-ref bg-step">9</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def authData = call read(&#39;login.feature@login_ok&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">194</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  <div>
+        
+    <div class="step-row">
+      <div class="step-container" id="2.9.0.call">
+        <div class="step-ref bg-step">&gt;&gt;</div>
+        <div class="step-indent"></div>
+        <div class="step-cell passed">org.udea.parabank.login</div>
+      </div>
+      <div class="time-cell passed">181</div>
+    </div>
+    <div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="2.9.0.call">
+    <div class="step-container" id="2.9.0.call.0.5">
+      <div class="step-ref bg-step">5</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url baseUrl</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="2.9.0.call">
+    <div class="step-container" id="2.9.0.call.0.6">
+      <div class="step-ref bg-step">6</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="2.9.0.call">
+    <div class="step-container" id="2.9.0.call.0.10">
+      <div class="step-ref bg-step">10</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;login&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="2.9.0.call">
+    <div class="step-container" id="2.9.0.call.0.11">
+      <div class="step-ref bg-step">11</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>path &#39;john&#39; //userName</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="2.9.0.call">
+    <div class="step-container" id="2.9.0.call.0.12">
+      <div class="step-ref bg-step">12</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>path &#39;demo&#39; //password</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="2.9.0.call">
+    <div class="step-container" id="2.9.0.call.0.13">
+      <div class="step-ref bg-step">13</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method GET</span>
+      </div>
+    </div>
+    <div class="time-cell passed">177</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="2.9.0.call.0.13">19:29:59.321 request:
+1 &gt; GET https://parabank.parasoft.com/parabank/services/bank/login/john/demo
+1 &gt; Accept: application/json
+1 &gt; Host: parabank.parasoft.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+19:29:59.495 response time in milliseconds: 174
+1 &lt; 200
+1 &lt; Date: Thu, 21 May 2026 00:29:58 GMT
+1 &lt; Content-Type: application/json
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Connection: keep-alive
+1 &lt; Server: cloudflare
+1 &lt; cf-cache-status: DYNAMIC
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; CF-RAY: 9fef78468ffeb6fd-BOG
+{&quot;id&quot;:12212,&quot;firstName&quot;:&quot;John&quot;,&quot;lastName&quot;:&quot;Smith&quot;,&quot;address&quot;:{&quot;street&quot;:&quot;1431 Main St&quot;,&quot;city&quot;:&quot;Beverly Hills&quot;,&quot;state&quot;:&quot;CA&quot;,&quot;zipCode&quot;:&quot;90210&quot;},&quot;phoneNumber&quot;:&quot;310-447-4121&quot;,&quot;ssn&quot;:&quot;622-11-9999&quot;}
+
+</div>   
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="2.9.0.call">
+    <div class="step-container" id="2.9.0.call.0.14">
+      <div class="step-ref bg-step">14</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="2.9.0.call">
+    <div class="step-container" id="2.9.0.call.0.15">
+      <div class="step-ref bg-step">15</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response ==</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="2.9.0.call.0.15">{
+   &quot;id&quot;: &#39;#number&#39;,
+   &quot;firstName&quot;: &#39;#string&#39;,
+   &quot;lastName&quot;: &#39;#string&#39;,
+   &quot;address&quot;: {
+        &quot;street&quot;: &#39;#string&#39;,
+        &quot;city&quot;: &#39;#string&#39;,
+        &quot;state&quot;: &#39;#string&#39;,
+        &quot;zipCode&quot;: &#39;#string&#39;
+    },
+   &quot;phoneNumber&quot;: &#39;#string&#39;,
+   &quot;ssn&quot;: &#39;#string&#39;
+}</div>
+
+  
+
+     
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="2.9.0.call">
+    <div class="step-container" id="2.9.0.call.0.31">
+      <div class="step-ref bg-step">31</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>match header Content-Type contains &#39;application/json&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  <div class="step-row" data-parent="2.9.0.call">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      <div class="step-indent"></div>
+      <div class="step-cell comment"># DEFECTO DOCUMENTADO: El endpoint REST /login/{user}/{pass} no emite Set-Cookie/JSESSIONID.</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row" data-parent="2.9.0.call">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      <div class="step-indent"></div>
+      <div class="step-cell comment"># La sesión solo se crea via formulario HTML (/login.htm), no via el API REST.</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row" data-parent="2.9.0.call">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      <div class="step-indent"></div>
+      <div class="step-cell comment"># Criterio de aceptación exige JSESSIONID, pero la API no lo provee en este endpoint.</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row" data-parent="2.9.0.call">
+    <div class="step-container" id="2.9.0.call.0.36">
+      <div class="step-ref bg-step">36</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def setCookie = responseHeaders[&#39;Set-Cookie&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="2.9.0.call">
+    <div class="step-container" id="2.9.0.call.0.37">
+      <div class="step-ref bg-step">37</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>print &#39;Set-Cookie (DEFECTO - esperado JSESSIONID, no presente en REST login):&#39;, setCookie</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="2.9.0.call.0.37">19:29:59.498 [print] Set-Cookie (DEFECTO - esperado JSESSIONID, no presente en REST login): [
+]
+ 
+</div>   
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="2.9.0.call">
+    <div class="step-container" id="2.9.0.call.0.39">
+      <div class="step-ref bg-step">39</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def customerId = response.id</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+    </div>    
+  </div>
+
+</div>
+</div>
+          <div data-parent="[2.2:62]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.10">
+      <div class="step-ref bg-step">10</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def customerId = authData.customerId</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.2:62]bg"><div>
+  
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment"># Obtener accountId y saldo disponible DINÁMICAMENTE</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container" id="2.12">
+      <div class="step-ref bg-step">12</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;customers&#39;, customerId, &#39;accounts&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.2:62]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.13">
+      <div class="step-ref bg-step">13</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method GET</span>
+      </div>
+    </div>
+    <div class="time-cell passed">179</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="2.13">19:29:59.503 request:
+1 &gt; GET https://parabank.parasoft.com/parabank/services/bank/customers/12212/accounts
+1 &gt; Accept: application/json
+1 &gt; Host: parabank.parasoft.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+19:29:59.679 response time in milliseconds: 175
+1 &lt; 200
+1 &lt; Date: Thu, 21 May 2026 00:29:58 GMT
+1 &lt; Content-Type: application/json
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Connection: keep-alive
+1 &lt; Server: cloudflare
+1 &lt; cf-cache-status: DYNAMIC
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; CF-RAY: 9fef7847af8eb6f6-BOG
+[{&quot;id&quot;:13344,&quot;customerId&quot;:12212,&quot;type&quot;:&quot;CHECKING&quot;,&quot;balance&quot;:-19994865.07}]
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.2:62]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.2:62]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def accountId = response[0].id</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.2:62]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def availableBalance = response[0].balance</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.2:62]bg"><div>
+  
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment"># Payee válido (XML requerido por la API de Parabank)</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container" id="2.19">
+      <div class="step-ref bg-step">19</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def payeeXml =</span>
+      </div>
+    </div>
+    <div class="time-cell passed">3</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="2.19">&lt;payee&gt;
+  &lt;name&gt;Test Payee&lt;/name&gt;
+  &lt;address&gt;
+    &lt;street&gt;123 Main St&lt;/street&gt;
+    &lt;city&gt;Beverly Hills&lt;/city&gt;
+    &lt;state&gt;CA&lt;/state&gt;
+    &lt;zipCode&gt;90210&lt;/zipCode&gt;
+  &lt;/address&gt;
+  &lt;phoneNumber&gt;310-000-0000&lt;/phoneNumber&gt;
+  &lt;accountNumber&gt;9999&lt;/accountNumber&gt;
+  &lt;routingNumber&gt;111000025&lt;/routingNumber&gt;
+&lt;/payee&gt;</div>
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment"># El criterio de aceptación espera 400 Bad Request para montos inválidos y saldo insuficiente.</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment"># DEFECTO DOCUMENTADO: La API no valida montos y retorna 200 en todos los casos de borde.</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment"># Los mensajes de error descriptivos esperados por el criterio no son provistos por la API.</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container" id="2.50">
+      <div class="step-ref passed">50</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;billpay&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.51">
+      <div class="step-ref passed">51</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>param accountId = accountId</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.52">
+      <div class="step-ref passed">52</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>param amount = -50</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.53">
+      <div class="step-ref passed">53</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Content-Type = &#39;application/xml&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.54">
+      <div class="step-ref passed">54</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request payeeXml</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.55">
+      <div class="step-ref passed">55</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">184</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="2.55">19:29:59.691 request:
+2 &gt; POST https://parabank.parasoft.com/parabank/services/bank/billpay?accountId=13344&amp;amount=-50
+2 &gt; Content-Type: application/xml; charset=UTF-8
+2 &gt; Accept: application/json
+2 &gt; Content-Length: 316
+2 &gt; Host: parabank.parasoft.com
+2 &gt; Connection: Keep-Alive
+2 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
+2 &gt; Accept-Encoding: gzip,deflate
+&lt;payee&gt;
+  &lt;name&gt;Test Payee&lt;/name&gt;
+  &lt;address&gt;
+    &lt;street&gt;123 Main St&lt;/street&gt;
+    &lt;city&gt;Beverly Hills&lt;/city&gt;
+    &lt;state&gt;CA&lt;/state&gt;
+    &lt;zipCode&gt;90210&lt;/zipCode&gt;
+  &lt;/address&gt;
+  &lt;phoneNumber&gt;310-000-0000&lt;/phoneNumber&gt;
+  &lt;accountNumber&gt;9999&lt;/accountNumber&gt;
+  &lt;routingNumber&gt;111000025&lt;/routingNumber&gt;
+&lt;/payee&gt;
+
+19:29:59.871 response time in milliseconds: 180
+2 &lt; 200
+2 &lt; Date: Thu, 21 May 2026 00:29:58 GMT
+2 &lt; Content-Type: application/json
+2 &lt; Transfer-Encoding: chunked
+2 &lt; Connection: keep-alive
+2 &lt; Server: cloudflare
+2 &lt; cf-cache-status: DYNAMIC
+2 &lt; X-Content-Type-Options: nosniff
+2 &lt; CF-RAY: 9fef7848dbccb6fd-BOG
+{&quot;payeeName&quot;:&quot;Test Payee&quot;,&quot;amount&quot;:-50,&quot;accountId&quot;:13344}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment"># DEFECTO: Debería retornar 400, pero la API retorna &lt;actualStatus&gt; sin validar &lt;descripcion&gt;</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container" id="2.57">
+      <div class="step-ref passed">57</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[2.3:63]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                <a class="badge badge-primary" href="karate-tags.html">parabank_billpay</a>
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[2.3:63]</span>
+                <span class="scenario-name">Data-Driven - Validación de casos de borde y saldo insuficiente</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>572</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[2.3:63]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[2.3:63]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url baseUrl</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.3:63]bg"><div>
+  
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment"># configure headers persiste Accept en TODOS los requests del feature (no solo el primero)</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container" id="3.7">
+      <div class="step-ref bg-step">7</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>configure headers = { Accept: &#39;application/json&#39; }</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.3:63]bg"><div>
+  
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment"># Obtener customerId via login</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container" id="3.9">
+      <div class="step-ref bg-step">9</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def authData = call read(&#39;login.feature@login_ok&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">192</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  <div>
+        
+    <div class="step-row">
+      <div class="step-container" id="3.9.0.call">
+        <div class="step-ref bg-step">&gt;&gt;</div>
+        <div class="step-indent"></div>
+        <div class="step-cell passed">org.udea.parabank.login</div>
+      </div>
+      <div class="time-cell passed">181</div>
+    </div>
+    <div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="3.9.0.call">
+    <div class="step-container" id="3.9.0.call.0.5">
+      <div class="step-ref bg-step">5</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url baseUrl</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="3.9.0.call">
+    <div class="step-container" id="3.9.0.call.0.6">
+      <div class="step-ref bg-step">6</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="3.9.0.call">
+    <div class="step-container" id="3.9.0.call.0.10">
+      <div class="step-ref bg-step">10</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;login&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="3.9.0.call">
+    <div class="step-container" id="3.9.0.call.0.11">
+      <div class="step-ref bg-step">11</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>path &#39;john&#39; //userName</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="3.9.0.call">
+    <div class="step-container" id="3.9.0.call.0.12">
+      <div class="step-ref bg-step">12</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>path &#39;demo&#39; //password</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="3.9.0.call">
+    <div class="step-container" id="3.9.0.call.0.13">
+      <div class="step-ref bg-step">13</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method GET</span>
+      </div>
+    </div>
+    <div class="time-cell passed">178</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="3.9.0.call.0.13">19:29:59.896 request:
+1 &gt; GET https://parabank.parasoft.com/parabank/services/bank/login/john/demo
+1 &gt; Accept: application/json
+1 &gt; Host: parabank.parasoft.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+19:30:00.071 response time in milliseconds: 174
+1 &lt; 200
+1 &lt; Date: Thu, 21 May 2026 00:29:58 GMT
+1 &lt; Content-Type: application/json
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Connection: keep-alive
+1 &lt; Server: cloudflare
+1 &lt; cf-cache-status: DYNAMIC
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; CF-RAY: 9fef784a2885b6f2-BOG
+{&quot;id&quot;:12212,&quot;firstName&quot;:&quot;John&quot;,&quot;lastName&quot;:&quot;Smith&quot;,&quot;address&quot;:{&quot;street&quot;:&quot;1431 Main St&quot;,&quot;city&quot;:&quot;Beverly Hills&quot;,&quot;state&quot;:&quot;CA&quot;,&quot;zipCode&quot;:&quot;90210&quot;},&quot;phoneNumber&quot;:&quot;310-447-4121&quot;,&quot;ssn&quot;:&quot;622-11-9999&quot;}
+
+</div>   
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="3.9.0.call">
+    <div class="step-container" id="3.9.0.call.0.14">
+      <div class="step-ref bg-step">14</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="3.9.0.call">
+    <div class="step-container" id="3.9.0.call.0.15">
+      <div class="step-ref bg-step">15</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response ==</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="3.9.0.call.0.15">{
+   &quot;id&quot;: &#39;#number&#39;,
+   &quot;firstName&quot;: &#39;#string&#39;,
+   &quot;lastName&quot;: &#39;#string&#39;,
+   &quot;address&quot;: {
+        &quot;street&quot;: &#39;#string&#39;,
+        &quot;city&quot;: &#39;#string&#39;,
+        &quot;state&quot;: &#39;#string&#39;,
+        &quot;zipCode&quot;: &#39;#string&#39;
+    },
+   &quot;phoneNumber&quot;: &#39;#string&#39;,
+   &quot;ssn&quot;: &#39;#string&#39;
+}</div>
+
+  
+
+     
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="3.9.0.call">
+    <div class="step-container" id="3.9.0.call.0.31">
+      <div class="step-ref bg-step">31</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>match header Content-Type contains &#39;application/json&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  <div class="step-row" data-parent="3.9.0.call">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      <div class="step-indent"></div>
+      <div class="step-cell comment"># DEFECTO DOCUMENTADO: El endpoint REST /login/{user}/{pass} no emite Set-Cookie/JSESSIONID.</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row" data-parent="3.9.0.call">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      <div class="step-indent"></div>
+      <div class="step-cell comment"># La sesión solo se crea via formulario HTML (/login.htm), no via el API REST.</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row" data-parent="3.9.0.call">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      <div class="step-indent"></div>
+      <div class="step-cell comment"># Criterio de aceptación exige JSESSIONID, pero la API no lo provee en este endpoint.</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row" data-parent="3.9.0.call">
+    <div class="step-container" id="3.9.0.call.0.36">
+      <div class="step-ref bg-step">36</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def setCookie = responseHeaders[&#39;Set-Cookie&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="3.9.0.call">
+    <div class="step-container" id="3.9.0.call.0.37">
+      <div class="step-ref bg-step">37</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>print &#39;Set-Cookie (DEFECTO - esperado JSESSIONID, no presente en REST login):&#39;, setCookie</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="3.9.0.call.0.37">19:30:00.074 [print] Set-Cookie (DEFECTO - esperado JSESSIONID, no presente en REST login): [
+]
+ 
+</div>   
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="3.9.0.call">
+    <div class="step-container" id="3.9.0.call.0.39">
+      <div class="step-ref bg-step">39</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def customerId = response.id</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+    </div>    
+  </div>
+
+</div>
+</div>
+          <div data-parent="[2.3:63]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.10">
+      <div class="step-ref bg-step">10</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def customerId = authData.customerId</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.3:63]bg"><div>
+  
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment"># Obtener accountId y saldo disponible DINÁMICAMENTE</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container" id="3.12">
+      <div class="step-ref bg-step">12</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;customers&#39;, customerId, &#39;accounts&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.3:63]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.13">
+      <div class="step-ref bg-step">13</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method GET</span>
+      </div>
+    </div>
+    <div class="time-cell passed">188</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="3.13">19:30:00.078 request:
+1 &gt; GET https://parabank.parasoft.com/parabank/services/bank/customers/12212/accounts
+1 &gt; Accept: application/json
+1 &gt; Host: parabank.parasoft.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+19:30:00.262 response time in milliseconds: 184
+1 &lt; 200
+1 &lt; Date: Thu, 21 May 2026 00:29:59 GMT
+1 &lt; Content-Type: application/json
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Connection: keep-alive
+1 &lt; Server: cloudflare
+1 &lt; cf-cache-status: DYNAMIC
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; CF-RAY: 9fef784b3eadb6ef-BOG
+[{&quot;id&quot;:13344,&quot;customerId&quot;:12212,&quot;type&quot;:&quot;CHECKING&quot;,&quot;balance&quot;:-19994815.07}]
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.3:63]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.3:63]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def accountId = response[0].id</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.3:63]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def availableBalance = response[0].balance</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.3:63]bg"><div>
+  
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment"># Payee válido (XML requerido por la API de Parabank)</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container" id="3.19">
+      <div class="step-ref bg-step">19</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def payeeXml =</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="3.19">&lt;payee&gt;
+  &lt;name&gt;Test Payee&lt;/name&gt;
+  &lt;address&gt;
+    &lt;street&gt;123 Main St&lt;/street&gt;
+    &lt;city&gt;Beverly Hills&lt;/city&gt;
+    &lt;state&gt;CA&lt;/state&gt;
+    &lt;zipCode&gt;90210&lt;/zipCode&gt;
+  &lt;/address&gt;
+  &lt;phoneNumber&gt;310-000-0000&lt;/phoneNumber&gt;
+  &lt;accountNumber&gt;9999&lt;/accountNumber&gt;
+  &lt;routingNumber&gt;111000025&lt;/routingNumber&gt;
+&lt;/payee&gt;</div>
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment"># El criterio de aceptación espera 400 Bad Request para montos inválidos y saldo insuficiente.</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment"># DEFECTO DOCUMENTADO: La API no valida montos y retorna 200 en todos los casos de borde.</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment"># Los mensajes de error descriptivos esperados por el criterio no son provistos por la API.</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container" id="3.50">
+      <div class="step-ref passed">50</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;billpay&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.51">
+      <div class="step-ref passed">51</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>param accountId = accountId</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.52">
+      <div class="step-ref passed">52</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>param amount = 9999999</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.53">
+      <div class="step-ref passed">53</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Content-Type = &#39;application/xml&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.54">
+      <div class="step-ref passed">54</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request payeeXml</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.55">
+      <div class="step-ref passed">55</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">188</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="3.55">19:30:00.271 request:
+2 &gt; POST https://parabank.parasoft.com/parabank/services/bank/billpay?accountId=13344&amp;amount=9999999
+2 &gt; Content-Type: application/xml; charset=UTF-8
+2 &gt; Accept: application/json
+2 &gt; Content-Length: 316
+2 &gt; Host: parabank.parasoft.com
+2 &gt; Connection: Keep-Alive
+2 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
+2 &gt; Accept-Encoding: gzip,deflate
+&lt;payee&gt;
+  &lt;name&gt;Test Payee&lt;/name&gt;
+  &lt;address&gt;
+    &lt;street&gt;123 Main St&lt;/street&gt;
+    &lt;city&gt;Beverly Hills&lt;/city&gt;
+    &lt;state&gt;CA&lt;/state&gt;
+    &lt;zipCode&gt;90210&lt;/zipCode&gt;
+  &lt;/address&gt;
+  &lt;phoneNumber&gt;310-000-0000&lt;/phoneNumber&gt;
+  &lt;accountNumber&gt;9999&lt;/accountNumber&gt;
+  &lt;routingNumber&gt;111000025&lt;/routingNumber&gt;
+&lt;/payee&gt;
+
+19:30:00.455 response time in milliseconds: 184
+2 &lt; 200
+2 &lt; Date: Thu, 21 May 2026 00:29:59 GMT
+2 &lt; Content-Type: application/json
+2 &lt; Transfer-Encoding: chunked
+2 &lt; Connection: keep-alive
+2 &lt; Server: cloudflare
+2 &lt; cf-cache-status: DYNAMIC
+2 &lt; X-Content-Type-Options: nosniff
+2 &lt; CF-RAY: 9fef784c7a10b6f7-BOG
+{&quot;payeeName&quot;:&quot;Test Payee&quot;,&quot;amount&quot;:9999999,&quot;accountId&quot;:13344}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment"># DEFECTO: Debería retornar 400, pero la API retorna &lt;actualStatus&gt; sin validar &lt;descripcion&gt;</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container" id="3.57">
+      <div class="step-ref passed">57</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[3:65]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                <a class="badge badge-primary" href="karate-tags.html">parabank_billpay</a>
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[3:65]</span>
+                <span class="scenario-name">Cuenta de origen inexistente retorna error de servidor</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>584</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[3:65]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[3:65]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url baseUrl</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[3:65]bg"><div>
+  
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment"># configure headers persiste Accept en TODOS los requests del feature (no solo el primero)</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container" id="0.7">
+      <div class="step-ref bg-step">7</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>configure headers = { Accept: &#39;application/json&#39; }</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[3:65]bg"><div>
+  
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment"># Obtener customerId via login</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container" id="0.9">
+      <div class="step-ref bg-step">9</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def authData = call read(&#39;login.feature@login_ok&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">209</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  <div>
+        
+    <div class="step-row">
+      <div class="step-container" id="0.9.0.call">
+        <div class="step-ref bg-step">&gt;&gt;</div>
+        <div class="step-indent"></div>
+        <div class="step-cell passed">org.udea.parabank.login</div>
+      </div>
+      <div class="time-cell passed">181</div>
+    </div>
+    <div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="0.9.0.call">
+    <div class="step-container" id="0.9.0.call.0.5">
+      <div class="step-ref bg-step">5</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url baseUrl</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="0.9.0.call">
+    <div class="step-container" id="0.9.0.call.0.6">
+      <div class="step-ref bg-step">6</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="0.9.0.call">
+    <div class="step-container" id="0.9.0.call.0.10">
+      <div class="step-ref bg-step">10</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;login&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="0.9.0.call">
+    <div class="step-container" id="0.9.0.call.0.11">
+      <div class="step-ref bg-step">11</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>path &#39;john&#39; //userName</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="0.9.0.call">
+    <div class="step-container" id="0.9.0.call.0.12">
+      <div class="step-ref bg-step">12</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>path &#39;demo&#39; //password</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="0.9.0.call">
+    <div class="step-container" id="0.9.0.call.0.13">
+      <div class="step-ref bg-step">13</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method GET</span>
+      </div>
+    </div>
+    <div class="time-cell passed">178</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.9.0.call.0.13">19:30:00.498 request:
+1 &gt; GET https://parabank.parasoft.com/parabank/services/bank/login/john/demo
+1 &gt; Accept: application/json
+1 &gt; Host: parabank.parasoft.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+19:30:00.674 response time in milliseconds: 174
+1 &lt; 200
+1 &lt; Date: Thu, 21 May 2026 00:29:59 GMT
+1 &lt; Content-Type: application/json
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Connection: keep-alive
+1 &lt; Server: cloudflare
+1 &lt; cf-cache-status: DYNAMIC
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; CF-RAY: 9fef784deabcb6f9-BOG
+{&quot;id&quot;:12212,&quot;firstName&quot;:&quot;John&quot;,&quot;lastName&quot;:&quot;Smith&quot;,&quot;address&quot;:{&quot;street&quot;:&quot;1431 Main St&quot;,&quot;city&quot;:&quot;Beverly Hills&quot;,&quot;state&quot;:&quot;CA&quot;,&quot;zipCode&quot;:&quot;90210&quot;},&quot;phoneNumber&quot;:&quot;310-447-4121&quot;,&quot;ssn&quot;:&quot;622-11-9999&quot;}
+
+</div>   
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="0.9.0.call">
+    <div class="step-container" id="0.9.0.call.0.14">
+      <div class="step-ref bg-step">14</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="0.9.0.call">
+    <div class="step-container" id="0.9.0.call.0.15">
+      <div class="step-ref bg-step">15</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response ==</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="0.9.0.call.0.15">{
+   &quot;id&quot;: &#39;#number&#39;,
+   &quot;firstName&quot;: &#39;#string&#39;,
+   &quot;lastName&quot;: &#39;#string&#39;,
+   &quot;address&quot;: {
+        &quot;street&quot;: &#39;#string&#39;,
+        &quot;city&quot;: &#39;#string&#39;,
+        &quot;state&quot;: &#39;#string&#39;,
+        &quot;zipCode&quot;: &#39;#string&#39;
+    },
+   &quot;phoneNumber&quot;: &#39;#string&#39;,
+   &quot;ssn&quot;: &#39;#string&#39;
+}</div>
+
+  
+
+     
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="0.9.0.call">
+    <div class="step-container" id="0.9.0.call.0.31">
+      <div class="step-ref bg-step">31</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>match header Content-Type contains &#39;application/json&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  <div class="step-row" data-parent="0.9.0.call">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      <div class="step-indent"></div>
+      <div class="step-cell comment"># DEFECTO DOCUMENTADO: El endpoint REST /login/{user}/{pass} no emite Set-Cookie/JSESSIONID.</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row" data-parent="0.9.0.call">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      <div class="step-indent"></div>
+      <div class="step-cell comment"># La sesión solo se crea via formulario HTML (/login.htm), no via el API REST.</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row" data-parent="0.9.0.call">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      <div class="step-indent"></div>
+      <div class="step-cell comment"># Criterio de aceptación exige JSESSIONID, pero la API no lo provee en este endpoint.</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row" data-parent="0.9.0.call">
+    <div class="step-container" id="0.9.0.call.0.36">
+      <div class="step-ref bg-step">36</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def setCookie = responseHeaders[&#39;Set-Cookie&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="0.9.0.call">
+    <div class="step-container" id="0.9.0.call.0.37">
+      <div class="step-ref bg-step">37</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>print &#39;Set-Cookie (DEFECTO - esperado JSESSIONID, no presente en REST login):&#39;, setCookie</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.9.0.call.0.37">19:30:00.676 [print] Set-Cookie (DEFECTO - esperado JSESSIONID, no presente en REST login): [
+]
+ 
+</div>   
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="0.9.0.call">
+    <div class="step-container" id="0.9.0.call.0.39">
+      <div class="step-ref bg-step">39</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def customerId = response.id</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+    </div>    
+  </div>
+
+</div>
+</div>
+          <div data-parent="[3:65]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.10">
+      <div class="step-ref bg-step">10</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def customerId = authData.customerId</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[3:65]bg"><div>
+  
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment"># Obtener accountId y saldo disponible DINÁMICAMENTE</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container" id="0.12">
+      <div class="step-ref bg-step">12</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;customers&#39;, customerId, &#39;accounts&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[3:65]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.13">
+      <div class="step-ref bg-step">13</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method GET</span>
+      </div>
+    </div>
+    <div class="time-cell passed">181</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.13">19:30:00.681 request:
+1 &gt; GET https://parabank.parasoft.com/parabank/services/bank/customers/12212/accounts
+1 &gt; Accept: application/json
+1 &gt; Host: parabank.parasoft.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+19:30:00.859 response time in milliseconds: 178
+1 &lt; 200
+1 &lt; Date: Thu, 21 May 2026 00:29:59 GMT
+1 &lt; Content-Type: application/json
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Connection: keep-alive
+1 &lt; Server: cloudflare
+1 &lt; cf-cache-status: DYNAMIC
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; CF-RAY: 9fef784f08c1b6f2-BOG
+[{&quot;id&quot;:13344,&quot;customerId&quot;:12212,&quot;type&quot;:&quot;CHECKING&quot;,&quot;balance&quot;:-29994814.07}]
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div data-parent="[3:65]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[3:65]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def accountId = response[0].id</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[3:65]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def availableBalance = response[0].balance</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[3:65]bg"><div>
+  
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment"># Payee válido (XML requerido por la API de Parabank)</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container" id="0.19">
+      <div class="step-ref bg-step">19</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def payeeXml =</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="0.19">&lt;payee&gt;
+  &lt;name&gt;Test Payee&lt;/name&gt;
+  &lt;address&gt;
+    &lt;street&gt;123 Main St&lt;/street&gt;
+    &lt;city&gt;Beverly Hills&lt;/city&gt;
+    &lt;state&gt;CA&lt;/state&gt;
+    &lt;zipCode&gt;90210&lt;/zipCode&gt;
+  &lt;/address&gt;
+  &lt;phoneNumber&gt;310-000-0000&lt;/phoneNumber&gt;
+  &lt;accountNumber&gt;9999&lt;/accountNumber&gt;
+  &lt;routingNumber&gt;111000025&lt;/routingNumber&gt;
+&lt;/payee&gt;</div>
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment"># DEFECTO DOCUMENTADO: Con accountId inexistente la API retorna 500 Internal Server Error.</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment"># El criterio exige 400 Bad Request con mensaje descriptivo (no un error interno del servidor).</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment"># Esto expone trazas internas, lo cual es también un defecto de seguridad.</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container" id="0.69">
+      <div class="step-ref passed">69</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;billpay&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.70">
+      <div class="step-ref passed">70</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>param accountId = 99999999</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.71">
+      <div class="step-ref passed">71</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>param amount = 10</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.72">
+      <div class="step-ref passed">72</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Content-Type = &#39;application/xml&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.73">
+      <div class="step-ref passed">73</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request payeeXml</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.74">
+      <div class="step-ref passed">74</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">190</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.74">19:30:00.866 request:
+2 &gt; POST https://parabank.parasoft.com/parabank/services/bank/billpay?accountId=99999999&amp;amount=10
+2 &gt; Content-Type: application/xml; charset=UTF-8
+2 &gt; Accept: application/json
+2 &gt; Content-Length: 316
+2 &gt; Host: parabank.parasoft.com
+2 &gt; Connection: Keep-Alive
+2 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
+2 &gt; Accept-Encoding: gzip,deflate
+&lt;payee&gt;
+  &lt;name&gt;Test Payee&lt;/name&gt;
+  &lt;address&gt;
+    &lt;street&gt;123 Main St&lt;/street&gt;
+    &lt;city&gt;Beverly Hills&lt;/city&gt;
+    &lt;state&gt;CA&lt;/state&gt;
+    &lt;zipCode&gt;90210&lt;/zipCode&gt;
+  &lt;/address&gt;
+  &lt;phoneNumber&gt;310-000-0000&lt;/phoneNumber&gt;
+  &lt;accountNumber&gt;9999&lt;/accountNumber&gt;
+  &lt;routingNumber&gt;111000025&lt;/routingNumber&gt;
+&lt;/payee&gt;
+
+19:30:01.053 response time in milliseconds: 184
+2 &lt; 500
+2 &lt; Date: Thu, 21 May 2026 00:29:59 GMT
+2 &lt; Content-Type: text/html;charset=ISO-8859-1
+2 &lt; Transfer-Encoding: chunked
+2 &lt; Connection: keep-alive
+2 &lt; Server: cloudflare
+2 &lt; Set-Cookie: JSESSIONID=E1D7CA367E353EE3C8F7C56250C5A66E; Path=/parabank; HttpOnly
+2 &lt; content-language: en-US
+2 &lt; cf-cache-status: DYNAMIC
+2 &lt; X-Content-Type-Options: nosniff
+2 &lt; CF-RAY: 9fef78503900b6ff-BOG
+
+
+
+
+&lt;!-- &lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;
+&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+ --&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;meta charset=&quot;UTF-8&quot;&gt;
+		&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot; /&gt;
+		&lt;title&gt;ParaBank | Error&lt;/title&gt;
+		&lt;link href=&quot;template.css;jsessionid=E1D7CA367E353EE3C8F7C56250C5A66E&quot; rel=&quot;stylesheet&quot;
+			type=&quot;text/css&quot; /&gt;
+		&lt;link href=&quot;style.css;jsessionid=E1D7CA367E353EE3C8F7C56250C5A66E&quot; rel=&quot;stylesheet&quot;
+			type=&quot;text/css&quot; /&gt;
+		&lt;script src=&quot;webjars/jquery/4.0.0/jquery.min.js;jsessionid=E1D7CA367E353EE3C8F7C56250C5A66E&quot;&gt;&lt;/script&gt;
+	&lt;/head&gt;
+
+	&lt;body
+		
+	    onload=&quot;document.login.username.focus();&quot;
+	  &gt;
+		&lt;div id=&quot;mainPanel&quot;&gt;
+			
+				
+					
+
+
+
+&lt;div id=&quot;topPanel&quot;&gt;
+  &lt;a href=&quot;admin.htm;jsessionid=E1D7CA367E353EE3C8F7C56250C5A66E&quot;&gt;&lt;img src=&quot;images/clear.gif;jsessionid=E1D7CA367E353EE3C8F7C56250C5A66E&quot; width=&quot;56&quot; height=&quot;42&quot; border=&quot;0&quot; class=&quot;admin&quot;/&gt;&lt;/a&gt;
+  &lt;a href=&quot;index.htm;jsessionid=E1D7CA367E353EE3C8F7C56250C5A66E&quot;&gt;&lt;img src=&quot;images/logo.gif;jsessionid=E1D7CA367E353EE3C8F7C56250C5A66E&quot; alt=&quot;ParaBank&quot; width=&quot;136&quot; height=&quot;31&quot; border=&quot;0&quot; class=&quot;logo&quot; title=&quot;ParaBank&quot;/&gt;&lt;/a&gt;
+  &lt;p class=&quot;caption&quot;&gt;Experience the difference&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&quot;headerPanel&quot; style=&quot;background: url(images/header-main.jpg;jsessionid=E1D7CA367E353EE3C8F7C56250C5A66E) 0 0 no-repeat;&quot;&gt;
+  
+
+
+&lt;ul class=&quot;leftmenu&quot;&gt;
+  &lt;li class=&quot;Solutions&quot;&gt;Solutions&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;about.htm;jsessionid=E1D7CA367E353EE3C8F7C56250C5A66E&quot;&gt;About Us&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;services.htm;jsessionid=E1D7CA367E353EE3C8F7C56250C5A66E&quot;&gt;Services&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.parasoft.com/jsp/products.jsp&quot;&gt;Products&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.parasoft.com/jsp/pr/contacts.jsp&quot;&gt;Locations&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;admin.htm;jsessionid=E1D7CA367E353EE3C8F7C56250C5A66E&quot;&gt;Admin Page&lt;/a&gt;&lt;/li&gt;
+  
+&lt;/ul&gt;
+  
+
+
+&lt;ul class=&quot;button&quot;&gt;
+  &lt;li class=&quot;home&quot;&gt;&lt;a href=&quot;index.htm;jsessionid=E1D7CA367E353EE3C8F7C56250C5A66E&quot;&gt;home&lt;/a&gt;&lt;/li&gt;
+  &lt;li class=&quot;aboutus&quot;&gt;&lt;a href=&quot;about.htm;jsessionid=E1D7CA367E353EE3C8F7C56250C5A66E&quot;&gt;about&lt;/a&gt;&lt;/li&gt;
+  &lt;li class=&quot;contact&quot;&gt;&lt;a href=&quot;contact.htm;jsessionid=E1D7CA367E353EE3C8F7C56250C5A66E&quot;&gt;contact&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+				
+				
+			
+			&lt;div id=&quot;bodyPanel&quot;&gt;
+				&lt;div id=&quot;leftPanel&quot;&gt;
+					
+						
+							
+
+
+&lt;h2&gt;Customer Login&lt;/h2&gt;
+&lt;div id=&quot;loginPanel&quot;&gt;
+  &lt;form name=&quot;login&quot; action=&quot;login.htm;jsessionid=E1D7CA367E353EE3C8F7C56250C5A66E&quot; method=&quot;POST&quot;&gt;
+    
+    &lt;p&gt;&lt;b&gt;Username&lt;/b&gt;&lt;/p&gt;
+    &lt;div class=&quot;login&quot;&gt;&lt;input type=&quot;text&quot; class=&quot;input&quot; name=&quot;username&quot;/&gt;&lt;/div&gt;
+    &lt;p&gt;&lt;b&gt;Password&lt;/b&gt;&lt;/p&gt;
+    &lt;div class=&quot;login&quot;&gt;&lt;input type=&quot;password&quot; class=&quot;input&quot; name=&quot;password&quot;/&gt;&lt;/div&gt;
+    &lt;div class=&quot;login&quot;&gt;&lt;input type=&quot;submit&quot; class=&quot;button&quot; value=&quot;Log In&quot;/&gt;&lt;/div&gt;
+  &lt;/form&gt;
+  &lt;p&gt;&lt;a href=&quot;lookup.htm;jsessionid=E1D7CA367E353EE3C8F7C56250C5A66E&quot;&gt;Forgot login info?&lt;/a&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;a href=&quot;register.htm;jsessionid=E1D7CA367E353EE3C8F7C56250C5A66E&quot;&gt;Register&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+						
+						
+					
+				&lt;/div&gt;
+				&lt;div id=&quot;rightPanel&quot;&gt;
+					
+
+
+&lt;h1 class=&quot;title&quot;&gt;Error!&lt;/h1&gt;
+
+
+
+&lt;p class=&quot;error&quot;&gt;An internal error has occurred and has been logged.&lt;/p&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		
+
+
+&lt;div id=&quot;footermainPanel&quot;&gt;
+  &lt;div id=&quot;footerPanel&quot;&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;index.htm;jsessionid=E1D7CA367E353EE3C8F7C56250C5A66E&quot;&gt;Home&lt;/a&gt;| &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;about.htm;jsessionid=E1D7CA367E353EE3C8F7C56250C5A66E&quot;&gt;About Us&lt;/a&gt;| &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;services.htm;jsessionid=E1D7CA367E353EE3C8F7C56250C5A66E&quot;&gt;Services&lt;/a&gt;| &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;http://www.parasoft.com/jsp/products.jsp&quot;&gt;Products&lt;/a&gt;| &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;http://www.parasoft.com/jsp/pr/contacts.jsp&quot;&gt;Locations&lt;/a&gt;| &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;http://forums.parasoft.com/&quot;&gt;Forum&lt;/a&gt;| &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;sitemap.htm;jsessionid=E1D7CA367E353EE3C8F7C56250C5A66E&quot;&gt;Site Map&lt;/a&gt;| &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;contact.htm;jsessionid=E1D7CA367E353EE3C8F7C56250C5A66E&quot;&gt;Contact Us&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;p class=&quot;copyright&quot;&gt;&amp;copy; Parasoft. All rights reserved.&lt;/p&gt;
+    &lt;ul class=&quot;visit&quot;&gt;
+      &lt;li&gt;Visit us at:&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;http://www.parasoft.com/&quot; target=&quot;_blank&quot;&gt;www.parasoft.com&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+	&lt;/body&gt;
+&lt;/html&gt;
+
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.75">
+      <div class="step-ref passed">75</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 500</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+

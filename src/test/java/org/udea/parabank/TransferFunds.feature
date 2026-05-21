@@ -3,7 +3,7 @@ Feature: Transferencia Atómica y Validación de Histórico
 
   Background:
     * url baseUrl
-    * header Accept = 'application/json'
+    * configure headers = { Accept: 'application/json' }
     # Usamos las cuentas que ya venían en el ejemplo del repo
     * def val_fromAccountId = '13899'
     * def val_toAccountId = '14565'
@@ -28,9 +28,11 @@ Feature: Transferencia Atómica y Validación de Histórico
     When method GET
     Then status 200
 
-    # Validamos mediante JSONPath que la última transacción coincida en monto y tipo (Credit)
-    # La posición [0] suele traer el movimiento más reciente
-    * def lastTransaction = response[0]
+    # Validamos mediante JSONPath que la última transacción coincida en monto y tipo (Credit).
+    # NOTA: Parabank devuelve transacciones en orden ASCENDENTE por ID (más antigua primero),
+    # por lo que la más reciente está en el ÚLTIMO índice, no en [0].
+    # Usamos karate.jsonPath con $[-1:] para obtener el último elemento de forma confiable.
+    * def lastTransaction = karate.jsonPath(response, '$[-1:]')[0]
     
     * match lastTransaction.type == 'Credit'
     * match lastTransaction.amount == val_amount

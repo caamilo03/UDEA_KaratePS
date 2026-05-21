@@ -1,44 +1,1338 @@
-19:35:42.184 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
-19:35:44.011 [main] DEBUG com.intuit.karate - request:
-1 > GET http://192.168.0.182:8080/parabank/services/bank/login/john/demo
+19:29:15.094 [main] INFO  com.intuit.karate.Runner - using system property 'karate.env': prod
+19:29:15.248 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+19:29:16.696 [main] INFO  c.intuit.karate.core.FeatureRuntime - classpath:org/udea/parabank/login.feature - call by tag at line 9: login_ok
+19:29:17.068 [main] DEBUG com.intuit.karate - request:
+1 > GET https://parabank.parasoft.com/parabank/services/bank/login/john/demo
 1 > Accept: application/json
-1 > Host: 192.168.0.182:8080
+1 > Host: parabank.parasoft.com
 1 > Connection: Keep-Alive
 1 > User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
 1 > Accept-Encoding: gzip,deflate
 
 
-19:35:49.045 [main] ERROR com.intuit.karate - org.apache.http.conn.ConnectTimeoutException: Connect to 192.168.0.182:8080 [/192.168.0.182] failed: Connect timed out, http call failed after 5358 milliseconds for url: http://192.168.0.182:8080/parabank/services/bank/login/john/demo
-19:35:49.047 [main] ERROR com.intuit.karate - classpath:org/udea/parabank/login.feature:12
-When method GET
-http call failed after 5358 milliseconds for url: http://192.168.0.182:8080/parabank/services/bank/login/john/demo
-classpath:org/udea/parabank/login.feature:12
-19:35:50.444 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
-19:35:50.574 [main] DEBUG com.intuit.karate - request:
-1 > POST http://192.168.0.182:8080/parabank/services/bank/transfer?amount=159&fromAccountId=13899&toAccountId=14565
+19:29:17.823 [main] DEBUG com.intuit.karate - response time in milliseconds: 751
+1 < 200
+1 < Date: Thu, 21 May 2026 00:29:16 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 9fef77407d32b6ec-BOG
+{"id":12212,"firstName":"John","lastName":"Smith","address":{"street":"1431 Main St","city":"Beverly Hills","state":"CA","zipCode":"90210"},"phoneNumber":"310-447-4121","ssn":"622-11-9999"}
+
+19:29:17.865 [main] INFO  com.intuit.karate - [print] Set-Cookie (DEFECTO - esperado JSESSIONID, no presente en REST login): [
+]
+ 
+19:29:17.883 [main] DEBUG com.intuit.karate - request:
+1 > GET https://parabank.parasoft.com/parabank/services/bank/customers/12212/accounts
 1 > Accept: application/json
-1 > Host: 192.168.0.182:8080
+1 > Host: parabank.parasoft.com
 1 > Connection: Keep-Alive
 1 > User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
 1 > Accept-Encoding: gzip,deflate
 
 
-19:35:55.582 [main] ERROR com.intuit.karate - org.apache.http.conn.ConnectTimeoutException: Connect to 192.168.0.182:8080 [/192.168.0.182] failed: Connect timed out, http call failed after 5010 milliseconds for url: http://192.168.0.182:8080/parabank/services/bank/transfer?amount=159&fromAccountId=13899&toAccountId=14565
-19:35:55.582 [main] ERROR com.intuit.karate - classpath:org/udea/parabank/TransferFunds.feature:19
-When method POST
-http call failed after 5010 milliseconds for url: http://192.168.0.182:8080/parabank/services/bank/transfer?amount=159&fromAccountId=13899&toAccountId=14565
-classpath:org/udea/parabank/TransferFunds.feature:19
-19:35:55.606 [main] DEBUG com.intuit.karate - request:
-1 > POST http://192.168.0.182:8080/parabank/services/bank/transfer?amount=78&fromAccountId=260631&toAccountId=433732
+19:29:18.065 [main] DEBUG com.intuit.karate - response time in milliseconds: 181
+1 < 200
+1 < Date: Thu, 21 May 2026 00:29:16 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 9fef7743982eb6f7-BOG
+[{"id":13344,"customerId":12212,"type":"CHECKING","balance":-9994896.07}]
+
+19:29:18.186 [main] DEBUG com.intuit.karate - request:
+2 > POST https://parabank.parasoft.com/parabank/services/bank/billpay?accountId=13344&amount=10
+2 > Content-Type: application/xml; charset=UTF-8
+2 > Accept: application/json
+2 > Content-Length: 316
+2 > Host: parabank.parasoft.com
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
+2 > Accept-Encoding: gzip,deflate
+<payee>
+  <name>Test Payee</name>
+  <address>
+    <street>123 Main St</street>
+    <city>Beverly Hills</city>
+    <state>CA</state>
+    <zipCode>90210</zipCode>
+  </address>
+  <phoneNumber>310-000-0000</phoneNumber>
+  <accountNumber>9999</accountNumber>
+  <routingNumber>111000025</routingNumber>
+</payee>
+
+19:29:18.376 [main] DEBUG com.intuit.karate - response time in milliseconds: 189
+2 < 200
+2 < Date: Thu, 21 May 2026 00:29:17 GMT
+2 < Content-Type: application/json
+2 < Transfer-Encoding: chunked
+2 < Connection: keep-alive
+2 < Server: cloudflare
+2 < cf-cache-status: DYNAMIC
+2 < X-Content-Type-Options: nosniff
+2 < CF-RAY: 9fef77457fd5b6fd-BOG
+{"payeeName":"Test Payee","amount":10,"accountId":13344}
+
+19:29:18.405 [main] INFO  c.intuit.karate.core.FeatureRuntime - classpath:org/udea/parabank/login.feature - call by tag at line 9: login_ok
+19:29:18.417 [main] DEBUG com.intuit.karate - request:
+1 > GET https://parabank.parasoft.com/parabank/services/bank/login/john/demo
 1 > Accept: application/json
-1 > Host: 192.168.0.182:8080
+1 > Host: parabank.parasoft.com
 1 > Connection: Keep-Alive
 1 > User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
 1 > Accept-Encoding: gzip,deflate
 
 
-19:36:00.612 [main] ERROR com.intuit.karate - org.apache.http.conn.ConnectTimeoutException: Connect to 192.168.0.182:8080 [/192.168.0.182] failed: Connect timed out, http call failed after 5008 milliseconds for url: http://192.168.0.182:8080/parabank/services/bank/transfer?amount=78&fromAccountId=260631&toAccountId=433732
-19:36:00.614 [main] ERROR com.intuit.karate - classpath:org/udea/parabank/TransferFunds.feature:28
-When method POST
-http call failed after 5008 milliseconds for url: http://192.168.0.182:8080/parabank/services/bank/transfer?amount=78&fromAccountId=260631&toAccountId=433732
-classpath:org/udea/parabank/TransferFunds.feature:28
+19:29:18.593 [main] DEBUG com.intuit.karate - response time in milliseconds: 175
+1 < 200
+1 < Date: Thu, 21 May 2026 00:29:17 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 9fef7746ee6bb6ec-BOG
+{"id":12212,"firstName":"John","lastName":"Smith","address":{"street":"1431 Main St","city":"Beverly Hills","state":"CA","zipCode":"90210"},"phoneNumber":"310-447-4121","ssn":"622-11-9999"}
+
+19:29:18.597 [main] INFO  com.intuit.karate - [print] Set-Cookie (DEFECTO - esperado JSESSIONID, no presente en REST login): [
+]
+ 
+19:29:18.601 [main] DEBUG com.intuit.karate - request:
+1 > GET https://parabank.parasoft.com/parabank/services/bank/customers/12212/accounts
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
+1 > Accept-Encoding: gzip,deflate
+
+
+19:29:18.779 [main] DEBUG com.intuit.karate - response time in milliseconds: 177
+1 < 200
+1 < Date: Thu, 21 May 2026 00:29:17 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 9fef77481df7b6f6-BOG
+[{"id":13344,"customerId":12212,"type":"CHECKING","balance":-9994906.07}]
+
+19:29:18.788 [main] DEBUG com.intuit.karate - request:
+2 > POST https://parabank.parasoft.com/parabank/services/bank/billpay?accountId=13344&amount=0
+2 > Content-Type: application/xml; charset=UTF-8
+2 > Accept: application/json
+2 > Content-Length: 316
+2 > Host: parabank.parasoft.com
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
+2 > Accept-Encoding: gzip,deflate
+<payee>
+  <name>Test Payee</name>
+  <address>
+    <street>123 Main St</street>
+    <city>Beverly Hills</city>
+    <state>CA</state>
+    <zipCode>90210</zipCode>
+  </address>
+  <phoneNumber>310-000-0000</phoneNumber>
+  <accountNumber>9999</accountNumber>
+  <routingNumber>111000025</routingNumber>
+</payee>
+
+19:29:18.979 [main] DEBUG com.intuit.karate - response time in milliseconds: 191
+2 < 200
+2 < Date: Thu, 21 May 2026 00:29:17 GMT
+2 < Content-Type: application/json
+2 < Transfer-Encoding: chunked
+2 < Connection: keep-alive
+2 < Server: cloudflare
+2 < cf-cache-status: DYNAMIC
+2 < X-Content-Type-Options: nosniff
+2 < CF-RAY: 9fef77494ad4b6f2-BOG
+{"payeeName":"Test Payee","amount":0,"accountId":13344}
+
+19:29:18.997 [main] INFO  c.intuit.karate.core.FeatureRuntime - classpath:org/udea/parabank/login.feature - call by tag at line 9: login_ok
+19:29:19.005 [main] DEBUG com.intuit.karate - request:
+1 > GET https://parabank.parasoft.com/parabank/services/bank/login/john/demo
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
+1 > Accept-Encoding: gzip,deflate
+
+
+19:29:19.181 [main] DEBUG com.intuit.karate - response time in milliseconds: 175
+1 < 200
+1 < Date: Thu, 21 May 2026 00:29:17 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 9fef774a8ba1b6ec-BOG
+{"id":12212,"firstName":"John","lastName":"Smith","address":{"street":"1431 Main St","city":"Beverly Hills","state":"CA","zipCode":"90210"},"phoneNumber":"310-447-4121","ssn":"622-11-9999"}
+
+19:29:19.186 [main] INFO  com.intuit.karate - [print] Set-Cookie (DEFECTO - esperado JSESSIONID, no presente en REST login): [
+]
+ 
+19:29:19.191 [main] DEBUG com.intuit.karate - request:
+1 > GET https://parabank.parasoft.com/parabank/services/bank/customers/12212/accounts
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
+1 > Accept-Encoding: gzip,deflate
+
+
+19:29:19.367 [main] DEBUG com.intuit.karate - response time in milliseconds: 175
+1 < 200
+1 < Date: Thu, 21 May 2026 00:29:18 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 9fef774bbe9ab6f2-BOG
+[{"id":13344,"customerId":12212,"type":"CHECKING","balance":-9994906.07}]
+
+19:29:19.378 [main] DEBUG com.intuit.karate - request:
+2 > POST https://parabank.parasoft.com/parabank/services/bank/billpay?accountId=13344&amount=-50
+2 > Content-Type: application/xml; charset=UTF-8
+2 > Accept: application/json
+2 > Content-Length: 316
+2 > Host: parabank.parasoft.com
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
+2 > Accept-Encoding: gzip,deflate
+<payee>
+  <name>Test Payee</name>
+  <address>
+    <street>123 Main St</street>
+    <city>Beverly Hills</city>
+    <state>CA</state>
+    <zipCode>90210</zipCode>
+  </address>
+  <phoneNumber>310-000-0000</phoneNumber>
+  <accountNumber>9999</accountNumber>
+  <routingNumber>111000025</routingNumber>
+</payee>
+
+19:29:19.551 [main] DEBUG com.intuit.karate - response time in milliseconds: 172
+2 < 200
+2 < Date: Thu, 21 May 2026 00:29:18 GMT
+2 < Content-Type: application/json
+2 < Transfer-Encoding: chunked
+2 < Connection: keep-alive
+2 < Server: cloudflare
+2 < cf-cache-status: DYNAMIC
+2 < X-Content-Type-Options: nosniff
+2 < CF-RAY: 9fef774ce864b6f2-BOG
+{"payeeName":"Test Payee","amount":-50,"accountId":13344}
+
+19:29:19.567 [main] INFO  c.intuit.karate.core.FeatureRuntime - classpath:org/udea/parabank/login.feature - call by tag at line 9: login_ok
+19:29:19.578 [main] DEBUG com.intuit.karate - request:
+1 > GET https://parabank.parasoft.com/parabank/services/bank/login/john/demo
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
+1 > Accept-Encoding: gzip,deflate
+
+
+19:29:19.753 [main] DEBUG com.intuit.karate - response time in milliseconds: 174
+1 < 200
+1 < Date: Thu, 21 May 2026 00:29:18 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 9fef774e2a8db6f9-BOG
+{"id":12212,"firstName":"John","lastName":"Smith","address":{"street":"1431 Main St","city":"Beverly Hills","state":"CA","zipCode":"90210"},"phoneNumber":"310-447-4121","ssn":"622-11-9999"}
+
+19:29:19.757 [main] INFO  com.intuit.karate - [print] Set-Cookie (DEFECTO - esperado JSESSIONID, no presente en REST login): [
+]
+ 
+19:29:19.761 [main] DEBUG com.intuit.karate - request:
+1 > GET https://parabank.parasoft.com/parabank/services/bank/customers/12212/accounts
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
+1 > Accept-Encoding: gzip,deflate
+
+
+19:29:19.934 [main] DEBUG com.intuit.karate - response time in milliseconds: 173
+1 < 200
+1 < Date: Thu, 21 May 2026 00:29:18 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 9fef774f4872b6f6-BOG
+[{"id":13344,"customerId":12212,"type":"CHECKING","balance":-9994856.07}]
+
+19:29:19.942 [main] DEBUG com.intuit.karate - request:
+2 > POST https://parabank.parasoft.com/parabank/services/bank/billpay?accountId=13344&amount=9999999
+2 > Content-Type: application/xml; charset=UTF-8
+2 > Accept: application/json
+2 > Content-Length: 316
+2 > Host: parabank.parasoft.com
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
+2 > Accept-Encoding: gzip,deflate
+<payee>
+  <name>Test Payee</name>
+  <address>
+    <street>123 Main St</street>
+    <city>Beverly Hills</city>
+    <state>CA</state>
+    <zipCode>90210</zipCode>
+  </address>
+  <phoneNumber>310-000-0000</phoneNumber>
+  <accountNumber>9999</accountNumber>
+  <routingNumber>111000025</routingNumber>
+</payee>
+
+19:29:20.125 [main] DEBUG com.intuit.karate - response time in milliseconds: 183
+2 < 200
+2 < Date: Thu, 21 May 2026 00:29:18 GMT
+2 < Content-Type: application/json
+2 < Transfer-Encoding: chunked
+2 < Connection: keep-alive
+2 < Server: cloudflare
+2 < cf-cache-status: DYNAMIC
+2 < X-Content-Type-Options: nosniff
+2 < CF-RAY: 9fef775068e3b6fd-BOG
+{"payeeName":"Test Payee","amount":9999999,"accountId":13344}
+
+19:29:20.140 [main] INFO  c.intuit.karate.core.FeatureRuntime - classpath:org/udea/parabank/login.feature - call by tag at line 9: login_ok
+19:29:20.149 [main] DEBUG com.intuit.karate - request:
+1 > GET https://parabank.parasoft.com/parabank/services/bank/login/john/demo
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
+1 > Accept-Encoding: gzip,deflate
+
+
+19:29:20.327 [main] DEBUG com.intuit.karate - response time in milliseconds: 178
+1 < 200
+1 < Date: Thu, 21 May 2026 00:29:19 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 9fef7751bf3bb6f9-BOG
+{"id":12212,"firstName":"John","lastName":"Smith","address":{"street":"1431 Main St","city":"Beverly Hills","state":"CA","zipCode":"90210"},"phoneNumber":"310-447-4121","ssn":"622-11-9999"}
+
+19:29:20.329 [main] INFO  com.intuit.karate - [print] Set-Cookie (DEFECTO - esperado JSESSIONID, no presente en REST login): [
+]
+ 
+19:29:20.332 [main] DEBUG com.intuit.karate - request:
+1 > GET https://parabank.parasoft.com/parabank/services/bank/customers/12212/accounts
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
+1 > Accept-Encoding: gzip,deflate
+
+
+19:29:20.510 [main] DEBUG com.intuit.karate - response time in milliseconds: 178
+1 < 200
+1 < Date: Thu, 21 May 2026 00:29:19 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 9fef7752d87bb6f9-BOG
+[{"id":13344,"customerId":12212,"type":"CHECKING","balance":-19994855.07}]
+
+19:29:20.517 [main] DEBUG com.intuit.karate - request:
+2 > POST https://parabank.parasoft.com/parabank/services/bank/billpay?accountId=99999999&amount=10
+2 > Content-Type: application/xml; charset=UTF-8
+2 > Accept: application/json
+2 > Content-Length: 316
+2 > Host: parabank.parasoft.com
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
+2 > Accept-Encoding: gzip,deflate
+<payee>
+  <name>Test Payee</name>
+  <address>
+    <street>123 Main St</street>
+    <city>Beverly Hills</city>
+    <state>CA</state>
+    <zipCode>90210</zipCode>
+  </address>
+  <phoneNumber>310-000-0000</phoneNumber>
+  <accountNumber>9999</accountNumber>
+  <routingNumber>111000025</routingNumber>
+</payee>
+
+19:29:20.698 [main] DEBUG com.intuit.karate - response time in milliseconds: 178
+2 < 500
+2 < Date: Thu, 21 May 2026 00:29:19 GMT
+2 < Content-Type: text/html;charset=ISO-8859-1
+2 < Transfer-Encoding: chunked
+2 < Connection: keep-alive
+2 < Server: cloudflare
+2 < Set-Cookie: JSESSIONID=431719BBDF60C2E45F7D67A98E873FB0; Path=/parabank; HttpOnly
+2 < content-language: en-US
+2 < cf-cache-status: DYNAMIC
+2 < X-Content-Type-Options: nosniff
+2 < CF-RAY: 9fef7753fc20b6f2-BOG
+
+
+
+
+<!-- <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>ParaBank | Error</title>
+		<link href="template.css;jsessionid=431719BBDF60C2E45F7D67A98E873FB0" rel="stylesheet"
+			type="text/css" />
+		<link href="style.css;jsessionid=431719BBDF60C2E45F7D67A98E873FB0" rel="stylesheet"
+			type="text/css" />
+		<script src="webjars/jquery/4.0.0/jquery.min.js;jsessionid=431719BBDF60C2E45F7D67A98E873FB0"></script>
+	</head>
+
+	<body
+		
+	    onload="document.login.username.focus();"
+	  >
+		<div id="mainPanel">
+			
+				
+					
+
+
+
+<div id="topPanel">
+  <a href="admin.htm;jsessionid=431719BBDF60C2E45F7D67A98E873FB0"><img src="images/clear.gif;jsessionid=431719BBDF60C2E45F7D67A98E873FB0" width="56" height="42" border="0" class="admin"/></a>
+  <a href="index.htm;jsessionid=431719BBDF60C2E45F7D67A98E873FB0"><img src="images/logo.gif;jsessionid=431719BBDF60C2E45F7D67A98E873FB0" alt="ParaBank" width="136" height="31" border="0" class="logo" title="ParaBank"/></a>
+  <p class="caption">Experience the difference</p>
+</div>
+<div id="headerPanel" style="background: url(images/header-main.jpg;jsessionid=431719BBDF60C2E45F7D67A98E873FB0) 0 0 no-repeat;">
+  
+
+
+<ul class="leftmenu">
+  <li class="Solutions">Solutions</li>
+  <li><a href="about.htm;jsessionid=431719BBDF60C2E45F7D67A98E873FB0">About Us</a></li>
+  <li><a href="services.htm;jsessionid=431719BBDF60C2E45F7D67A98E873FB0">Services</a></li>
+  <li><a href="http://www.parasoft.com/jsp/products.jsp">Products</a></li>
+  <li><a href="http://www.parasoft.com/jsp/pr/contacts.jsp">Locations</a></li>
+  <li><a href="admin.htm;jsessionid=431719BBDF60C2E45F7D67A98E873FB0">Admin Page</a></li>
+  
+</ul>
+  
+
+
+<ul class="button">
+  <li class="home"><a href="index.htm;jsessionid=431719BBDF60C2E45F7D67A98E873FB0">home</a></li>
+  <li class="aboutus"><a href="about.htm;jsessionid=431719BBDF60C2E45F7D67A98E873FB0">about</a></li>
+  <li class="contact"><a href="contact.htm;jsessionid=431719BBDF60C2E45F7D67A98E873FB0">contact</a></li>
+</ul>
+</div>
+				
+				
+			
+			<div id="bodyPanel">
+				<div id="leftPanel">
+					
+						
+							
+
+
+<h2>Customer Login</h2>
+<div id="loginPanel">
+  <form name="login" action="login.htm;jsessionid=431719BBDF60C2E45F7D67A98E873FB0" method="POST">
+    
+    <p><b>Username</b></p>
+    <div class="login"><input type="text" class="input" name="username"/></div>
+    <p><b>Password</b></p>
+    <div class="login"><input type="password" class="input" name="password"/></div>
+    <div class="login"><input type="submit" class="button" value="Log In"/></div>
+  </form>
+  <p><a href="lookup.htm;jsessionid=431719BBDF60C2E45F7D67A98E873FB0">Forgot login info?</a></p>
+  <p><a href="register.htm;jsessionid=431719BBDF60C2E45F7D67A98E873FB0">Register</a></p>
+</div>
+						
+						
+					
+				</div>
+				<div id="rightPanel">
+					
+
+
+<h1 class="title">Error!</h1>
+
+
+
+<p class="error">An internal error has occurred and has been logged.</p>
+				</div>
+			</div>
+		</div>
+		
+
+
+<div id="footermainPanel">
+  <div id="footerPanel">
+    <ul>
+      <li><a href="index.htm;jsessionid=431719BBDF60C2E45F7D67A98E873FB0">Home</a>| </li>
+      <li><a href="about.htm;jsessionid=431719BBDF60C2E45F7D67A98E873FB0">About Us</a>| </li>
+      <li><a href="services.htm;jsessionid=431719BBDF60C2E45F7D67A98E873FB0">Services</a>| </li>
+      <li><a href="http://www.parasoft.com/jsp/products.jsp">Products</a>| </li>
+      <li><a href="http://www.parasoft.com/jsp/pr/contacts.jsp">Locations</a>| </li>
+      <li><a href="http://forums.parasoft.com/">Forum</a>| </li>
+      <li><a href="sitemap.htm;jsessionid=431719BBDF60C2E45F7D67A98E873FB0">Site Map</a>| </li>
+      <li><a href="contact.htm;jsessionid=431719BBDF60C2E45F7D67A98E873FB0">Contact Us</a></li>
+    </ul>
+    <p class="copyright">&copy; Parasoft. All rights reserved.</p>
+    <ul class="visit">
+      <li>Visit us at:</li>
+      <li><a href="http://www.parasoft.com/" target="_blank">www.parasoft.com</a></li>
+    </ul>
+  </div>
+</div>
+	</body>
+</html>
+
+
+19:29:22.414 [main] INFO  com.intuit.karate.Runner - using system property 'karate.env': prod
+19:29:22.417 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+19:29:22.434 [main] DEBUG com.intuit.karate - request:
+1 > GET https://parabank.parasoft.com/parabank/services/bank/login/john/demo
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
+1 > Accept-Encoding: gzip,deflate
+
+
+19:29:22.611 [main] DEBUG com.intuit.karate - response time in milliseconds: 176
+1 < 200
+1 < Date: Thu, 21 May 2026 00:29:21 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 9fef77600cecb6f5-BOG
+{"id":12212,"firstName":"John","lastName":"Smith","address":{"street":"1431 Main St","city":"Beverly Hills","state":"CA","zipCode":"90210"},"phoneNumber":"310-447-4121","ssn":"622-11-9999"}
+
+19:29:22.617 [main] INFO  com.intuit.karate - [print] Set-Cookie (DEFECTO - esperado JSESSIONID, no presente en REST login): [
+]
+ 
+19:29:22.634 [main] DEBUG com.intuit.karate - request:
+1 > GET https://parabank.parasoft.com/parabank/services/bank/login/john/wrongpassword
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
+1 > Accept-Encoding: gzip,deflate
+
+
+19:29:22.810 [main] DEBUG com.intuit.karate - response time in milliseconds: 175
+1 < 400
+1 < Date: Thu, 21 May 2026 00:29:21 GMT
+1 < Content-Type: text/plain;charset=UTF-8
+1 < Content-Length: 32
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 9fef77614f04b6f2-BOG
+Invalid username and/or password
+
+19:29:22.975 [main] INFO  com.intuit.karate.Runner - using system property 'karate.env': prod
+19:29:22.979 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+19:29:22.989 [main] INFO  c.intuit.karate.core.FeatureRuntime - classpath:org/udea/parabank/login.feature - call by tag at line 9: login_ok
+19:29:22.994 [main] DEBUG com.intuit.karate - request:
+1 > GET https://parabank.parasoft.com/parabank/services/bank/login/john/demo
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
+1 > Accept-Encoding: gzip,deflate
+
+
+19:29:23.167 [main] DEBUG com.intuit.karate - response time in milliseconds: 173
+1 < 200
+1 < Date: Thu, 21 May 2026 00:29:21 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 9fef776379b3b6f5-BOG
+{"id":12212,"firstName":"John","lastName":"Smith","address":{"street":"1431 Main St","city":"Beverly Hills","state":"CA","zipCode":"90210"},"phoneNumber":"310-447-4121","ssn":"622-11-9999"}
+
+19:29:23.171 [main] INFO  com.intuit.karate - [print] Set-Cookie (DEFECTO - esperado JSESSIONID, no presente en REST login): [
+]
+ 
+19:29:23.177 [main] DEBUG com.intuit.karate - request:
+1 > GET https://parabank.parasoft.com/parabank/services/bank/customers/12212/accounts
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
+1 > Accept-Encoding: gzip,deflate
+
+
+19:29:23.350 [main] DEBUG com.intuit.karate - response time in milliseconds: 172
+1 < 200
+1 < Date: Thu, 21 May 2026 00:29:22 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 9fef7764abbcb6f2-BOG
+[{"id":13344,"customerId":12212,"type":"CHECKING","balance":-19994855.07}]
+
+19:29:23.359 [main] INFO  com.intuit.karate - [print] Saldos encontrados (DEFECTO si negativo en cuenta CHECKING/SAVINGS): [
+  -1.999485507E7
+]
+ 
+19:29:23.363 [main] INFO  com.intuit.karate - [print] Todos los saldos son >= 0? false 
+19:29:23.566 [main] INFO  com.intuit.karate.Runner - using system property 'karate.env': prod
+19:29:23.571 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+19:29:23.586 [main] DEBUG com.intuit.karate - request:
+1 > POST https://parabank.parasoft.com/parabank/services/bank/transfer?amount=50&fromAccountId=13899&toAccountId=14565
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
+1 > Accept-Encoding: gzip,deflate
+
+
+19:29:23.762 [main] DEBUG com.intuit.karate - response time in milliseconds: 176
+1 < 200
+1 < Date: Thu, 21 May 2026 00:29:22 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 9fef77673911b6fd-BOG
+Successfully transferred $50 from account #13899 to account #14565
+
+19:29:23.766 [main] DEBUG com.intuit.karate - request:
+2 > GET https://parabank.parasoft.com/parabank/services/bank/accounts/14565/transactions
+2 > Accept: application/json
+2 > Host: parabank.parasoft.com
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
+2 > Accept-Encoding: gzip,deflate
+
+
+19:29:23.945 [main] DEBUG com.intuit.karate - response time in milliseconds: 178
+2 < 200
+2 < Date: Thu, 21 May 2026 00:29:22 GMT
+2 < Content-Type: application/json
+2 < Transfer-Encoding: chunked
+2 < Connection: keep-alive
+2 < Server: cloudflare
+2 < cf-cache-status: DYNAMIC
+2 < X-Content-Type-Options: nosniff
+2 < CF-RAY: 9fef77685e85b6f7-BOG
+[{"id":16363,"accountId":14565,"type":"Credit","date":1779321600000,"amount":90.00,"description":"Funds Transfer Received"},{"id":16585,"accountId":14565,"type":"Credit","date":1779321600000,"amount":0.01,"description":"Funds Transfer Received"},{"id":18139,"accountId":14565,"type":"Credit","date":1779321600000,"amount":50.00,"description":"Funds Transfer Received"},{"id":22357,"accountId":14565,"type":"Credit","date":1779321600000,"amount":100.00,"description":"Funds Transfer Received"},{"id":22579,"accountId":14565,"type":"Credit","date":1779321600000,"amount":100.00,"description":"Funds Transfer Received"},{"id":25687,"accountId":14565,"type":"Credit","date":1779321600000,"amount":50.00,"description":"Funds Transfer Received"},{"id":26242,"accountId":14565,"type":"Credit","date":1779321600000,"amount":50.00,"description":"Funds Transfer Received"},{"id":26908,"accountId":14565,"type":"Credit","date":1779321600000,"amount":50.00,"description":"Funds Transfer Received"}]
+
+19:29:55.541 [main] INFO  com.intuit.karate.Runner - using system property 'karate.env': prod
+19:29:55.689 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+19:29:57.149 [main] INFO  c.intuit.karate.core.FeatureRuntime - classpath:org/udea/parabank/login.feature - call by tag at line 9: login_ok
+19:29:57.530 [main] DEBUG com.intuit.karate - request:
+1 > GET https://parabank.parasoft.com/parabank/services/bank/login/john/demo
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
+1 > Accept-Encoding: gzip,deflate
+
+
+19:29:58.118 [main] DEBUG com.intuit.karate - response time in milliseconds: 586
+1 < 200
+1 < Date: Thu, 21 May 2026 00:29:56 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 9fef783dca4bb6ff-BOG
+{"id":12212,"firstName":"John","lastName":"Smith","address":{"street":"1431 Main St","city":"Beverly Hills","state":"CA","zipCode":"90210"},"phoneNumber":"310-447-4121","ssn":"622-11-9999"}
+
+19:29:58.171 [main] INFO  com.intuit.karate - [print] Set-Cookie (DEFECTO - esperado JSESSIONID, no presente en REST login): [
+]
+ 
+19:29:58.191 [main] DEBUG com.intuit.karate - request:
+1 > GET https://parabank.parasoft.com/parabank/services/bank/customers/12212/accounts
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
+1 > Accept-Encoding: gzip,deflate
+
+
+19:29:58.385 [main] DEBUG com.intuit.karate - response time in milliseconds: 193
+1 < 200
+1 < Date: Thu, 21 May 2026 00:29:57 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 9fef783f8af4b6ef-BOG
+[{"id":13344,"customerId":12212,"type":"CHECKING","balance":-19994855.07}]
+
+19:29:58.513 [main] DEBUG com.intuit.karate - request:
+2 > POST https://parabank.parasoft.com/parabank/services/bank/billpay?accountId=13344&amount=10
+2 > Content-Type: application/xml; charset=UTF-8
+2 > Accept: application/json
+2 > Content-Length: 316
+2 > Host: parabank.parasoft.com
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
+2 > Accept-Encoding: gzip,deflate
+<payee>
+  <name>Test Payee</name>
+  <address>
+    <street>123 Main St</street>
+    <city>Beverly Hills</city>
+    <state>CA</state>
+    <zipCode>90210</zipCode>
+  </address>
+  <phoneNumber>310-000-0000</phoneNumber>
+  <accountNumber>9999</accountNumber>
+  <routingNumber>111000025</routingNumber>
+</payee>
+
+19:29:58.689 [main] DEBUG com.intuit.karate - response time in milliseconds: 176
+2 < 200
+2 < Date: Thu, 21 May 2026 00:29:57 GMT
+2 < Content-Type: application/json
+2 < Transfer-Encoding: chunked
+2 < Connection: keep-alive
+2 < Server: cloudflare
+2 < cf-cache-status: DYNAMIC
+2 < X-Content-Type-Options: nosniff
+2 < CF-RAY: 9fef78417916b6f2-BOG
+{"payeeName":"Test Payee","amount":10,"accountId":13344}
+
+19:29:58.729 [main] INFO  c.intuit.karate.core.FeatureRuntime - classpath:org/udea/parabank/login.feature - call by tag at line 9: login_ok
+19:29:58.742 [main] DEBUG com.intuit.karate - request:
+1 > GET https://parabank.parasoft.com/parabank/services/bank/login/john/demo
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
+1 > Accept-Encoding: gzip,deflate
+
+
+19:29:58.923 [main] DEBUG com.intuit.karate - response time in milliseconds: 179
+1 < 200
+1 < Date: Thu, 21 May 2026 00:29:57 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 9fef7842e83cb6ef-BOG
+{"id":12212,"firstName":"John","lastName":"Smith","address":{"street":"1431 Main St","city":"Beverly Hills","state":"CA","zipCode":"90210"},"phoneNumber":"310-447-4121","ssn":"622-11-9999"}
+
+19:29:58.927 [main] INFO  com.intuit.karate - [print] Set-Cookie (DEFECTO - esperado JSESSIONID, no presente en REST login): [
+]
+ 
+19:29:58.931 [main] DEBUG com.intuit.karate - request:
+1 > GET https://parabank.parasoft.com/parabank/services/bank/customers/12212/accounts
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
+1 > Accept-Encoding: gzip,deflate
+
+
+19:29:59.107 [main] DEBUG com.intuit.karate - response time in milliseconds: 176
+1 < 200
+1 < Date: Thu, 21 May 2026 00:29:57 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 9fef78441c0ab6ec-BOG
+[{"id":13344,"customerId":12212,"type":"CHECKING","balance":-19994865.07}]
+
+19:29:59.117 [main] DEBUG com.intuit.karate - request:
+2 > POST https://parabank.parasoft.com/parabank/services/bank/billpay?accountId=13344&amount=0
+2 > Content-Type: application/xml; charset=UTF-8
+2 > Accept: application/json
+2 > Content-Length: 316
+2 > Host: parabank.parasoft.com
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
+2 > Accept-Encoding: gzip,deflate
+<payee>
+  <name>Test Payee</name>
+  <address>
+    <street>123 Main St</street>
+    <city>Beverly Hills</city>
+    <state>CA</state>
+    <zipCode>90210</zipCode>
+  </address>
+  <phoneNumber>310-000-0000</phoneNumber>
+  <accountNumber>9999</accountNumber>
+  <routingNumber>111000025</routingNumber>
+</payee>
+
+19:29:59.293 [main] DEBUG com.intuit.karate - response time in milliseconds: 176
+2 < 200
+2 < Date: Thu, 21 May 2026 00:29:58 GMT
+2 < Content-Type: application/json
+2 < Transfer-Encoding: chunked
+2 < Connection: keep-alive
+2 < Server: cloudflare
+2 < cf-cache-status: DYNAMIC
+2 < X-Content-Type-Options: nosniff
+2 < CF-RAY: 9fef78454de8b6ec-BOG
+{"payeeName":"Test Payee","amount":0,"accountId":13344}
+
+19:29:59.309 [main] INFO  c.intuit.karate.core.FeatureRuntime - classpath:org/udea/parabank/login.feature - call by tag at line 9: login_ok
+19:29:59.320 [main] DEBUG com.intuit.karate - request:
+1 > GET https://parabank.parasoft.com/parabank/services/bank/login/john/demo
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
+1 > Accept-Encoding: gzip,deflate
+
+
+19:29:59.495 [main] DEBUG com.intuit.karate - response time in milliseconds: 174
+1 < 200
+1 < Date: Thu, 21 May 2026 00:29:58 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 9fef78468ffeb6fd-BOG
+{"id":12212,"firstName":"John","lastName":"Smith","address":{"street":"1431 Main St","city":"Beverly Hills","state":"CA","zipCode":"90210"},"phoneNumber":"310-447-4121","ssn":"622-11-9999"}
+
+19:29:59.498 [main] INFO  com.intuit.karate - [print] Set-Cookie (DEFECTO - esperado JSESSIONID, no presente en REST login): [
+]
+ 
+19:29:59.503 [main] DEBUG com.intuit.karate - request:
+1 > GET https://parabank.parasoft.com/parabank/services/bank/customers/12212/accounts
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
+1 > Accept-Encoding: gzip,deflate
+
+
+19:29:59.678 [main] DEBUG com.intuit.karate - response time in milliseconds: 175
+1 < 200
+1 < Date: Thu, 21 May 2026 00:29:58 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 9fef7847af8eb6f6-BOG
+[{"id":13344,"customerId":12212,"type":"CHECKING","balance":-19994865.07}]
+
+19:29:59.691 [main] DEBUG com.intuit.karate - request:
+2 > POST https://parabank.parasoft.com/parabank/services/bank/billpay?accountId=13344&amount=-50
+2 > Content-Type: application/xml; charset=UTF-8
+2 > Accept: application/json
+2 > Content-Length: 316
+2 > Host: parabank.parasoft.com
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
+2 > Accept-Encoding: gzip,deflate
+<payee>
+  <name>Test Payee</name>
+  <address>
+    <street>123 Main St</street>
+    <city>Beverly Hills</city>
+    <state>CA</state>
+    <zipCode>90210</zipCode>
+  </address>
+  <phoneNumber>310-000-0000</phoneNumber>
+  <accountNumber>9999</accountNumber>
+  <routingNumber>111000025</routingNumber>
+</payee>
+
+19:29:59.871 [main] DEBUG com.intuit.karate - response time in milliseconds: 180
+2 < 200
+2 < Date: Thu, 21 May 2026 00:29:58 GMT
+2 < Content-Type: application/json
+2 < Transfer-Encoding: chunked
+2 < Connection: keep-alive
+2 < Server: cloudflare
+2 < cf-cache-status: DYNAMIC
+2 < X-Content-Type-Options: nosniff
+2 < CF-RAY: 9fef7848dbccb6fd-BOG
+{"payeeName":"Test Payee","amount":-50,"accountId":13344}
+
+19:29:59.886 [main] INFO  c.intuit.karate.core.FeatureRuntime - classpath:org/udea/parabank/login.feature - call by tag at line 9: login_ok
+19:29:59.896 [main] DEBUG com.intuit.karate - request:
+1 > GET https://parabank.parasoft.com/parabank/services/bank/login/john/demo
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
+1 > Accept-Encoding: gzip,deflate
+
+
+19:30:00.071 [main] DEBUG com.intuit.karate - response time in milliseconds: 174
+1 < 200
+1 < Date: Thu, 21 May 2026 00:29:58 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 9fef784a2885b6f2-BOG
+{"id":12212,"firstName":"John","lastName":"Smith","address":{"street":"1431 Main St","city":"Beverly Hills","state":"CA","zipCode":"90210"},"phoneNumber":"310-447-4121","ssn":"622-11-9999"}
+
+19:30:00.074 [main] INFO  com.intuit.karate - [print] Set-Cookie (DEFECTO - esperado JSESSIONID, no presente en REST login): [
+]
+ 
+19:30:00.078 [main] DEBUG com.intuit.karate - request:
+1 > GET https://parabank.parasoft.com/parabank/services/bank/customers/12212/accounts
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
+1 > Accept-Encoding: gzip,deflate
+
+
+19:30:00.262 [main] DEBUG com.intuit.karate - response time in milliseconds: 184
+1 < 200
+1 < Date: Thu, 21 May 2026 00:29:59 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 9fef784b3eadb6ef-BOG
+[{"id":13344,"customerId":12212,"type":"CHECKING","balance":-19994815.07}]
+
+19:30:00.271 [main] DEBUG com.intuit.karate - request:
+2 > POST https://parabank.parasoft.com/parabank/services/bank/billpay?accountId=13344&amount=9999999
+2 > Content-Type: application/xml; charset=UTF-8
+2 > Accept: application/json
+2 > Content-Length: 316
+2 > Host: parabank.parasoft.com
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
+2 > Accept-Encoding: gzip,deflate
+<payee>
+  <name>Test Payee</name>
+  <address>
+    <street>123 Main St</street>
+    <city>Beverly Hills</city>
+    <state>CA</state>
+    <zipCode>90210</zipCode>
+  </address>
+  <phoneNumber>310-000-0000</phoneNumber>
+  <accountNumber>9999</accountNumber>
+  <routingNumber>111000025</routingNumber>
+</payee>
+
+19:30:00.455 [main] DEBUG com.intuit.karate - response time in milliseconds: 184
+2 < 200
+2 < Date: Thu, 21 May 2026 00:29:59 GMT
+2 < Content-Type: application/json
+2 < Transfer-Encoding: chunked
+2 < Connection: keep-alive
+2 < Server: cloudflare
+2 < cf-cache-status: DYNAMIC
+2 < X-Content-Type-Options: nosniff
+2 < CF-RAY: 9fef784c7a10b6f7-BOG
+{"payeeName":"Test Payee","amount":9999999,"accountId":13344}
+
+19:30:00.481 [main] INFO  c.intuit.karate.core.FeatureRuntime - classpath:org/udea/parabank/login.feature - call by tag at line 9: login_ok
+19:30:00.498 [main] DEBUG com.intuit.karate - request:
+1 > GET https://parabank.parasoft.com/parabank/services/bank/login/john/demo
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
+1 > Accept-Encoding: gzip,deflate
+
+
+19:30:00.672 [main] DEBUG com.intuit.karate - response time in milliseconds: 174
+1 < 200
+1 < Date: Thu, 21 May 2026 00:29:59 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 9fef784deabcb6f9-BOG
+{"id":12212,"firstName":"John","lastName":"Smith","address":{"street":"1431 Main St","city":"Beverly Hills","state":"CA","zipCode":"90210"},"phoneNumber":"310-447-4121","ssn":"622-11-9999"}
+
+19:30:00.676 [main] INFO  com.intuit.karate - [print] Set-Cookie (DEFECTO - esperado JSESSIONID, no presente en REST login): [
+]
+ 
+19:30:00.680 [main] DEBUG com.intuit.karate - request:
+1 > GET https://parabank.parasoft.com/parabank/services/bank/customers/12212/accounts
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
+1 > Accept-Encoding: gzip,deflate
+
+
+19:30:00.859 [main] DEBUG com.intuit.karate - response time in milliseconds: 178
+1 < 200
+1 < Date: Thu, 21 May 2026 00:29:59 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 9fef784f08c1b6f2-BOG
+[{"id":13344,"customerId":12212,"type":"CHECKING","balance":-29994814.07}]
+
+19:30:00.866 [main] DEBUG com.intuit.karate - request:
+2 > POST https://parabank.parasoft.com/parabank/services/bank/billpay?accountId=99999999&amount=10
+2 > Content-Type: application/xml; charset=UTF-8
+2 > Accept: application/json
+2 > Content-Length: 316
+2 > Host: parabank.parasoft.com
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
+2 > Accept-Encoding: gzip,deflate
+<payee>
+  <name>Test Payee</name>
+  <address>
+    <street>123 Main St</street>
+    <city>Beverly Hills</city>
+    <state>CA</state>
+    <zipCode>90210</zipCode>
+  </address>
+  <phoneNumber>310-000-0000</phoneNumber>
+  <accountNumber>9999</accountNumber>
+  <routingNumber>111000025</routingNumber>
+</payee>
+
+19:30:01.053 [main] DEBUG com.intuit.karate - response time in milliseconds: 184
+2 < 500
+2 < Date: Thu, 21 May 2026 00:29:59 GMT
+2 < Content-Type: text/html;charset=ISO-8859-1
+2 < Transfer-Encoding: chunked
+2 < Connection: keep-alive
+2 < Server: cloudflare
+2 < Set-Cookie: JSESSIONID=E1D7CA367E353EE3C8F7C56250C5A66E; Path=/parabank; HttpOnly
+2 < content-language: en-US
+2 < cf-cache-status: DYNAMIC
+2 < X-Content-Type-Options: nosniff
+2 < CF-RAY: 9fef78503900b6ff-BOG
+
+
+
+
+<!-- <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>ParaBank | Error</title>
+		<link href="template.css;jsessionid=E1D7CA367E353EE3C8F7C56250C5A66E" rel="stylesheet"
+			type="text/css" />
+		<link href="style.css;jsessionid=E1D7CA367E353EE3C8F7C56250C5A66E" rel="stylesheet"
+			type="text/css" />
+		<script src="webjars/jquery/4.0.0/jquery.min.js;jsessionid=E1D7CA367E353EE3C8F7C56250C5A66E"></script>
+	</head>
+
+	<body
+		
+	    onload="document.login.username.focus();"
+	  >
+		<div id="mainPanel">
+			
+				
+					
+
+
+
+<div id="topPanel">
+  <a href="admin.htm;jsessionid=E1D7CA367E353EE3C8F7C56250C5A66E"><img src="images/clear.gif;jsessionid=E1D7CA367E353EE3C8F7C56250C5A66E" width="56" height="42" border="0" class="admin"/></a>
+  <a href="index.htm;jsessionid=E1D7CA367E353EE3C8F7C56250C5A66E"><img src="images/logo.gif;jsessionid=E1D7CA367E353EE3C8F7C56250C5A66E" alt="ParaBank" width="136" height="31" border="0" class="logo" title="ParaBank"/></a>
+  <p class="caption">Experience the difference</p>
+</div>
+<div id="headerPanel" style="background: url(images/header-main.jpg;jsessionid=E1D7CA367E353EE3C8F7C56250C5A66E) 0 0 no-repeat;">
+  
+
+
+<ul class="leftmenu">
+  <li class="Solutions">Solutions</li>
+  <li><a href="about.htm;jsessionid=E1D7CA367E353EE3C8F7C56250C5A66E">About Us</a></li>
+  <li><a href="services.htm;jsessionid=E1D7CA367E353EE3C8F7C56250C5A66E">Services</a></li>
+  <li><a href="http://www.parasoft.com/jsp/products.jsp">Products</a></li>
+  <li><a href="http://www.parasoft.com/jsp/pr/contacts.jsp">Locations</a></li>
+  <li><a href="admin.htm;jsessionid=E1D7CA367E353EE3C8F7C56250C5A66E">Admin Page</a></li>
+  
+</ul>
+  
+
+
+<ul class="button">
+  <li class="home"><a href="index.htm;jsessionid=E1D7CA367E353EE3C8F7C56250C5A66E">home</a></li>
+  <li class="aboutus"><a href="about.htm;jsessionid=E1D7CA367E353EE3C8F7C56250C5A66E">about</a></li>
+  <li class="contact"><a href="contact.htm;jsessionid=E1D7CA367E353EE3C8F7C56250C5A66E">contact</a></li>
+</ul>
+</div>
+				
+				
+			
+			<div id="bodyPanel">
+				<div id="leftPanel">
+					
+						
+							
+
+
+<h2>Customer Login</h2>
+<div id="loginPanel">
+  <form name="login" action="login.htm;jsessionid=E1D7CA367E353EE3C8F7C56250C5A66E" method="POST">
+    
+    <p><b>Username</b></p>
+    <div class="login"><input type="text" class="input" name="username"/></div>
+    <p><b>Password</b></p>
+    <div class="login"><input type="password" class="input" name="password"/></div>
+    <div class="login"><input type="submit" class="button" value="Log In"/></div>
+  </form>
+  <p><a href="lookup.htm;jsessionid=E1D7CA367E353EE3C8F7C56250C5A66E">Forgot login info?</a></p>
+  <p><a href="register.htm;jsessionid=E1D7CA367E353EE3C8F7C56250C5A66E">Register</a></p>
+</div>
+						
+						
+					
+				</div>
+				<div id="rightPanel">
+					
+
+
+<h1 class="title">Error!</h1>
+
+
+
+<p class="error">An internal error has occurred and has been logged.</p>
+				</div>
+			</div>
+		</div>
+		
+
+
+<div id="footermainPanel">
+  <div id="footerPanel">
+    <ul>
+      <li><a href="index.htm;jsessionid=E1D7CA367E353EE3C8F7C56250C5A66E">Home</a>| </li>
+      <li><a href="about.htm;jsessionid=E1D7CA367E353EE3C8F7C56250C5A66E">About Us</a>| </li>
+      <li><a href="services.htm;jsessionid=E1D7CA367E353EE3C8F7C56250C5A66E">Services</a>| </li>
+      <li><a href="http://www.parasoft.com/jsp/products.jsp">Products</a>| </li>
+      <li><a href="http://www.parasoft.com/jsp/pr/contacts.jsp">Locations</a>| </li>
+      <li><a href="http://forums.parasoft.com/">Forum</a>| </li>
+      <li><a href="sitemap.htm;jsessionid=E1D7CA367E353EE3C8F7C56250C5A66E">Site Map</a>| </li>
+      <li><a href="contact.htm;jsessionid=E1D7CA367E353EE3C8F7C56250C5A66E">Contact Us</a></li>
+    </ul>
+    <p class="copyright">&copy; Parasoft. All rights reserved.</p>
+    <ul class="visit">
+      <li>Visit us at:</li>
+      <li><a href="http://www.parasoft.com/" target="_blank">www.parasoft.com</a></li>
+    </ul>
+  </div>
+</div>
+	</body>
+</html>
+
+
+19:30:02.767 [main] INFO  com.intuit.karate.Runner - using system property 'karate.env': prod
+19:30:02.771 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+19:30:02.785 [main] DEBUG com.intuit.karate - request:
+1 > GET https://parabank.parasoft.com/parabank/services/bank/login/john/demo
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
+1 > Accept-Encoding: gzip,deflate
+
+
+19:30:02.993 [main] DEBUG com.intuit.karate - response time in milliseconds: 208
+1 < 200
+1 < Date: Thu, 21 May 2026 00:30:01 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 9fef785c49feb6ef-BOG
+{"id":12212,"firstName":"John","lastName":"Smith","address":{"street":"1431 Main St","city":"Beverly Hills","state":"CA","zipCode":"90210"},"phoneNumber":"310-447-4121","ssn":"622-11-9999"}
+
+19:30:02.997 [main] INFO  com.intuit.karate - [print] Set-Cookie (DEFECTO - esperado JSESSIONID, no presente en REST login): [
+]
+ 
+19:30:03.012 [main] DEBUG com.intuit.karate - request:
+1 > GET https://parabank.parasoft.com/parabank/services/bank/login/john/wrongpassword
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
+1 > Accept-Encoding: gzip,deflate
+
+
+19:30:03.194 [main] DEBUG com.intuit.karate - response time in milliseconds: 180
+1 < 400
+1 < Date: Thu, 21 May 2026 00:30:01 GMT
+1 < Content-Type: text/plain;charset=UTF-8
+1 < Content-Length: 32
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 9fef785d9ed1b6f7-BOG
+Invalid username and/or password
+
+19:30:03.340 [main] INFO  com.intuit.karate.Runner - using system property 'karate.env': prod
+19:30:03.344 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+19:30:03.356 [main] INFO  c.intuit.karate.core.FeatureRuntime - classpath:org/udea/parabank/login.feature - call by tag at line 9: login_ok
+19:30:03.362 [main] DEBUG com.intuit.karate - request:
+1 > GET https://parabank.parasoft.com/parabank/services/bank/login/john/demo
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
+1 > Accept-Encoding: gzip,deflate
+
+
+19:30:03.542 [main] DEBUG com.intuit.karate - response time in milliseconds: 180
+1 < 200
+1 < Date: Thu, 21 May 2026 00:30:02 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 9fef785fcd18b6ff-BOG
+{"id":12212,"firstName":"John","lastName":"Smith","address":{"street":"1431 Main St","city":"Beverly Hills","state":"CA","zipCode":"90210"},"phoneNumber":"310-447-4121","ssn":"622-11-9999"}
+
+19:30:03.545 [main] INFO  com.intuit.karate - [print] Set-Cookie (DEFECTO - esperado JSESSIONID, no presente en REST login): [
+]
+ 
+19:30:03.549 [main] DEBUG com.intuit.karate - request:
+1 > GET https://parabank.parasoft.com/parabank/services/bank/customers/12212/accounts
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
+1 > Accept-Encoding: gzip,deflate
+
+
+19:30:03.731 [main] DEBUG com.intuit.karate - response time in milliseconds: 181
+1 < 200
+1 < Date: Thu, 21 May 2026 00:30:02 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 9fef7860faafb6ef-BOG
+[{"id":13344,"customerId":12212,"type":"CHECKING","balance":-29994814.07}]
+
+19:30:03.740 [main] INFO  com.intuit.karate - [print] Saldos encontrados (DEFECTO si negativo en cuenta CHECKING/SAVINGS): [
+  -2.999481407E7
+]
+ 
+19:30:03.744 [main] INFO  com.intuit.karate - [print] Todos los saldos son >= 0? false 
+19:30:03.930 [main] INFO  com.intuit.karate.Runner - using system property 'karate.env': prod
+19:30:03.933 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+19:30:03.949 [main] DEBUG com.intuit.karate - request:
+1 > POST https://parabank.parasoft.com/parabank/services/bank/transfer?amount=50&fromAccountId=13899&toAccountId=14565
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
+1 > Accept-Encoding: gzip,deflate
+
+
+19:30:04.146 [main] DEBUG com.intuit.karate - response time in milliseconds: 197
+1 < 200
+1 < Date: Thu, 21 May 2026 00:30:02 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 9fef78637f20b6ef-BOG
+Successfully transferred $50 from account #13899 to account #14565
+
+19:30:04.150 [main] DEBUG com.intuit.karate - request:
+2 > GET https://parabank.parasoft.com/parabank/services/bank/accounts/14565/transactions
+2 > Accept: application/json
+2 > Host: parabank.parasoft.com
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
+2 > Accept-Encoding: gzip,deflate
+
+
+19:30:04.329 [main] DEBUG com.intuit.karate - response time in milliseconds: 179
+2 < 200
+2 < Date: Thu, 21 May 2026 00:30:03 GMT
+2 < Content-Type: application/json
+2 < Transfer-Encoding: chunked
+2 < Connection: keep-alive
+2 < Server: cloudflare
+2 < cf-cache-status: DYNAMIC
+2 < X-Content-Type-Options: nosniff
+2 < CF-RAY: 9fef7864bb2db6f7-BOG
+[{"id":16363,"accountId":14565,"type":"Credit","date":1779321600000,"amount":90.00,"description":"Funds Transfer Received"},{"id":16585,"accountId":14565,"type":"Credit","date":1779321600000,"amount":0.01,"description":"Funds Transfer Received"},{"id":18139,"accountId":14565,"type":"Credit","date":1779321600000,"amount":50.00,"description":"Funds Transfer Received"},{"id":22357,"accountId":14565,"type":"Credit","date":1779321600000,"amount":100.00,"description":"Funds Transfer Received"},{"id":22579,"accountId":14565,"type":"Credit","date":1779321600000,"amount":100.00,"description":"Funds Transfer Received"},{"id":25687,"accountId":14565,"type":"Credit","date":1779321600000,"amount":50.00,"description":"Funds Transfer Received"},{"id":26242,"accountId":14565,"type":"Credit","date":1779321600000,"amount":50.00,"description":"Funds Transfer Received"},{"id":26908,"accountId":14565,"type":"Credit","date":1779321600000,"amount":50.00,"description":"Funds Transfer Received"},{"id":27574,"accountId":14565,"type":"Credit","date":1779321600000,"amount":50.00,"description":"Funds Transfer Received"}]
+

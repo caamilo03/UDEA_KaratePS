@@ -39,24 +39,27 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <img src="karate-labs-logo-ring.svg" alt="Karate Labs"/>
     </a>
     <div class="nav-count">
-      <div id="nav-pass" class="bg-success">0</div>
-      <div id="nav-fail" class="bg-danger">1</div>
+      <div id="nav-pass" class="bg-success">2</div>
+      <div id="nav-fail" class="bg-danger">0</div>
     </div>
   </div>
   <div id="nav-env">
-    <div></div>
+    <div>prod</div>
   </div>
   <div id="nav-type">
     <div>Scenarios</div>
   </div>
   <div id="nav-date">
-    <div>2026-05-19 07:35:49 p. m.</div>
+    <div>2026-05-20 07:30:03 p. m.</div>
   </div>
 </div>
 
         <div class="nav-container">
-          <div class="nav-item failed">
-            <a href="#[1:8]"><span>[1:8]</span> <span>Customer Login</span></a>
+          <div class="nav-item passed">
+            <a href="#[1:9]"><span>[1:9]</span> <span>Customer Login</span></a>
+          </div>
+          <div class="nav-item passed">
+            <a href="#[2:42]"><span>[2:42]</span> <span>Customer Login with invalid credentials returns error</span></a>
           </div>
         </div>
       </div>
@@ -70,29 +73,29 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
           <span class="feature-description"></span>
         </div>
         <div class="scenario">
-          <div class="scenario-heading" id="[1:8]">
+          <div class="scenario-heading" id="[1:9]">
             <div class="heading-container">
               <div class="scenario-tags">
-                <a class="badge badge-primary" href="karate-tags.html">parabank_login</a>
+                <a class="badge badge-primary" href="karate-tags.html">login_ok</a><a class="badge badge-primary" href="karate-tags.html">parabank_login</a>
               </div>
               <div class="scenario-keyword">
-                Scenario: <span>[1:8]</span>
+                Scenario: <span>[1:9]</span>
                 <span class="scenario-name">Customer Login</span>
                 <span></span>
               </div>
             </div>
-            <div class="scenario-time failed">
-              <span>ms:</span>&nbsp;<span>5376</span>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>216</span>
             </div>
           </div>
           <div class="step-row">
-            <div class="step-container" id="[1:8]bg">
+            <div class="step-container" id="[1:9]bg">
               <div class="step-ref bg-step">&gt;&gt;</div>
               <div class="step-cell passed">Background:</div>
             </div>
             <div class="time-cell passed"></div>
           </div>
-          <div data-parent="[1:8]bg"><div>
+          <div data-parent="[1:9]bg"><div>
   
 
   
@@ -105,7 +108,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>*</span>&nbsp;<span>url baseUrl</span>
       </div>
     </div>
-    <div class="time-cell passed">2</div>
+    <div class="time-cell passed">0</div>
   </div>
 
    
@@ -120,7 +123,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
 </div>
 </div>
-          <div data-parent="[1:8]bg"><div>
+          <div data-parent="[1:9]bg"><div>
   
 
   
@@ -133,35 +136,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>*</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
       </div>
     </div>
-    <div class="time-cell passed">3</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.9">
-      <div class="step-ref passed">9</div>
-      
-      <div class="step-cell passed">
-        <span>Given</span>&nbsp;<span>path &#39;login&#39;</span>
-      </div>
-    </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell passed">0</div>
   </div>
 
    
@@ -186,7 +161,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref passed">10</div>
       
       <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>path &#39;john&#39; //userName</span>
+        <span>Given</span>&nbsp;<span>path &#39;login&#39;</span>
       </div>
     </div>
     <div class="time-cell passed">0</div>
@@ -214,7 +189,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref passed">11</div>
       
       <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>path &#39;demo&#39; //password</span>
+        <span>And</span>&nbsp;<span>path &#39;john&#39; //userName</span>
       </div>
     </div>
     <div class="time-cell passed">0</div>
@@ -239,55 +214,13 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   <div class="step-row">
     <div class="step-container" id="0.12">
-      <div class="step-ref failed">12</div>
+      <div class="step-ref passed">12</div>
       
-      <div class="step-cell failed">
-        <span>When</span>&nbsp;<span>method GET</span>
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>path &#39;demo&#39; //password</span>
       </div>
     </div>
-    <div class="time-cell failed">5370</div>
-  </div>
-
-   
-  
-  
-
-  
-
-  <div class="preformatted" data-parent="0.12">19:35:44.012 request:
-1 &gt; GET http://192.168.0.182:8080/parabank/services/bank/login/john/demo
-1 &gt; Accept: application/json
-1 &gt; Host: 192.168.0.182:8080
-1 &gt; Connection: Keep-Alive
-1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
-1 &gt; Accept-Encoding: gzip,deflate
-
-
-19:35:49.046 org.apache.http.conn.ConnectTimeoutException: Connect to 192.168.0.182:8080 [/192.168.0.182] failed: Connect timed out, http call failed after 5358 milliseconds for url: http://192.168.0.182:8080/parabank/services/bank/login/john/demo
-19:35:49.047 classpath:org/udea/parabank/login.feature:12
-When method GET
-http call failed after 5358 milliseconds for url: http://192.168.0.182:8080/parabank/services/bank/login/john/demo
-classpath:org/udea/parabank/login.feature:12
-</div>   
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.13">
-      <div class="step-ref skipped">13</div>
-      
-      <div class="step-cell skipped">
-        <span>Then</span>&nbsp;<span>status 200</span>
-      </div>
-    </div>
-    <div class="time-cell skipped">0</div>
+    <div class="time-cell passed">0</div>
   </div>
 
    
@@ -308,19 +241,96 @@ classpath:org/udea/parabank/login.feature:12
   
 
   <div class="step-row">
-    <div class="step-container" id="0.14">
-      <div class="step-ref skipped">14</div>
+    <div class="step-container" id="0.13">
+      <div class="step-ref passed">13</div>
       
-      <div class="step-cell skipped">
-        <span>And</span>&nbsp;<span>match response ==</span>
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method GET</span>
       </div>
     </div>
-    <div class="time-cell skipped">0</div>
+    <div class="time-cell passed">211</div>
   </div>
 
    
   
-  <div class="preformatted" data-parent="0.14">{
+  
+
+  
+
+  <div class="preformatted" data-parent="0.13">19:30:02.785 request:
+1 &gt; GET https://parabank.parasoft.com/parabank/services/bank/login/john/demo
+1 &gt; Accept: application/json
+1 &gt; Host: parabank.parasoft.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+19:30:02.993 response time in milliseconds: 208
+1 &lt; 200
+1 &lt; Date: Thu, 21 May 2026 00:30:01 GMT
+1 &lt; Content-Type: application/json
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Connection: keep-alive
+1 &lt; Server: cloudflare
+1 &lt; cf-cache-status: DYNAMIC
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; CF-RAY: 9fef785c49feb6ef-BOG
+{&quot;id&quot;:12212,&quot;firstName&quot;:&quot;John&quot;,&quot;lastName&quot;:&quot;Smith&quot;,&quot;address&quot;:{&quot;street&quot;:&quot;1431 Main St&quot;,&quot;city&quot;:&quot;Beverly Hills&quot;,&quot;state&quot;:&quot;CA&quot;,&quot;zipCode&quot;:&quot;90210&quot;},&quot;phoneNumber&quot;:&quot;310-447-4121&quot;,&quot;ssn&quot;:&quot;622-11-9999&quot;}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.14">
+      <div class="step-ref passed">14</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.15">
+      <div class="step-ref passed">15</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response ==</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="0.15">{
    &quot;id&quot;: &#39;#number&#39;,
    &quot;firstName&quot;: &#39;#string&#39;,
    &quot;lastName&quot;: &#39;#string&#39;,
@@ -348,14 +358,67 @@ classpath:org/udea/parabank/login.feature:12
   
 
   <div class="step-row">
-    <div class="step-container" id="0.30">
-      <div class="step-ref skipped">30</div>
+    <div class="step-container" id="0.31">
+      <div class="step-ref passed">31</div>
       
-      <div class="step-cell skipped">
+      <div class="step-cell passed">
         <span>*</span>&nbsp;<span>match header Content-Type contains &#39;application/json&#39;</span>
       </div>
     </div>
-    <div class="time-cell skipped">0</div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment"># DEFECTO DOCUMENTADO: El endpoint REST /login/{user}/{pass} no emite Set-Cookie/JSESSIONID.</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment"># La sesión solo se crea via formulario HTML (/login.htm), no via el API REST.</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment"># Criterio de aceptación exige JSESSIONID, pero la API no lo provee en este endpoint.</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container" id="0.36">
+      <div class="step-ref passed">36</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def setCookie = responseHeaders[&#39;Set-Cookie&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
   </div>
 
    
@@ -376,14 +439,125 @@ classpath:org/udea/parabank/login.feature:12
   
 
   <div class="step-row">
-    <div class="step-container" id="0.32">
-      <div class="step-ref skipped">32</div>
+    <div class="step-container" id="0.37">
+      <div class="step-ref passed">37</div>
       
-      <div class="step-cell skipped">
-        <span>*</span>&nbsp;<span>def cookieHeader = responseHeaders[&#39;Set-Cookie&#39;][0]</span>
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>print &#39;Set-Cookie (DEFECTO - esperado JSESSIONID, no presente en REST login):&#39;, setCookie</span>
       </div>
     </div>
-    <div class="time-cell skipped">0</div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.37">19:30:02.997 [print] Set-Cookie (DEFECTO - esperado JSESSIONID, no presente en REST login): [
+]
+ 
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.39">
+      <div class="step-ref passed">39</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def customerId = response.id</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[2:42]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                <a class="badge badge-primary" href="karate-tags.html">login_fail</a><a class="badge badge-primary" href="karate-tags.html">parabank_login</a>
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[2:42]</span>
+                <span class="scenario-name">Customer Login with invalid credentials returns error</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>187</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[2:42]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[2:42]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url baseUrl</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2:42]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.6">
+      <div class="step-ref bg-step">6</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
   </div>
 
    
@@ -404,14 +578,151 @@ classpath:org/udea/parabank/login.feature:12
   
 
   <div class="step-row">
-    <div class="step-container" id="0.34">
-      <div class="step-ref skipped">34</div>
+    <div class="step-container" id="0.43">
+      <div class="step-ref passed">43</div>
       
-      <div class="step-cell skipped">
-        <span>*</span>&nbsp;<span>match cookieHeader contains &#39;JSESSIONID&#39;</span>
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;login&#39;, &#39;john&#39;, &#39;wrongpassword&#39;</span>
       </div>
     </div>
-    <div class="time-cell skipped">0</div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.44">
+      <div class="step-ref passed">44</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method GET</span>
+      </div>
+    </div>
+    <div class="time-cell passed">184</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.44">19:30:03.013 request:
+1 &gt; GET https://parabank.parasoft.com/parabank/services/bank/login/john/wrongpassword
+1 &gt; Accept: application/json
+1 &gt; Host: parabank.parasoft.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+19:30:03.194 response time in milliseconds: 180
+1 &lt; 400
+1 &lt; Date: Thu, 21 May 2026 00:30:01 GMT
+1 &lt; Content-Type: text/plain;charset=UTF-8
+1 &lt; Content-Length: 32
+1 &lt; Connection: keep-alive
+1 &lt; Server: cloudflare
+1 &lt; cf-cache-status: DYNAMIC
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; CF-RAY: 9fef785d9ed1b6f7-BOG
+Invalid username and/or password
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment"># DEFECTO DOCUMENTADO: RFC 7235 establece que credenciales inválidas deben retornar 401 Unauthorized.</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment"># Parabank retorna 400 Bad Request, lo cual no sigue el estándar REST de autenticación.</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container" id="0.47">
+      <div class="step-ref passed">47</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 400</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment"># DEFECTO DOCUMENTADO: El criterio exige un JSON con campo &#39;error&#39;, pero la API retorna texto plano.</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment"># Respuesta real: &quot;Invalid username and/or password&quot; (text/plain, no application/json)</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container" id="0.50">
+      <div class="step-ref passed">50</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>match response contains &#39;Invalid&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
   </div>
 
    
