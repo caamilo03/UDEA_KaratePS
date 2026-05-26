@@ -28,22 +28,17 @@ Feature: Autenticación y Persistencia de Sesión en Parabank
     """
     * match header Content-Type contains 'application/json'
 
-    # Criterio de aceptación: extraer y validar el header Set-Cookie para asegurar que el JSESSIONID está presente.
-    # DEFECTO DEL API: El endpoint REST /login/{user}/{pass} no emite el header Set-Cookie con JSESSIONID.
-    # La sesión solo se crea via formulario HTML (/login.htm), no a través del endpoint REST.
-    # La API no gestiona el ciclo de vida de la sesión como lo exige el criterio de aceptación.
+    # DEFECTO: El endpoint REST no emite Set-Cookie/JSESSIONID. La sesión solo existe vía formulario HTML.
     * def cookieHeader = responseHeaders['Set-Cookie'][0]
     * match cookieHeader contains 'JSESSIONID'
 
     * def customerId = response.id
 
   @login_fail
-  Scenario: Credenciales incorrectas retornan 401 Unauthorized con esquema de error estandarizado
+  Scenario: Credenciales incorrectas retornan 401 con esquema de error estandarizado
     Given path 'login', 'john', 'wrongpassword'
     When method GET
-    # DEFECTO DEL API: El estándar REST (RFC 7235) y el criterio de aceptación exigen 401 Unauthorized
-    # para credenciales inválidas. La API retorna 400 Bad Request, que es semánticamente incorrecto.
+    # DEFECTO: RFC 7235 exige 401 Unauthorized. Parabank retorna 400 Bad Request.
     Then status 401
-    # DEFECTO DEL API: El criterio exige un JSON con campo 'error' estandarizado.
-    # La API retorna texto plano "Invalid username and/or password" con Content-Type: text/plain.
+    # DEFECTO: Se esperaba JSON con campo 'error'. La API retorna texto plano (Content-Type: text/plain).
     * match response == {error: '#string'}

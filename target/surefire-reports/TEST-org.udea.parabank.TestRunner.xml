@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="org.udea.parabank.TestRunner" time="4.911" tests="1" errors="0" skipped="0" failures="1">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="org.udea.parabank.TestRunner" time="7.051" tests="4" errors="0" skipped="0" failures="2">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -16,9 +16,9 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="CO"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-21\bin"/>
-    <property name="sun.java.command" value="C:\Users\Camilo\AppData\Local\Temp\surefire7766101664544956929\surefirebooter11720362941256141173.jar C:\Users\Camilo\AppData\Local\Temp\surefire7766101664544956929 2026-05-20T19-59-38_113-jvmRun1 surefire18310132386068167212tmp surefire_015648284043053221571tmp"/>
+    <property name="sun.java.command" value="C:\Users\Camilo\AppData\Local\Temp\surefire15967863588170636613\surefirebooter14910518336079562013.jar C:\Users\Camilo\AppData\Local\Temp\surefire15967863588170636613 2026-05-20T20-52-06_343-jvmRun1 surefire1678297087722711766tmp surefire_016173229103049507403tmp"/>
     <property name="jdk.debug" value="release"/>
-    <property name="test" value="TestRunner#test03_ParabankAccounts"/>
+    <property name="test" value="TestRunner#test05_ParabankRequestLoan"/>
     <property name="surefire.test.class.path" value="C:\Users\Camilo\UDEA_KaratePS\target\test-classes;C:\Users\Camilo\UDEA_KaratePS\target\classes;C:\Users\Camilo\.m2\repository\com\intuit\karate\karate-core\1.3.1\karate-core-1.3.1.jar;C:\Users\Camilo\.m2\repository\org\graalvm\js\js-scriptengine\22.0.0.2\js-scriptengine-22.0.0.2.jar;C:\Users\Camilo\.m2\repository\org\graalvm\sdk\graal-sdk\22.0.0.2\graal-sdk-22.0.0.2.jar;C:\Users\Camilo\.m2\repository\org\graalvm\js\js\22.0.0.2\js-22.0.0.2.jar;C:\Users\Camilo\.m2\repository\org\graalvm\regex\regex\22.0.0.2\regex-22.0.0.2.jar;C:\Users\Camilo\.m2\repository\org\graalvm\truffle\truffle-api\22.0.0.2\truffle-api-22.0.0.2.jar;C:\Users\Camilo\.m2\repository\org\thymeleaf\thymeleaf\3.0.14.RELEASE\thymeleaf-3.0.14.RELEASE.jar;C:\Users\Camilo\.m2\repository\ognl\ognl\3.1.26\ognl-3.1.26.jar;C:\Users\Camilo\.m2\repository\org\javassist\javassist\3.20.0-GA\javassist-3.20.0-GA.jar;C:\Users\Camilo\.m2\repository\org\attoparser\attoparser\2.0.5.RELEASE\attoparser-2.0.5.RELEASE.jar;C:\Users\Camilo\.m2\repository\org\unbescape\unbescape\1.1.6.RELEASE\unbescape-1.1.6.RELEASE.jar;C:\Users\Camilo\.m2\repository\org\slf4j\slf4j-api\1.7.25\slf4j-api-1.7.25.jar;C:\Users\Camilo\.m2\repository\com\linecorp\armeria\armeria\1.18.0\armeria-1.18.0.jar;C:\Users\Camilo\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.13.3\jackson-core-2.13.3.jar;C:\Users\Camilo\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.13.3\jackson-annotations-2.13.3.jar;C:\Users\Camilo\.m2\repository\io\micrometer\micrometer-core\1.9.2\micrometer-core-1.9.2.jar;C:\Users\Camilo\.m2\repository\org\hdrhistogram\HdrHistogram\2.1.12\HdrHistogram-2.1.12.jar;C:\Users\Camilo\.m2\repository\org\latencyutils\LatencyUtils\2.0.3\LatencyUtils-2.0.3.jar;C:\Users\Camilo\.m2\repository\io\netty\netty-transport\4.1.79.Final\netty-transport-4.1.79.Final.jar;C:\Users\Camilo\.m2\repository\io\netty\netty-common\4.1.79.Final\netty-common-4.1.79.Final.jar;C:\Users\Camilo\.m2\repository\io\netty\netty-buffer\4.1.79.Final\netty-buffer-4.1.79.Final.jar;C:\Users\Camilo\.m2\repository\io\netty\netty-resolver\4.1.79.Final\netty-resolver-4.1.79.Final.jar;C:\Users\Camilo\.m2\repository\io\netty\netty-codec-haproxy\4.1.79.Final\netty-codec-haproxy-4.1.79.Final.jar;C:\Users\Camilo\.m2\repository\io\netty\netty-codec\4.1.79.Final\netty-codec-4.1.79.Final.jar;C:\Users\Camilo\.m2\repository\io\netty\netty-codec-http2\4.1.79.Final\netty-codec-http2-4.1.79.Final.jar;C:\Users\Camilo\.m2\repository\io\netty\netty-handler\4.1.79.Final\netty-handler-4.1.79.Final.jar;C:\Users\Camilo\.m2\repository\io\netty\netty-codec-http\4.1.79.Final\netty-codec-http-4.1.79.Final.jar;C:\Users\Camilo\.m2\repository\io\netty\netty-resolver-dns\4.1.79.Final\netty-resolver-dns-4.1.79.Final.jar;C:\Users\Camilo\.m2\repository\io\netty\netty-codec-dns\4.1.79.Final\netty-codec-dns-4.1.79.Final.jar;C:\Users\Camilo\.m2\repository\org\reactivestreams\reactive-streams\1.0.4\reactive-streams-1.0.4.jar;C:\Users\Camilo\.m2\repository\io\netty\netty-transport-native-unix-common\4.1.79.Final\netty-transport-native-unix-common-4.1.79.Final-linux-x86_64.jar;C:\Users\Camilo\.m2\repository\io\netty\netty-transport-native-epoll\4.1.79.Final\netty-transport-native-epoll-4.1.79.Final-linux-x86_64.jar;C:\Users\Camilo\.m2\repository\io\netty\netty-transport-native-unix-common\4.1.79.Final\netty-transport-native-unix-common-4.1.79.Final.jar;C:\Users\Camilo\.m2\repository\io\netty\netty-transport-classes-epoll\4.1.79.Final\netty-transport-classes-epoll-4.1.79.Final.jar;C:\Users\Camilo\.m2\repository\io\netty\netty-resolver-dns-native-macos\4.1.79.Final\netty-resolver-dns-native-macos-4.1.79.Final-osx-x86_64.jar;C:\Users\Camilo\.m2\repository\io\netty\netty-resolver-dns-classes-macos\4.1.79.Final\netty-resolver-dns-classes-macos-4.1.79.Final.jar;C:\Users\Camilo\.m2\repository\io\netty\netty-resolver-dns-native-macos\4.1.79.Final\netty-resolver-dns-native-macos-4.1.79.Final-osx-aarch_64.jar;C:\Users\Camilo\.m2\repository\io\netty\netty-tcnative-boringssl-static\2.0.53.Final\netty-tcnative-boringssl-static-2.0.53.Final-linux-x86_64.jar;C:\Users\Camilo\.m2\repository\io\netty\netty-tcnative-classes\2.0.53.Final\netty-tcnative-classes-2.0.53.Final.jar;C:\Users\Camilo\.m2\repository\io\netty\netty-tcnative-boringssl-static\2.0.53.Final\netty-tcnative-boringssl-static-2.0.53.Final-linux-aarch_64.jar;C:\Users\Camilo\.m2\repository\io\netty\netty-tcnative-boringssl-static\2.0.53.Final\netty-tcnative-boringssl-static-2.0.53.Final-osx-x86_64.jar;C:\Users\Camilo\.m2\repository\io\netty\netty-tcnative-boringssl-static\2.0.53.Final\netty-tcnative-boringssl-static-2.0.53.Final-osx-aarch_64.jar;C:\Users\Camilo\.m2\repository\io\netty\netty-tcnative-boringssl-static\2.0.53.Final\netty-tcnative-boringssl-static-2.0.53.Final-windows-x86_64.jar;C:\Users\Camilo\.m2\repository\io\netty\netty-handler-proxy\4.1.79.Final\netty-handler-proxy-4.1.79.Final.jar;C:\Users\Camilo\.m2\repository\io\netty\netty-codec-socks\4.1.79.Final\netty-codec-socks-4.1.79.Final.jar;C:\Users\Camilo\.m2\repository\com\aayushatharva\brotli4j\brotli4j\1.7.1\brotli4j-1.7.1.jar;C:\Users\Camilo\.m2\repository\com\aayushatharva\brotli4j\native-windows-x86_64\1.7.1\native-windows-x86_64-1.7.1.jar;C:\Users\Camilo\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\Camilo\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;C:\Users\Camilo\.m2\repository\ch\qos\logback\logback-classic\1.2.9\logback-classic-1.2.9.jar;C:\Users\Camilo\.m2\repository\ch\qos\logback\logback-core\1.2.9\logback-core-1.2.9.jar;C:\Users\Camilo\.m2\repository\org\slf4j\jcl-over-slf4j\1.7.32\jcl-over-slf4j-1.7.32.jar;C:\Users\Camilo\.m2\repository\org\antlr\antlr4-runtime\4.9.3\antlr4-runtime-4.9.3.jar;C:\Users\Camilo\.m2\repository\com\jayway\jsonpath\json-path\2.7.0\json-path-2.7.0.jar;C:\Users\Camilo\.m2\repository\net\minidev\json-smart\2.4.7\json-smart-2.4.7.jar;C:\Users\Camilo\.m2\repository\net\minidev\accessors-smart\2.4.7\accessors-smart-2.4.7.jar;C:\Users\Camilo\.m2\repository\org\ow2\asm\asm\9.1\asm-9.1.jar;C:\Users\Camilo\.m2\repository\info\cukes\cucumber-java\1.2.5\cucumber-java-1.2.5.jar;C:\Users\Camilo\.m2\repository\info\cukes\cucumber-core\1.2.5\cucumber-core-1.2.5.jar;C:\Users\Camilo\.m2\repository\org\yaml\snakeyaml\1.32\snakeyaml-1.32.jar;C:\Users\Camilo\.m2\repository\de\siegmar\fastcsv\2.0.0\fastcsv-2.0.0.jar;C:\Users\Camilo\.m2\repository\info\picocli\picocli\4.6.1\picocli-4.6.1.jar;C:\Users\Camilo\.m2\repository\io\github\classgraph\classgraph\4.8.149\classgraph-4.8.149.jar;C:\Users\Camilo\.m2\repository\io\github\t12y\resemble\1.0.2\resemble-1.0.2.jar;C:\Users\Camilo\.m2\repository\io\github\t12y\ssim\1.0.0\ssim-1.0.0.jar;C:\Users\Camilo\.m2\repository\com\intuit\karate\karate-junit5\1.3.1\karate-junit5-1.3.1.jar;C:\Users\Camilo\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.7.2\junit-jupiter-api-5.7.2.jar;C:\Users\Camilo\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\Camilo\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\Camilo\.m2\repository\org\junit\platform\junit-platform-commons\1.7.2\junit-platform-commons-1.7.2.jar;C:\Users\Camilo\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.7.2\junit-jupiter-engine-5.7.2.jar;C:\Users\Camilo\.m2\repository\org\junit\platform\junit-platform-engine\1.7.2\junit-platform-engine-1.7.2.jar;C:\Users\Camilo\.m2\repository\net\masterthought\cucumber-reporting\5.7.4\cucumber-reporting-5.7.4.jar;C:\Users\Camilo\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.13.2.2\jackson-databind-2.13.2.2.jar;C:\Users\Camilo\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.13.2\jackson-datatype-jsr310-2.13.2.jar;C:\Users\Camilo\.m2\repository\org\apache\velocity\velocity-engine-core\2.3\velocity-engine-core-2.3.jar;C:\Users\Camilo\.m2\repository\org\apache\commons\commons-collections4\4.4\commons-collections4-4.4.jar;C:\Users\Camilo\.m2\repository\joda-time\joda-time\2.10.14\joda-time-2.10.14.jar;C:\Users\Camilo\.m2\repository\org\apache\commons\commons-lang3\3.12.0\commons-lang3-3.12.0.jar;C:\Users\Camilo\.m2\repository\org\codehaus\plexus\plexus-utils\3.4.2\plexus-utils-3.4.2.jar;C:\Users\Camilo\.m2\repository\org\jsoup\jsoup\1.15.3\jsoup-1.15.3.jar;C:\Users\Camilo\.m2\repository\com\google\guava\guava\31.1-jre\guava-31.1-jre.jar;C:\Users\Camilo\.m2\repository\com\google\guava\failureaccess\1.0.1\failureaccess-1.0.1.jar;C:\Users\Camilo\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\Camilo\.m2\repository\org\checkerframework\checker-qual\3.12.0\checker-qual-3.12.0.jar;C:\Users\Camilo\.m2\repository\com\google\errorprone\error_prone_annotations\2.11.0\error_prone_annotations-2.11.0.jar;C:\Users\Camilo\.m2\repository\com\google\j2objc\j2objc-annotations\1.3\j2objc-annotations-1.3.jar;C:\Users\Camilo\.m2\repository\com\googlecode\owasp-java-html-sanitizer\owasp-java-html-sanitizer\20211018.2\owasp-java-html-sanitizer-20211018.2.jar;C:\Users\Camilo\.m2\repository\commons-configuration\commons-configuration\1.10\commons-configuration-1.10.jar;C:\Users\Camilo\.m2\repository\commons-lang\commons-lang\2.6\commons-lang-2.6.jar;C:\Users\Camilo\.m2\repository\commons-logging\commons-logging\1.1.1\commons-logging-1.1.1.jar;C:\Users\Camilo\.m2\repository\commons-io\commons-io\2.11.0\commons-io-2.11.0.jar;C:\Users\Camilo\.m2\repository\commons-codec\commons-codec\1.15\commons-codec-1.15.jar;C:\Users\Camilo\.m2\repository\com\github\java-json-tools\json-schema-validator\2.2.14\json-schema-validator-2.2.14.jar;C:\Users\Camilo\.m2\repository\com\github\java-json-tools\jackson-coreutils-equivalence\1.0\jackson-coreutils-equivalence-1.0.jar;C:\Users\Camilo\.m2\repository\com\github\java-json-tools\jackson-coreutils\2.0\jackson-coreutils-2.0.jar;C:\Users\Camilo\.m2\repository\com\github\java-json-tools\msg-simple\1.2\msg-simple-1.2.jar;C:\Users\Camilo\.m2\repository\com\github\java-json-tools\btf\1.3\btf-1.3.jar;C:\Users\Camilo\.m2\repository\com\github\java-json-tools\json-schema-core\1.2.14\json-schema-core-1.2.14.jar;C:\Users\Camilo\.m2\repository\com\github\java-json-tools\uri-template\0.10\uri-template-0.10.jar;C:\Users\Camilo\.m2\repository\org\mozilla\rhino\1.7.7.2\rhino-1.7.7.2.jar;C:\Users\Camilo\.m2\repository\com\sun\mail\mailapi\1.6.2\mailapi-1.6.2.jar;C:\Users\Camilo\.m2\repository\com\googlecode\libphonenumber\libphonenumber\8.11.1\libphonenumber-8.11.1.jar;C:\Users\Camilo\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\Camilo\.m2\repository\net\sf\jopt-simple\jopt-simple\5.0.4\jopt-simple-5.0.4.jar;C:\Users\Camilo\.m2\repository\com\github\javafaker\javafaker\1.0.2\javafaker-1.0.2.jar;C:\Users\Camilo\.m2\repository\org\yaml\snakeyaml\1.23\snakeyaml-1.23-android.jar;C:\Users\Camilo\.m2\repository\com\github\mifmif\generex\1.0.2\generex-1.0.2.jar;C:\Users\Camilo\.m2\repository\dk\brics\automaton\automaton\1.11-8\automaton-1.11-8.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\Camilo"/>
@@ -32,7 +32,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\Camilo\AppData\Local\Temp\surefire7766101664544956929\surefirebooter11720362941256141173.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\Camilo\AppData\Local\Temp\surefire15967863588170636613\surefirebooter14910518336079562013.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="21.0.7+8-LTS-245"/>
@@ -61,18 +61,14 @@
     <property name="java.class.version" value="65.0"/>
     <property name="maven.test.failure.ignore" value="true"/>
   </properties>
-  <testcase name="[1:14] Validar esquema e integridad financiera del endpoint de cuentas" classname="org/udea/parabank/accounts" time="3.631">
-    <failure message="match failed: EACH_EQUALS&#10;  $ | match each failed at index 0 (LIST:STRING)&#10;  [-7.999460907E7]&#10;  &apos;#? isNotNegative(_)&apos;&#10;&#10;    $[0] | evaluated to &apos;false&apos; (NUMBER:STRING)&#10;    -7.999460907E7&#10;    &apos;#? isNotNegative(_)&apos;&#10;&#10;classpath:org/udea/parabank/accounts.feature:36" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: 
-match failed: EACH_EQUALS
-  $ | match each failed at index 0 (LIST:STRING)
-  [-7.999460907E7]
-  '#? isNotNegative(_)'
+  <testcase name="[1:19] Solicitud de préstamo con perfil válido - verificación de respuesta y fecha ISO-8601" classname="org/udea/parabank/RequestLoan" time="2.664">
+    <failure message="match failed: EQUALS&#10;  $ | not a string (NUMBER:STRING)&#10;  1779328330629&#10;  &apos;#string&apos;&#10;&#10;classpath:org/udea/parabank/RequestLoan.feature:34" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: 
+match failed: EQUALS
+  $ | not a string (NUMBER:STRING)
+  1779328330629
+  '#string'
 
-    $[0] | evaluated to 'false' (NUMBER:STRING)
-    -7.999460907E7
-    '#? isNotNegative(_)'
-
-classpath:org/udea/parabank/accounts.feature:36
+classpath:org/udea/parabank/RequestLoan.feature:34
 	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:39)
 	at org.junit.jupiter.api.Assertions.fail(Assertions.java:117)
 	at com.intuit.karate.junit5.FeatureNode.lambda$next$1(FeatureNode.java:86)
@@ -177,9 +173,9 @@ classpath:org/udea/parabank/accounts.feature:36
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
 ]]></failure>
-    <system-out><![CDATA[19:59:40.792 [main] INFO  com.intuit.karate.Runner - using system property 'karate.env': prod
-19:59:40.931 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
-19:59:42.655 [main] DEBUG com.intuit.karate - request:
+    <system-out><![CDATA[20:52:09.024 [main] INFO  com.intuit.karate.Runner - using system property 'karate.env': prod
+20:52:09.169 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+20:52:10.874 [main] DEBUG com.intuit.karate - request:
 1 > GET https://parabank.parasoft.com/parabank/services/bank/login/john/demo
 1 > Accept: application/json
 1 > Host: parabank.parasoft.com
@@ -188,19 +184,19 @@ classpath:org/udea/parabank/accounts.feature:36
 1 > Accept-Encoding: gzip,deflate
 
 
-19:59:43.253 [main] DEBUG com.intuit.karate - response time in milliseconds: 595
+20:52:11.390 [main] DEBUG com.intuit.karate - response time in milliseconds: 511
 1 < 200
-1 < Date: Thu, 21 May 2026 00:59:42 GMT
+1 < Date: Thu, 21 May 2026 01:52:10 GMT
 1 < Content-Type: application/json
 1 < Transfer-Encoding: chunked
 1 < Connection: keep-alive
 1 < Server: cloudflare
 1 < cf-cache-status: DYNAMIC
 1 < X-Content-Type-Options: nosniff
-1 < CF-RAY: 9fefa3d2ddd4b6ec-BOG
+1 < CF-RAY: 9feff0af0bf4b6f7-BOG
 {"id":12212,"firstName":"John","lastName":"Smith","address":{"street":"1431 Main St","city":"Beverly Hills","state":"CA","zipCode":"90210"},"phoneNumber":"310-447-4121","ssn":"622-11-9999"}
 
-19:59:43.288 [main] DEBUG com.intuit.karate - request:
+20:52:11.420 [main] DEBUG com.intuit.karate - request:
 2 > GET https://parabank.parasoft.com/parabank/services/bank/customers/12212/accounts
 2 > Accept: application/json
 2 > Host: parabank.parasoft.com
@@ -209,52 +205,388 @@ classpath:org/udea/parabank/accounts.feature:36
 2 > Accept-Encoding: gzip,deflate
 
 
-19:59:43.509 [main] DEBUG com.intuit.karate - response time in milliseconds: 221
+20:52:11.600 [main] DEBUG com.intuit.karate - response time in milliseconds: 180
 2 < 200
-2 < Date: Thu, 21 May 2026 00:59:42 GMT
+2 < Date: Thu, 21 May 2026 01:52:10 GMT
 2 < Content-Type: application/json
 2 < Transfer-Encoding: chunked
 2 < Connection: keep-alive
 2 < Server: cloudflare
 2 < cf-cache-status: DYNAMIC
 2 < X-Content-Type-Options: nosniff
-2 < CF-RAY: 9fefa3d48850b6fd-BOG
-[{"id":13344,"customerId":12212,"type":"CHECKING","balance":-79994609.07}]
+2 < CF-RAY: 9feff0b07f7eb6f2-BOG
+[{"id":13344,"customerId":12212,"type":"CHECKING","balance":-89995360.57},{"id":23334,"customerId":12212,"type":"CHECKING","balance":290.00}]
 
-19:59:43.549 [main] ERROR com.intuit.karate - classpath:org/udea/parabank/accounts.feature:36
-* match each balances == '#? isNotNegative(_)'
-match failed: EACH_EQUALS
-  $ | match each failed at index 0 (LIST:STRING)
-  [-7.999460907E7]
-  '#? isNotNegative(_)'
+20:52:11.611 [main] DEBUG com.intuit.karate - request:
+3 > POST https://parabank.parasoft.com/parabank/services/bank/requestLoan?amount=1000&fromAccountId=13344&downPayment=200&customerId=12212
+3 > Accept: application/json
+3 > Host: parabank.parasoft.com
+3 > Connection: Keep-Alive
+3 > User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
+3 > Accept-Encoding: gzip,deflate
 
-    $[0] | evaluated to 'false' (NUMBER:STRING)
-    -7.999460907E7
-    '#? isNotNegative(_)'
 
-classpath:org/udea/parabank/accounts.feature:36
+20:52:11.841 [main] DEBUG com.intuit.karate - response time in milliseconds: 230
+3 < 200
+3 < Date: Thu, 21 May 2026 01:52:10 GMT
+3 < Content-Type: application/json
+3 < Transfer-Encoding: chunked
+3 < Connection: keep-alive
+3 < Server: cloudflare
+3 < cf-cache-status: DYNAMIC
+3 < X-Content-Type-Options: nosniff
+3 < CF-RAY: 9feff0b1aa05b6f6-BOG
+{"responseDate":1779328330629,"loanProviderName":"Wealth Securities Dynamic Loans (WSDL)","approved":false,"message":"error.insufficient.funds.for.down.payment","accountId":null}
+
+20:52:11.863 [main] ERROR com.intuit.karate - classpath:org/udea/parabank/RequestLoan.feature:34
+* match response.responseDate == '#string'
+match failed: EQUALS
+  $ | not a string (NUMBER:STRING)
+  1779328330629
+  '#string'
+
+classpath:org/udea/parabank/RequestLoan.feature:34
+]]></system-out>
+  </testcase>
+  <testcase name="[2.1:53] Evaluación de riesgo con diferentes perfiles de solicitud" classname="org/udea/parabank/RequestLoan" time="0.58">
+    <failure message="match failed: EQUALS&#10;  $ | not equal (BOOLEAN:BOOLEAN)&#10;  false&#10;  true&#10;&#10;classpath:org/udea/parabank/RequestLoan.feature:49" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: 
+match failed: EQUALS
+  $ | not equal (BOOLEAN:BOOLEAN)
+  false
+  true
+
+classpath:org/udea/parabank/RequestLoan.feature:49
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:39)
+	at org.junit.jupiter.api.Assertions.fail(Assertions.java:117)
+	at com.intuit.karate.junit5.FeatureNode.lambda$next$1(FeatureNode.java:86)
+	at org.junit.jupiter.engine.descriptor.DynamicTestTestDescriptor.lambda$execute$0(DynamicTestTestDescriptor.java:52)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.api.extension.InvocationInterceptor.interceptDynamicTest(InvocationInterceptor.java:161)
+	at org.junit.jupiter.engine.descriptor.DynamicTestTestDescriptor.lambda$execute$1(DynamicTestTestDescriptor.java:58)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptorCall.lambda$ofVoid$0(InvocationInterceptorChain.java:78)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.descriptor.DynamicTestTestDescriptor.execute(DynamicTestTestDescriptor.java:57)
+	at org.junit.jupiter.engine.descriptor.DynamicTestTestDescriptor.execute(DynamicTestTestDescriptor.java:31)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask$DefaultDynamicTestExecutor.execute(NodeTestTask.java:212)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask$DefaultDynamicTestExecutor.execute(NodeTestTask.java:192)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$15$1.accept(ReferencePipeline.java:541)
+	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133)
+	at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1939)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEachOrdered(ReferencePipeline.java:601)
+	at org.junit.jupiter.engine.descriptor.DynamicContainerTestDescriptor.execute(DynamicContainerTestDescriptor.java:65)
+	at org.junit.jupiter.engine.descriptor.DynamicContainerTestDescriptor.execute(DynamicContainerTestDescriptor.java:33)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask$DefaultDynamicTestExecutor.execute(NodeTestTask.java:212)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask$DefaultDynamicTestExecutor.execute(NodeTestTask.java:192)
+	at java.base/java.util.Optional.ifPresent(Optional.java:178)
+	at org.junit.jupiter.engine.descriptor.TestFactoryTestDescriptor.lambda$invokeTestMethod$1(TestFactoryTestDescriptor.java:106)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestFactoryTestDescriptor.invokeTestMethod(TestFactoryTestDescriptor.java:93)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:131)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:65)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:108)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:96)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:75)
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:55)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:223)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:175)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:139)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:456)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:169)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
+]]></failure>
+    <system-out><![CDATA[20:52:11.904 [main] DEBUG com.intuit.karate - request:
+1 > GET https://parabank.parasoft.com/parabank/services/bank/login/john/demo
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
+1 > Accept-Encoding: gzip,deflate
+
+
+20:52:12.089 [main] DEBUG com.intuit.karate - response time in milliseconds: 185
+1 < 200
+1 < Date: Thu, 21 May 2026 01:52:10 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 9feff0b37ec7b6ef-BOG
+{"id":12212,"firstName":"John","lastName":"Smith","address":{"street":"1431 Main St","city":"Beverly Hills","state":"CA","zipCode":"90210"},"phoneNumber":"310-447-4121","ssn":"622-11-9999"}
+
+20:52:12.094 [main] DEBUG com.intuit.karate - request:
+2 > GET https://parabank.parasoft.com/parabank/services/bank/customers/12212/accounts
+2 > Accept: application/json
+2 > Host: parabank.parasoft.com
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
+2 > Accept-Encoding: gzip,deflate
+
+
+20:52:12.265 [main] DEBUG com.intuit.karate - response time in milliseconds: 171
+2 < 200
+2 < Date: Thu, 21 May 2026 01:52:11 GMT
+2 < Content-Type: application/json
+2 < Transfer-Encoding: chunked
+2 < Connection: keep-alive
+2 < Server: cloudflare
+2 < cf-cache-status: DYNAMIC
+2 < X-Content-Type-Options: nosniff
+2 < CF-RAY: 9feff0b49ebdb6f6-BOG
+[{"id":13344,"customerId":12212,"type":"CHECKING","balance":-89995360.57},{"id":23334,"customerId":12212,"type":"CHECKING","balance":290.00}]
+
+20:52:12.272 [main] DEBUG com.intuit.karate - request:
+3 > POST https://parabank.parasoft.com/parabank/services/bank/requestLoan?amount=1000&fromAccountId=13344&downPayment=500&customerId=12212
+3 > Accept: application/json
+3 > Host: parabank.parasoft.com
+3 > Connection: Keep-Alive
+3 > User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
+3 > Accept-Encoding: gzip,deflate
+
+
+20:52:12.458 [main] DEBUG com.intuit.karate - response time in milliseconds: 186
+3 < 200
+3 < Date: Thu, 21 May 2026 01:52:11 GMT
+3 < Content-Type: application/json
+3 < Transfer-Encoding: chunked
+3 < Connection: keep-alive
+3 < Server: cloudflare
+3 < cf-cache-status: DYNAMIC
+3 < X-Content-Type-Options: nosniff
+3 < CF-RAY: 9feff0b5bde5b6f5-BOG
+{"responseDate":1779328331247,"loanProviderName":"Wealth Securities Dynamic Loans (WSDL)","approved":false,"message":"error.insufficient.funds.for.down.payment","accountId":null}
+
+20:52:12.462 [main] ERROR com.intuit.karate - classpath:org/udea/parabank/RequestLoan.feature:49
+* match response.approved == true
+match failed: EQUALS
+  $ | not equal (BOOLEAN:BOOLEAN)
+  false
+  true
+
+classpath:org/udea/parabank/RequestLoan.feature:49
+]]></system-out>
+  </testcase>
+  <testcase name="[2.2:54] Evaluación de riesgo con diferentes perfiles de solicitud" classname="org/udea/parabank/RequestLoan" time="0.588">
+    <system-out><![CDATA[20:52:12.483 [main] DEBUG com.intuit.karate - request:
+1 > GET https://parabank.parasoft.com/parabank/services/bank/login/john/demo
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
+1 > Accept-Encoding: gzip,deflate
+
+
+20:52:12.656 [main] DEBUG com.intuit.karate - response time in milliseconds: 173
+1 < 200
+1 < Date: Thu, 21 May 2026 01:52:11 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 9feff0b70b35b6f6-BOG
+{"id":12212,"firstName":"John","lastName":"Smith","address":{"street":"1431 Main St","city":"Beverly Hills","state":"CA","zipCode":"90210"},"phoneNumber":"310-447-4121","ssn":"622-11-9999"}
+
+20:52:12.662 [main] DEBUG com.intuit.karate - request:
+2 > GET https://parabank.parasoft.com/parabank/services/bank/customers/12212/accounts
+2 > Accept: application/json
+2 > Host: parabank.parasoft.com
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
+2 > Accept-Encoding: gzip,deflate
+
+
+20:52:12.837 [main] DEBUG com.intuit.karate - response time in milliseconds: 175
+2 < 200
+2 < Date: Thu, 21 May 2026 01:52:11 GMT
+2 < Content-Type: application/json
+2 < Transfer-Encoding: chunked
+2 < Connection: keep-alive
+2 < Server: cloudflare
+2 < cf-cache-status: DYNAMIC
+2 < X-Content-Type-Options: nosniff
+2 < CF-RAY: 9feff0b82926b6f5-BOG
+[{"id":13344,"customerId":12212,"type":"CHECKING","balance":-89995360.57},{"id":23334,"customerId":12212,"type":"CHECKING","balance":290.00}]
+
+20:52:12.841 [main] DEBUG com.intuit.karate - request:
+3 > POST https://parabank.parasoft.com/parabank/services/bank/requestLoan?amount=1000&fromAccountId=13344&downPayment=10&customerId=12212
+3 > Accept: application/json
+3 > Host: parabank.parasoft.com
+3 > Connection: Keep-Alive
+3 > User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
+3 > Accept-Encoding: gzip,deflate
+
+
+20:52:13.052 [main] DEBUG com.intuit.karate - response time in milliseconds: 211
+3 < 200
+3 < Date: Thu, 21 May 2026 01:52:11 GMT
+3 < Content-Type: application/json
+3 < Transfer-Encoding: chunked
+3 < Connection: keep-alive
+3 < Server: cloudflare
+3 < cf-cache-status: DYNAMIC
+3 < X-Content-Type-Options: nosniff
+3 < CF-RAY: 9feff0b94ab5b6fd-BOG
+{"responseDate":1779328331837,"loanProviderName":"Wealth Securities Dynamic Loans (WSDL)","approved":false,"message":"error.insufficient.funds.for.down.payment","accountId":null}
+
+]]></system-out>
+  </testcase>
+  <testcase name="[2.3:55] Evaluación de riesgo con diferentes perfiles de solicitud" classname="org/udea/parabank/RequestLoan" time="1.946">
+    <system-out><![CDATA[20:52:13.070 [main] DEBUG com.intuit.karate - request:
+1 > GET https://parabank.parasoft.com/parabank/services/bank/login/john/demo
+1 > Accept: application/json
+1 > Host: parabank.parasoft.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
+1 > Accept-Encoding: gzip,deflate
+
+
+20:52:13.246 [main] DEBUG com.intuit.karate - response time in milliseconds: 176
+1 < 200
+1 < Date: Thu, 21 May 2026 01:52:12 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: cloudflare
+1 < cf-cache-status: DYNAMIC
+1 < X-Content-Type-Options: nosniff
+1 < CF-RAY: 9feff0babdfbb6ff-BOG
+{"id":12212,"firstName":"John","lastName":"Smith","address":{"street":"1431 Main St","city":"Beverly Hills","state":"CA","zipCode":"90210"},"phoneNumber":"310-447-4121","ssn":"622-11-9999"}
+
+20:52:13.250 [main] DEBUG com.intuit.karate - request:
+2 > GET https://parabank.parasoft.com/parabank/services/bank/customers/12212/accounts
+2 > Accept: application/json
+2 > Host: parabank.parasoft.com
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
+2 > Accept-Encoding: gzip,deflate
+
+
+20:52:13.423 [main] DEBUG com.intuit.karate - response time in milliseconds: 172
+2 < 200
+2 < Date: Thu, 21 May 2026 01:52:12 GMT
+2 < Content-Type: application/json
+2 < Transfer-Encoding: chunked
+2 < Connection: keep-alive
+2 < Server: cloudflare
+2 < cf-cache-status: DYNAMIC
+2 < X-Content-Type-Options: nosniff
+2 < CF-RAY: 9feff0bbde61b6f9-BOG
+[{"id":13344,"customerId":12212,"type":"CHECKING","balance":-89995360.57},{"id":23334,"customerId":12212,"type":"CHECKING","balance":290.00}]
+
+20:52:13.427 [main] DEBUG com.intuit.karate - request:
+3 > POST https://parabank.parasoft.com/parabank/services/bank/requestLoan?amount=500&fromAccountId=13344&downPayment=500&customerId=12212
+3 > Accept: application/json
+3 > Host: parabank.parasoft.com
+3 > Connection: Keep-Alive
+3 > User-Agent: Apache-HttpClient/4.5.13 (Java/21.0.7)
+3 > Accept-Encoding: gzip,deflate
+
+
+20:52:13.614 [main] DEBUG com.intuit.karate - response time in milliseconds: 187
+3 < 200
+3 < Date: Thu, 21 May 2026 01:52:12 GMT
+3 < Content-Type: application/json
+3 < Transfer-Encoding: chunked
+3 < Connection: keep-alive
+3 < Server: cloudflare
+3 < cf-cache-status: DYNAMIC
+3 < X-Content-Type-Options: nosniff
+3 < CF-RAY: 9feff0bcfe6cb6ef-BOG
+{"responseDate":1779328332403,"loanProviderName":"Wealth Securities Dynamic Loans (WSDL)","approved":false,"message":"error.insufficient.funds.for.down.payment","accountId":null}
+
 ---------------------------------------------------------
-feature: classpath:org/udea/parabank/accounts.feature
-scenarios:  1 | passed:  0 | failed:  1 | time: 1,2989
+feature: classpath:org/udea/parabank/RequestLoan.feature
+scenarios:  4 | passed:  2 | failed:  2 | time: 3,0736
 ---------------------------------------------------------
 
 Karate version: 1.3.1 | env: prod
 ======================================================
-elapsed:   3,67 | threads:    1 | thread time: 1,30 
-features:     1 | skipped:    0 | efficiency: 0,35
-scenarios:    1 | passed:     0 | failed: 1
+elapsed:   5,84 | threads:    1 | thread time: 3,07 
+features:     1 | skipped:    0 | efficiency: 0,53
+scenarios:    4 | passed:     2 | failed: 2
 ======================================================
 >>> failed features:
-match failed: EACH_EQUALS
-  $ | match each failed at index 0 (LIST:STRING)
-  [-7.999460907E7]
-  '#? isNotNegative(_)'
+match failed: EQUALS
+  $ | not a string (NUMBER:STRING)
+  1779328330629
+  '#string'
 
-    $[0] | evaluated to 'false' (NUMBER:STRING)
-    -7.999460907E7
-    '#? isNotNegative(_)'
+classpath:org/udea/parabank/RequestLoan.feature:34
+match failed: EQUALS
+  $ | not equal (BOOLEAN:BOOLEAN)
+  false
+  true
 
-classpath:org/udea/parabank/accounts.feature:36
+classpath:org/udea/parabank/RequestLoan.feature:49
 <<<
 
 HTML report: (paste into browser to view) | Karate version: 1.3.1 | env: prod
